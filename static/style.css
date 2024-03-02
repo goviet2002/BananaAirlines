@@ -1,0 +1,1465 @@
+:root {
+  --first-color: #ffffff;
+  --second-color: #8dc6ff;
+  --third-color: #8598ab;
+  --fourth-color: #0a0b20;
+  --fifth-color: #121430;
+  --sixth-color: #659bd5;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+body {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: var(--first-color);
+  background-color: var(--second-color);
+  background-size: cover;
+  background-position: center;
+  overflow: auto;
+}
+
+#logo0 {
+  margin-right: auto;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .3s;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--first-color);
+}
+
+#logo0 span {
+  color: var(--second-color);
+}
+
+#logo0:hover {
+  transform: scale(1.2);
+  transition: .3s;
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+#sign-in-button {
+  border: none;
+  background-color: var(--second-color);
+  color: var(--fourth-color);
+  font-size: 20px;
+  padding: 15px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: .3s;
+  text-decoration: none;
+}
+
+#sign-in-button:hover {
+  transform: scale(1.3);
+  transition: .3s;
+  color: var(--first-color);
+}
+
+.nav-bar {
+  background-color: var(--fourth-color);
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2%;
+  position: fixed;
+  flex-wrap: wrap;
+  z-index: 9999;
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+}
+  
+.nav-bar ul li {
+  padding: 15px 30px;
+  align-self: flex-end;
+  position: relative;
+}
+  
+.nav-bar ul li a {
+  font-size: 20px;
+  color: var(--first-color);
+  text-decoration: none;
+  transition: .3s;
+}
+  
+.nav-bar ul li a:hover {
+  color: var(--second-color);
+  transition: .3s;
+}
+  
+.dropdown-link {
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+
+.dropdown-menu {
+  display: none;
+}
+  
+.nav-bar ul li:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: var(--fourth-color);
+}
+  
+.nav-bar ul li:hover .dropdown-menu ul {
+  display: block;
+  margin: 20px;
+  margin-top: 35px;
+}
+  
+.nav-bar ul li:hover .dropdown-menu ul li {
+  width: 150px;
+  padding: 20px;
+}
+  
+.hero {
+  height: calc(100vh - 0px);
+  background-image: url(images/plane2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.hero2 {
+  height: calc(100vh - 0px);
+  background-image: url(images/plane1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.hero3 {
+  height: calc(100vh - 0px);
+  background-image: url(images/plane0.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.sign-in-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+
+  height: 350px;
+  width: 500px;
+  background-color: var(--fourth-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid var(--second-color);
+}
+
+.welcomming {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 150px;
+
+  height: 400px;
+  width: 650px;
+  background-color: var(--fourth-color);
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  vertical-align: middle;
+
+  border: 2px solid var(--second-color);
+  border-radius: 20px;
+}
+
+#logoAccount0 {
+  border: none;
+  background-color: var(--second-color);
+  color: var(--fourth-color);
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .3s;
+  text-decoration: none;
+}
+
+#logoAccount0:hover {
+  transform: scale(1.3);
+  transition: .3s;
+  color: var(--first-color);
+}
+
+.logoAccount {
+  height: 50px;
+  width: 50px;
+}
+
+#logoAccount01 {
+  display: flex;
+}
+
+#logOutButton:hover {
+  color: red;
+  transition: .3s;
+}
+
+/* Sener Code Ende */
+
+/* Book Flights Code */
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+.form-container {
+  width: 1225px;
+  background-color: var(--fourth-color);
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid var(--second-color);
+  border-radius: 20px;
+}
+
+.form-container label,
+.form-container input,
+.form-container select {
+  display: block;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-container label,
+.form-container input,
+.form-container select {
+  flex: 1;
+  width: 25%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-container label {
+  color: var(--second-color);
+  margin-right: 5px;
+  margin-left: 10px; 
+}
+
+.form-container soak {
+color: var(--second-color);
+}
+
+.form-container input[type="submit"] {
+  background-color: var(--second-color);
+  color: var(--fourth-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* Eingabeboxen anpassen */
+.form-container input[type="text"],
+.form-container input[type="date"],
+.form-container input[type="number"] {
+  width: 100%;
+  padding: 10px;
+}
+
+.form-container select {
+  width: 170px;
+  height: 37px;
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: var(--first-color);
+}
+
+/* Book Flights Ende */
+
+/* Account Details Code */
+
+.account-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-history-title {
+  font-size: 24px;
+  color: var(--second-color);
+  margin-bottom: 10px;
+}
+
+.account-title {
+  font-size: 24px;
+  color: var(--second-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.account-info {
+  font-size: 16px;
+  color: var(--first-color);
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid var(--fourth-color);
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--second-color);
+  color: var(--fourth-color);
+}
+
+.account-container2 {
+  background-color: var(--fourth-color);
+  padding: 50px;
+  border-radius: 20px;
+  border: 2px solid var(--second-color);
+  margin-top: 200px;
+}
+
+/* Account Details Code Ende */
+
+/* Check In Code */
+
+.checkIn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-in-form {
+  background-color: var(--fourth-color);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  border: 2px solid var(--second-color);
+  margin-top: 175px;
+}
+
+.check-in-form label {
+  display: block;
+  margin-bottom: 12px;
+  margin-top: 5px;
+  font-weight: bold;
+  color: var(--first-color);
+}
+
+.check-in-form input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid var(--second-color);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.extra-baggage-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.extra-baggage-options label {
+  font-weight: bold;
+  color: var(--first-color);
+  margin-right: 20px;
+}
+
+.extra-baggage-options input[type="radio"] {
+  margin-right: 0;
+  cursor: pointer;
+}
+
+.extra-baggage-message {
+  font-size: 13px;
+  color: #f00;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0px;
+}
+
+.confirm-button, .pay-button {
+  background-color: var(--second-color);
+  color: var(--fourth-color);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.confirm-button:hover, .pay-button:hover {
+  background-color: #659bd5;
+}
+
+.check-in-title {
+  color: var(--second-color);
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Check In Code Ende */
+
+/* Sign In Code */
+
+.sign-in-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-in-box {
+  background-color: var(--fourth-color);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  height: 450px;
+  width: 90%;
+  margin-top: 50px;
+}
+
+.sign-in-box form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-in-box .button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-in-box input[type="submit"] {
+  background-color: var(--second-color);
+  color: var(--fourth-color);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex: 1;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.sign-in-box input[type="submit"]:hover {
+  background-color: #659bd5;
+}
+
+.sign-in-box label {
+  display: block;
+  text-align: left;
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+.sign-in-box input[type="text"],
+.sign-in-box input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--second-color);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.registration-message {
+  margin-top: 30px;
+  font-size: 14px;
+  color: var(--first-color);
+}
+
+.sign-up-button {
+  background-color: var(--second-color);
+  color: var(--fourth-color);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex: 1;
+  margin-left: 5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.sign-up-button:hover {
+  background-color: var(--sixth-color);
+}
+
+.login-button {
+  text-decoration: none;
+  color: var(--second-color);
+}
+
+#sign-in-username {
+  color: var(--second-color);
+}
+
+/* Sign In Code Ende */
+
+/* Sign Up Code */
+
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-up-box {
+  background-color: var(--fourth-color);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  border: 2px solid var(--second-color);
+  margin-top: 200px;
+}
+
+.sign-up-box form {
+  margin-top: 5px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up-box .button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up-box input[type="submit"] {
+  background-color: var(--second-color);
+  color: var(--first-color);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+.sign-up-box input[type="submit"]:hover {
+  background-color: var(--sixth-color);
+}
+
+.sign-up-box label {
+  display: block;
+  text-align: left;
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: var(--second-color);
+}
+
+.sign-up-box input[type="text"],
+.sign-up-box input[type="password"],
+.sign-up-box input[type="email"],
+.sign-up-box input[type="date"],
+.sign-up-box select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--second-color);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.already-have-account {
+  font-size: 14px;
+  color: var(--first-color);
+  text-align: center;
+  margin-top: 25px;
+}
+
+.already-have-account a {
+  color: var(--second-color);
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.already-have-account a:hover {
+  text-decoration: underline;
+}
+
+/* Sign Up Code Ende */
+
+/* Sener Code */
+
+#myFlights-click {
+  text-decoration: none;
+  color: var(--first-color);
+}
+
+#myFlights-click:hover {
+  color: var(--second-color);
+}
+
+.approved {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 450px;
+  width: 700px;
+  background-color: var(--fourth-color);
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  vertical-align: middle;
+
+  border: 2px solid var(--second-color);
+  border-radius: 20px;
+}
+
+#returnHome {
+  text-decoration: none;
+  color: var(--second-color);
+}
+
+#returnHome:hover {
+  text-decoration: underline;
+}
+
+#approvedPicture {
+  height: 60px;
+  width: 60px;
+}
+
+.content2 {
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 150px;
+}
+
+.no-decoration {
+  text-decoration: none;
+  color: var(--fourth-color);
+}
+
+/* Tier Code */
+
+.tier-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tier-title {
+  color: var(--second-color);
+}
+
+.tier-form {
+  background-color: var(--fourth-color);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  border: 2px solid var(--second-color);
+  margin-top: 200px;
+}
+
+.tier-form label {
+  display: block;
+  margin-bottom: 40px;
+  margin-top: 25px;
+  font-weight: bold;
+  color: var(--first-color);
+}
+
+.tier-form input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid var(--second-color);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#tier-bronze span {
+  color: rgb(165, 105, 7);
+}
+
+#tier-bronze span span{
+  color: var(--first-color);
+}
+
+#tier-silver span {
+  color: rgb(202, 242, 255);
+}
+
+#tier-silver span span{
+  color: var(--first-color);
+}
+
+#tier-gold span {
+  color: rgb(255, 241, 40);
+}
+
+#tier-gold span span{
+  color: var(--first-color);
+}
+
+/* Tier Code Ende*/
+
+/* My Flights Code */
+
+.flight-box {
+  background-color: var(--fifth-color);
+  border: 2px solid var(--second-color);
+  border-radius: 10px;
+  width: 350px;
+  padding: 20px;
+  margin: 20px;
+  margin-top: 45px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+p {
+  margin: 30px 0;
+}
+
+.cancel-button {
+  background-color: #ff0000;
+  color: var(--first-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.cancel-button:hover {
+  background-color: #ff3333;
+}
+
+.cancellation-status {
+  margin-left: 10px;
+  color: red; 
+}
+
+.confirmation-box {
+  display: none;
+  position: absolute;
+  background-color: var(--fifth-color); 
+  border: 2px solid var(--second-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.confirmation-box p {
+  margin: 0;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: var(--first-color); 
+}
+
+.confirmation-box button.yes-button {
+  background-color: #ff0000; 
+  color: var(--first-color);
+  font-weight: bold;
+  border: 2px solid var(--fourth-color);
+  border-radius: 20px;
+  border: none;
+  padding: 10px 17px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.confirmation-box button.no-button {
+  background-color: #008000; 
+  color: var(--first-color);
+  font-weight: bold;
+  border: 2px solid var(--fourth-color);
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* My Flights Code Ende */
+
+/* Popular Code */
+
+.popular-container-container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.popular-container {
+  display: grid;
+  grid-template-rows: repeat(2, 150px);
+  grid-template-columns: repeat(3, 150px);
+  grid-gap: 10em;
+  place-items: center;
+  margin-top: 80px;
+}
+
+.item {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 0;
+  transition: .3s;
+  border: 2px solid var(--fourth-color);
+}
+
+.item-1 {
+  background-image: url(images/greece.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item-2 {
+  background-image: url(images/japan.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item-3 {
+  background-image: url(images/turkey.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item-4 {
+  background-image: url(images/usa.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item-5 {
+  background-image: url(images/hawaii.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item-6 {
+  background-image: url(images/paris.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item:hover {
+  transition: .3s;
+  color: var(--first-color);
+  font-weight: 700;
+  font-size: 2.25rem;
+  text-shadow: 2px -1px 1px black, 2px 1px 1px black;
+  cursor: pointer;
+}
+
+.popular-container-containerIndex {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.popular-container-containerBook {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 370px;
+}
+
+#popular-places {
+  color: var(--second-color);
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+  margin-top: 225px;
+  padding: 15px;
+  border: 2px solid var(--second-color);
+  border-radius: 20px;
+  background-color: var(--fourth-color);
+}
+/* Popular Code Ende */
+
+#website-indicator {
+  color: var(--second-color);
+}
+
+#website-indicator:hover {
+  color: var(--first-color);
+}
+
+/* Available Flights Code */
+
+.flight-box {
+  background-color: var(--fifth-color);
+  border: 2px solid var(--second-color);
+  border-radius: 10px;
+  width: 350px;
+  padding: 20px;
+  margin: 20px;
+  margin-top: 45px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+p {
+  margin: 30px 0;
+}
+
+.book-button {
+  background-color: #33ff00;
+  color: var(--first-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-left: 190px;
+}
+
+.book-button:hover {
+  background-color: #0c810a;
+}
+
+.available-flights-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.booking-history-title {
+  font-size: 24px;
+  color: var(--second-color); 
+  margin-bottom: 10px;
+}
+
+.account-title {
+  font-size: 24px;
+  color: var(--second-color);
+  margin-bottom: 20px;
+}
+
+.account-info {
+  font-size: 16px;
+  color: var(--first-color);
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid var(--fourth-color);
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--second-color);
+  color: var(--fourth-color);
+}
+
+.available-flights-container2 {
+  background-color: var(--fourth-color);
+  padding: 50px;
+  border-radius: 20px;
+  border: 2px solid var(--second-color);
+  margin-top: 200px;
+}
+
+/* Available Flights Code Ende */
+
+.search-ticket-button {
+  background-color: var(--second-color);
+  color: var(--fourth-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.search-ticket-button:hover {
+  background-color: var(--first-color);
+  color: var(--fourth-color);
+  transition: .3s;
+}
+
+/* Pick Class Code */
+
+.pay-class-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pay-class-block {
+  text-align: center;
+  padding: 60px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  width: 300px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.pay-class-name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.pay-class-description {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.pay-class-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: var(--second-color);
+  color: var(--fourth-color);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: sans-serif;
+  text-shadow: none;
+  font-weight: bold;
+}
+
+.pay-class-button:hover {
+  background-color: #659bd5;
+  color: var(--fourth-color);
+}
+
+.pay-class-economy-block {
+  text-align: center;
+  padding: 60px;
+  border: 2px solid var(--second-color);
+  border-radius: 10px;
+  width: 300px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  background-color: var(--fifth-color);
+  transition: 0.5s;
+  text-shadow: 1px -1px 1px black, 1px 0px 1px black;
+}
+
+.pay-class-economy-block:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
+  background-image: url(images/wood.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.pay-class-business-block {
+  text-align: center;
+  padding: 60px;
+  border: 2px solid var(--second-color);
+  border-radius: 10px;
+  width: 300px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  background-color: var(--fifth-color);
+  transition: 0.5s;
+  text-shadow: 1px -1px 1px black, 1px 0px 1px black;
+}
+
+.pay-class-business-block:hover {
+  background-image: url(images/gold1.jpeg);
+  background-position: center;
+  background-size: cover;
+  transition: all 0.5s;
+  transform: scale(1.1);
+}
+
+.pay-class-first-block {
+  text-align: center;
+  padding: 60px;
+  border: 2px solid var(--second-color);
+  border-radius: 10px;
+  width: 300px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  background-color: var(--fifth-color);
+  text-shadow: 1px -1px 1px black, 1px 0px 1px black;
+  transition: 0.5s;
+}
+
+.pay-class-first-block:hover {
+  background-image: url(images/diamond5.jpeg);
+  background-position: center;
+  background-size: cover;
+  transition: all 0.5s;
+  transform: scale(1.1);
+}
+
+/* Pick Class Code Ende*/
+
+/* Pay Flight Code Ende*/
+
+.pay-flight-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pay-flight-form {
+  background-color: var(--fourth-color);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  width: 1200px;
+  border: 2px solid var(--second-color);
+  margin-top: 175px;
+}
+
+.pay-flight-form label {
+  display: block;
+  margin-bottom: 12px;
+  margin-top: 5px;
+  font-weight: bold;
+  color: var(--first-color); 
+}
+
+.pay-flight-form input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid var(--second-color);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.pay-flight-extra-baggage-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.pay-flight-extra-baggage-options label {
+  font-weight: bold;
+  color: var(--first-color);
+  margin-right: 300px;
+}
+
+.pay-flight-extra-baggage-options input[type="radio"] {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.pay-flight-extra-baggage-message {
+  font-size: 13px;
+  color: #f00;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.pay-flight-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.pay-flight-confirm-button, .pay-flight-pay-button {
+  background-color: var(--second-color); 
+  color: var(--fourth-color);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.pay-flight-confirm-button:hover, .pay-flight-pay-button:hover {
+  background-color: #659bd5;
+}
+
+.pay-flight-title {
+  color: var(--second-color);
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Pay Flight Code Ende*/
+
+.no-account-message {
+  margin: 0;
+  margin-top: 10px;
+  color: red;
+}
+
+.pay-class-selected {
+  background-color: #33d138;
+  color: white;
+}
+
+.pay-total {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+.available-total {
+  text-align: left;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.search-ticket-discount {
+  margin-top: 200px;
+}
+
+#offerCode {
+  cursor: pointer;
+  color: var(--second-color);
+}
+
+#offer-click-to-see {
+  text-decoration: none;
+  color: var(--first-color);
+}
+
+#offer-click-to-see:hover {
+  color: var(--second-color);
+}
+
+#cancle-reason {
+  margin-top: 12px;
+  color: var(--first-color);
+}
+
+/* Employee Homepage */
+
+.body-employee {
+  font-weight: bold;
+  color: black;
+  font-family: sans-serif;
+}
+
+.navbar {
+  background-color: var(--fourth-color);
+}
+
+#addFlightButton {
+  padding: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-weight: bold;
+  border: 2px solid rgb(43, 42, 42);
+  transition: .3s;
+}
+
+#addFlightButton:hover {
+  border-radius: 20px;
+  transition: .3s;
+  background-color: var(--second-color);
+}
+
+#editFlightButton {
+  padding: 5px;
+  margin-right: 20px;
+  font-weight: bold;
+  border: 2px solid rgb(43, 42, 42);
+  transition: .3s;
+}
+
+#editFlightButton:hover {
+  border-radius: 20px;
+  transition: .3s;
+  background-color: var(--second-color);
+}
+
+#removeFlightButton {
+  padding: 5px;
+  margin-right: 20px;
+  font-weight: bold;
+  border: 2px solid rgb(43, 42, 42);
+  transition: .3s;
+}
+
+#removeFlightButton:hover {
+  border-radius: 20px;
+  transition: .3s;
+  background-color: var(--second-color);
+}
+
+#editOfferButton {
+  padding: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-weight: bold;
+  border: 2px solid rgb(43, 42, 42);
+  transition: .3s;
+}
+
+#editOfferButton:hover {
+  border-radius: 20px;
+  transition: .3s;
+  background-color: var(--second-color);
+}
+
+.table {
+  border: 2px solid black;
+}
+
+#offersTable {
+  border: 2px solid black;
+}
+
+#flightsTable {
+  border: 2px solid black;
+}
+
+#requestsTable {
+  border: 2px solid black;
+}
+
+th {
+  border: 2px solid black;
+}
+
+tr {
+  border: 2px solid black;
+}
+
+td {
+  border: 2px solid black;
+}
+
+/* Employee Homepage Ende */
+
+#checked-in-status {
+  color: var(--first-color);
+  margin-left: 45px;
+  border: 2px solid white;
+  padding: 8px;
+  border-radius: 20px;
+  transition: .3s;
+}
+
+#checked-in-status:hover {
+  border-radius: 0px;
+  transition: .3s;
+}
