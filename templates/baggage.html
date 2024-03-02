@@ -1,0 +1,79 @@
+<!DOCTYPE html>                                                                                                                             
+
+<html lang = "en">                                                                                                                          
+    <head>
+        <meta charset = "UTF-8">                                                                                                            
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">                                                        
+        <link rel = "stylesheet" href = "style.css">                                                                                        
+        <title>BananaAirlines</title>  
+        <script>
+          var timeout;
+            document.onmousemove = function(){
+              clearTimeout(timeout);
+              timeout = setTimeout(function(){location.href = '/index'}, 60000);
+            }
+        </script>                                                                                                             
+    </head>
+  <body>
+    <div class = "nav-bar">
+      <a id = "logo0" href = "indexSignedInClient.html"><img class = "logo" src = "images/icon.png" alt = "Logo">Banana<span>Airlines</a>
+      <ul>
+        <li><a id = "website-indicator" href = "bookFlights.html">Book Flight<i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "bookFlights.html">Book Flight</a></li>
+              <li><a href = "baggage.html">Baggage</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href = "myFlights.html">My Flights<i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "myFlights.html">My Flights</a></li>
+              <li><a href = "checkIn.html">Check In</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a>Discover<i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "tiers.html">Tiers</a></li>
+              <li><a href = "popular.html">Popular</a></li>
+            </ul>
+          </div>
+        </li>
+        <li id = "logoAccount01"><a id = "logoAccount0" href = "account.html"><img class = "logoAccount" src = "images/iconAccount.png" alt = "Logo"><i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "account.html">Account Details</a></li>
+              <li><a id = "logOutButton" href = "index.html">Log Out</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class = "hero">
+      <div class="checkIn-container">
+        <div class="check-in-form">
+          <h2 class="check-in-title">Baggage</h2>
+            <form action="checkInConfirmation.html" method="POST">
+                <div class="extra-baggage-options">
+                    <label for="extraBaggage">Purchase Allowance:</label>
+                    <input type="radio" id="extraBaggageYes" name="extraBaggage" value="Yes">
+                    <label for="extraBaggageYes">Yes</label>
+                    <input type="radio" id="extraBaggageNo" name="extraBaggage" value="No" checked>
+                    <label for="extraBaggageNo">No</label>
+                </div>
+
+                <p class="extra-baggage-message">*Extra Baggage Allowance costs 19.99€</p>
+
+                <div class="button-container">
+                    <button class="confirm-button" type="submit"><a class="no-decoration" href="approved.html">Confirm Purchase</a></button>
+                    <button class="pay-button" type="submit"><a class="no-decoration" href="indexSignedInClient.html">Deny extra Baggage Allowance</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+  </body>
+</html>

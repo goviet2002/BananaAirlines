@@ -1,0 +1,157 @@
+<!DOCTYPE html>                                                                                                                             
+
+<html lang = "en">                                                                                                                          
+    <head>
+        <meta charset = "UTF-8">                                                                                                            
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">                                                        
+        <link rel = "stylesheet" href = "static/style.css">                                                                                        
+        <title>BananaAirlines</title>    
+        
+        <script>
+          document.getElementById("myFlights-click").addEventListener("click", function(event){
+            event.preventDefault();
+            document.getElementById("flightsHistory").style.display = "block";
+          });
+          function copyToClipboard() {
+            var offerCode = document.getElementById('offerCode').innerText;
+            var tempInput = document.createElement("input");
+            tempInput.value = offerCode;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Copied the offer code: " + offerCode);
+          }
+
+          var timeout;
+          document.onmousemove = function(){
+            clearTimeout(timeout);
+            timeout = setTimeout(function(){location.href = '/index'}, 60000);
+          }
+          function formatDate(dateString) {
+            var dateParts = dateString.split("-");
+            return dateParts[2] + "-" + dateParts[1] + "-" + dateParts[0];
+          }
+        </script>
+          
+    </head>
+  <body>
+    <div class = "nav-bar">
+      <a id = "logo0" href = "/index"><img class = "logo" src = "static/images/icon.png" alt = "Logo">Banana<span>Airlines</a>
+      <ul>
+        <li><a href = "/bookFlights">Book Flight<i class = "dropdown-link"></i></a>
+        </li>
+        <li><a href = "/myFlights">My Flights<i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/myFlights">My Flights</a></li>
+              <li><a href = "/checkIn">Check In</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a>Discover<i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/tiers">Tiers</a></li>
+              <li><a href = "/popular">Popular</a></li>
+            </ul>
+          </div>
+        </li>
+        <li id = "logoAccount01"><a id = "logoAccount0" href = "/account"><img class = "logoAccount" src = "static/images/iconAccount.png" alt = "Logo"><i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/account">Account Details</a></li>
+              <li><a id = "logOutButton" href = "/logout">Log Out</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class = "hero">
+        <div class="account-container">
+          <div class = "account-container2">
+            <div class="account-box">
+                {% for row in value %}
+                    <h2 class="account-title">My Account</h2>
+                    <div class="account-info">
+                        <strong>First Name: {{ row[0] }}</strong>
+                    </div>
+                    <div class="account-info">
+                        <strong>Last Name: {{ row[1] }}</strong>
+                    </div>
+                    <div class="account-info">
+                        <strong>Email: {{ row[2] }}</strong>
+                    </div>
+                    <div class="account-info">
+                        <strong>User ID: {{ row[3] }}</strong>
+                    </div>
+                    <div class="account-info">
+                        <strong>Tier Status: {{ row[4] }}</strong>
+                    </div>
+                    <div class="account-info">
+                        <strong>Miles: {{ row[5] }}</strong>
+                    </div>
+                    <div class="account-info">
+                      <strong>Offers: Apply 
+                          <span id="offerCode">{{ row[6] }}</span>
+                          for discount <a id ="offer-click-to-see" href="/tiers">(Click for more details)</a>
+                      </strong>
+                    </div>
+        
+                    <!-- End of the first loop -->
+                {% endfor %}
+        
+                <!-- Start of the second loop for the table -->
+                <div class="account-info">
+                  <strong>My Flights <a id = "myFlights-click" href = "/myFlights">(Click for more details)</a></strong>
+                </div>
+        
+                <h2 class="booking-history-title">Flights History</h2>
+        
+                <table>
+                  <thead>
+                      <tr>
+                          <th>Booking ID</th>
+                          <th>Departure</th>
+                          <th>Departure Time</th>
+                          <th>Destination</th>
+                          <th>Arrival Time</th>
+                          <th>Flight Code</th>
+                          <th>Ticket Type</th>
+                          <th>Price</th>
+                          <th>Miles</th>
+                          <th>Status</th>
+                          <th>Extra Baggage</th>
+                          <th>Check In</th>
+
+                      </tr>
+                  </thead>
+                  <!-- Here's where we add the loop for the table rows -->
+                  {% for flight in flights %}
+                      <tbody>
+                          <tr>
+                              <td style="cursor: pointer;" id="ticketID" onclick="copyToClipboards()">{{ flight[0] }}</td>
+                              <td>{{ flight[1] }}</td>
+                              <td>{{ flight[2] }}</td>
+                              <td>{{ flight[3] }}</td>
+                              <td>{{ flight[4] }}</td>
+                              <td>{{ flight[5] }}</td>
+                              <td>{{ flight[6] }}</td>
+                              <td>{{ flight[7] }}</td>
+                              <td>{{ flight[11] }}</td>
+                              <td>{{ flight[8] }}</td>
+                              <td>{{ flight[10] }}</td>
+                              <td>{{ flight[9] }}</td>
+                          </tr>
+                      </tbody>
+                  {% endfor %} 
+                </table>
+        
+            </div>
+          </div> 
+        </div>
+      </div>
+      <div class = "hero2"></div>
+      <div class = "hero3"></div>
+    </body>
+</html>

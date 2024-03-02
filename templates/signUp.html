@@ -1,0 +1,158 @@
+<!DOCTYPE html>                                                                                                                             
+
+<html lang = "en">                                                                                                                          
+    <head>
+        <meta charset = "UTF-8">                                                                                                            
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">                                                        
+        <link rel = "stylesheet" href = "static/style.css">                                                                                        
+        <title>BananaAirlines</title>  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('create_username').addEventListener('input', function (e) {
+                    var username = e.target.value;
+                    if (username.startsWith('admin_')) {
+                        alert('Username should not start with "admin_"');
+                        e.target.value = '';  // Clear the input box
+                    }
+                });
+            });
+            
+            $(document).ready(function() {
+                $('#email').on('blur', function() {
+                    var email = $(this).val();
+                    var re = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+                    if (!re.test(email)) {
+                        alert('Please enter a valid email address');
+                        $(this).val(''); // Clear the input field if the email is invalid
+                    } else {
+                        // Send a POST request to the server with the email
+                        $.ajax({
+                            url: '/check_email',
+                            type: 'post',
+                            dataType: 'json',
+                            contentType: 'application/json',
+                            success: function (data) {
+                                // If the email exists, alert the user and clear the input field
+                                if (data.emailExists) {
+                                    alert('Email already exists');
+                                    $('#email').val('');
+                                }
+                            },
+                            data: JSON.stringify({email: email})
+                        });
+                    }
+                });
+            });
+
+            $(document).ready(function() {
+                $('#create_username').on('blur', function() {
+                    var username = $(this).val();
+                    $.ajax({
+                            url: '/check_username',
+                            type: 'post',
+                            dataType: 'json',
+                            contentType: 'application/json',
+                            success: function (data) {
+                                // If the email exists, alert the user and clear the input field
+                                if (data.username) {
+                                    alert('Userrname already exists');
+                                    $('#create_username').val('');
+                                }
+                            },
+                            data: JSON.stringify({username: username})
+                    });
+                });
+                
+            });
+        </script>                                                                                                                         
+    </head>
+  <body>
+    <div class = "nav-bar">
+      <a id = "logo0" href = "/index"><img class = "logo" src = "static/images/icon.png" alt = "Logo">Banana<span>Airlines</a>
+    </div>
+    <div class = "hero">
+      <div class="sign-up-container">
+        <div class="sign-up-box">
+            <form action="/signUp" method="POST">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required>
+
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="birthdate">Birthdate:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+
+                <label for="country">Country of Residence:</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Select your country</option>
+                </select>
+
+                <label for="create_username">Create Username:</label>
+                <input type="text" id="create_username" name="create_username" required>
+
+                <label for="create_password">Create Password:</label>
+                <input type="password" id="create_password" name="create_password" required>
+
+                <label for="mobile_number">Mobile Number:</label>
+                <input type="text" id="mobile_number" name="mobile_number" required>
+
+            
+                <div class="button-container">
+                    <!--<a href="/account" class="sign-up-button">Sign Up</a>
+                        here design -->
+                    <input type="submit" class="sign-up-button" value="Sign Up"></br>
+                    <p class="already-have-account">Already have an account? <a href="/signIn">Sign In Here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <script>
+        // Array mit Ländern
+        const countries = [
+        "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", 
+"Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", 
+"Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Côte d'Ivoire", "Cabo Verde", 
+"Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo (Congo-Brazzaville)", 
+"Costa Rica", "Croatia", "Cuba", "Cyprus", "Czechia (Czech Republic)", "Democratic Republic of the Congo (Congo-Kinshasa)", "Denmark", "Djibouti", "Dominica", "Dominican Republic", 
+"Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", 
+"France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", 
+"Guinea-Bissau", "Guyana", "Haiti", "Holy See", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", 
+"Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kuwait", 
+"Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", 
+"Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", 
+"Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar (formerly Burma)", "Namibia", "Nauru", 
+"Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia (formerly Macedonia)", "Norway", "Oman", 
+"Pakistan", "Palau", "Palestine State", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", 
+"Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", 
+"Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", 
+"Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", 
+"Syria", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", 
+"Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", 
+"Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe" 
+        ];
+
+        const countryDropdown = document.getElementById("country");
+        countries.forEach(country => {
+            const option = document.createElement("option");
+            option.value = country;
+            option.textContent = country;
+            countryDropdown.appendChild(option);
+        });
+    </script>
+    </div>
+    <div class = "hero2"></div>
+  </body>
+</html>

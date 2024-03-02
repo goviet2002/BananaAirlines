@@ -1,0 +1,32 @@
+<!DOCTYPE html>                                                                                                                             
+
+<html lang = "en">                                                                                                                          
+    <head>
+        <meta charset = "UTF-8">                                                                                                            
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">                                                        
+        <link rel = "stylesheet" href = "static/style.css">                                                                                      
+        <title>BananaAirlines</title>                                                                                                               
+    </head>
+  <body>
+    <div class = "nav-bar">
+      <a id = "logo0" href = "/index"><img class = "logo" src = "static/images/icon.png" alt = "Logo">Banana<span>Airlines</a>
+    </div>
+    <div class = "hero">
+      <div class="sign-in-container">
+        <div class="sign-in-box">
+            <form action="/signIn" method="POST">
+                <label id = "sign-in-username" for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label id = "sign-in-username" for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <div class="button-container">
+                    <input type="submit" value="Login" class="login-button"> 
+                    <p class = "no-account-message">{{ msg }}</p>
+                    <p class="registration-message">I don't have an account <a href="/signUp" class="sign-up-button">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+  </body>
+</html>

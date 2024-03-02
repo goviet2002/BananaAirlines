@@ -1,0 +1,159 @@
+<!DOCTYPE html>                                                                                                                             
+
+<html lang = "en">                                                                                                                          
+    <head>
+        <meta charset = "UTF-8">                                                                                                            
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">                                                        
+        <link rel = "stylesheet" href = "static/style.css">                                                                                        
+        <title>BananaAirlines</title>  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+          var timeout;
+          document.onmousemove = function(){
+            clearTimeout(timeout);
+            timeout = setTimeout(function(){location.href = '/index'}, 60000);
+          }
+
+          $(document).ready(function() {
+            $('.cancel-button').click(function() {
+                var confirmationBox = $(this).parent().siblings('.confirmation-box');
+                confirmationBox.show();
+            });
+        
+            $('.yes-button').click(function() {
+                var confirmationBox = $(this).parent();
+                var cancellationReason = confirmationBox.find('#cancle-reason-input').val();
+        
+                var reasonInput = $('<input>').attr({
+                    type: 'hidden',
+                    name: 'reason',
+                    value: cancellationReason
+                });
+        
+                confirmationBox.append(reasonInput);
+                confirmationBox.closest('form').submit();
+              });
+          
+              $('.no-button').click(function() {
+                  $(this).parent().hide();
+              });
+          });
+        
+        </script>
+        <style>
+          #checked-in-status {
+            margin-left: 65px;
+          }
+          .cancellation-status {
+            margin-left: 0px;
+          }
+          .row {
+            display: flex;
+            align-items: center;
+          }
+          #not-checked-in-status {
+            color: var(--first-color);
+            margin-left: 41px;
+            border: 2px solid white;
+            padding: 8px;
+            border-radius: 20px;
+            transition: .3s;
+          }
+          #not-checked-in-status:hover {
+            border-radius: 0px;
+            transition: .3s;
+          }
+        </style>
+    </head>
+  <body>
+    <div class = "nav-bar">
+      <a id = "logo0" href = "/index"><img class = "logo" src = "static/images/icon.png" alt = "Logo">Banana<span>Airlines</a>
+      <ul>
+        <li><a href = "/bookFlights">Book Flight<i class = "dropdown-link"></i></a>
+        </li>
+        <li><a id = "website-indicator" href = "/myFlights">My Flights<i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/myFlights">My Flights</a></li>
+              <li><a href = "/checkIn">Check In</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a>Discover<i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/tiers">Tiers</a></li>
+              <li><a href = "/popular">Popular</a></li>
+            </ul>
+          </div>
+        </li>
+        <li id = "logoAccount01"><a id = "logoAccount0" href = "/account"><img class = "logoAccount" src = "static/images/iconAccount.png" alt = "Logo"><i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/account">Account Details</a></li>
+              <li><a id = "logOutButton" href = "/logout">Log Out</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class = "hero">
+      <div class="account-container">
+        <div class = "account-container2">
+        <div class="account-box">
+          <h2 class="account-title" >My Flights</h2>
+          {% if flights %}
+            {% for flight in flights %}
+            <div class="flight-box">
+              <h2>Flight Details</h2>
+              <p><strong>Ticket ID:</strong> <span id="ticketID">{{ flight[7] }}</span></p>
+              <p><strong>Flight Code:</strong> {{ flight[0] }}</p>
+              <p><strong>Departure:</strong> {{ flight[1] }}</p>
+              <p><strong>Destination:</strong> {{ flight[2] }}</p>
+              <p><strong>Distance:</strong> {{ flight[3] }} </p>
+              <p><strong>Departure Time:</strong> {{ flight[4] }} UTC</p>
+              <p><strong>Arrival Time:</strong> {{ flight[5] }} UTC</p>
+              <p><strong>Extra Baggage:</strong> {{ flight[8] }}</p>
+              <p><strong>Status:</strong> <span style="color: #8dc6ff;">{{ flight[6] }}</span></p>
+
+              <form action="/Cancel_Client" method="POST">
+                <div class="confirmation-box" id="confirmationBox{{ flight[7] }}" data-flight="{{ flight[7] }}">
+                    <p style="color: #fff;">Are you sure you want to cancel your flight?</p>
+                    <button type="button" class="yes-button" onclick="confirmCancel(this)">Yes</button>
+                    <button type="button" class="no-button" onclick="cancelCancellation(this)">No</button>
+                    <br>
+                    <label for="cancle-reason-input">Reason (Required):</label>
+                    <br>
+                    <input type="text" id="cancle-reason-input" name="cancle-reason-input" required>
+                    <input type="hidden" name="TicketID" value="{{ flight[7] }}">
+                </div>
+                {% if flight[9] == "Yes" and flight[10] == "Yes" %}
+                  <p><span class="cancellation-status">Pending Request</span><span id="checked-in-status" style="background-color: #8dc6ff;">Checked in</span></p>
+                {% elif flight[9] == "Yes" and flight[10] == "No" %}
+                  <p><span class="cancellation-status">Pending Request</span><span id="not-checked-in-status">Not checked in</span></p>
+                {% elif flight[9] == "No" and flight[10] == "Yes" %}
+                  <div class="row">
+                    <button class="cancel-button" data-flight="{{ flight[7] }}" onclick="showConfirmation(this)">Cancel Flight</button>
+                    <span id="checked-in-status" style="background-color: #8dc6ff;">Checked in</span>
+                  </div>
+                {% else %}
+                <div class="row">
+                  <button class="cancel-button" data-flight="{{ flight[7] }}" onclick="showConfirmation(this)">Cancel Flight</button>
+                  <span id="not-checked-in-status">Not checked in</span>
+                </div>
+                {% endif %}
+              </form>
+            </div>
+            {% endfor %}
+        {% else %}
+          <p>You don't have any flights at the moment!</p>
+        {% endif %}
+
+          </div>
+        </div>
+    </div>
+    </div>
+    <div class ="hero2"></div>
+    <div class = "hero3"></div>
+  </body>
+</html>

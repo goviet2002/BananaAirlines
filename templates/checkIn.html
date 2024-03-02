@@ -1,0 +1,123 @@
+<!DOCTYPE html>                                                                                                                             
+
+<html lang = "en">                                                                                                                          
+    <head>
+        <meta charset = "UTF-8">                                                                                                            
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">                                                        
+        <link rel = "stylesheet" href = "static/style.css">                                                                                        
+        <title>BananaAirlines</title> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+          .pay-button{
+            margin-top: 0px;
+          }
+          #top{
+            margin-top: 20px;
+          }
+        </style>
+        <script>
+          var timeout;
+          document.onmousemove = function(){
+            clearTimeout(timeout);
+            timeout = setTimeout(function(){location.href = '/index'}, 60000);
+          }
+          function validateNames() {
+            var bookingID = document.getElementById('bookingID').value;
+            var enteredFirstName = document.getElementById('firstName').value;
+            var enteredLastName = document.getElementById('lastName').value;
+
+            // Reset the msg text content
+            document.getElementById('msg').textContent = '';
+            
+            $.ajax({
+                url: '/validate_names',
+                data: {'bookingID': bookingID},
+                type: 'POST',
+                success: function(response) {
+                    if (enteredFirstName !== response.firstName || enteredLastName !== response.lastName) {
+                        document.getElementById('msg').textContent = 'The first name or last name is incorrect!';
+                    } else if (response.alreadyCheckedIn) { // Corrected here
+                        document.getElementById('msg').textContent = 'This ticket is already checked in!';
+                    } else {
+                        $.ajax({
+                            url: '/update_checkin',
+                            data: {'bookingID': bookingID},
+                            type: 'POST',
+                            success: function(response) {
+                                if (response.success) {
+                                    window.location.href = '/finish_checkin';
+                                } else {
+                                    document.getElementById('msg').textContent = 'Failed to check in.';
+                                }
+                            }
+                        });
+                    }
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+          }         
+        </script>                                                                                                              
+    </head>
+  <body>
+    <div class = "nav-bar">
+      <a id = "logo0" href = "/index"><img class = "logo" src = "static/images/icon.png" alt = "Logo">Banana<span>Airlines</a>
+      <ul>
+        <li><a href = "/bookFlights">Book Flight<i class = "dropdown-link"></i></a>
+        </li>
+        <li><a id = "website-indicator" href = "/myFlights">My Flights<i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/myFlights">My Flights</a></li>
+              <li><a href = "/checkIn">Check In</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a>Discover<i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/tiers">Tiers</a></li>
+              <li><a href = "/popular">Popular</a></li>
+            </ul>
+          </div>
+        </li>
+        <li id = "logoAccount01"><a id = "logoAccount0" href = "/account"><img class = "logoAccount" src = "static/images/iconAccount.png" alt = "Logo"><i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/account">Account Details</a></li>
+              <li><a id = "logOutButton" href = "/logout">Log Out</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class = "hero">
+        <div class="checkIn-container">
+            <div class="check-in-form">
+              <h2 class="check-in-title">Check-In</h2>
+              <form action="/update_checkin" method="POST" onsubmit="event.preventDefault(); validateNames();">
+                    <label for="bookingID">Booking ID:</label>
+                    <input type="text" id="bookingID" name="bookingID" required>
+
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+    
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+
+                    <p id="msg" style="margin: 10px; text-align: center; color: red;"></p>
+    
+                    <div class="button-container">
+                        <button class="pay-button" id = 'top' type="submit">Confirm Online Check-In</button>
+                    </div>
+                </form>
+                <div class="button-container">
+                  <button class="pay-button"><a class="no-decoration" href="/index">Do not check in yet</a></button>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class = "hero2"></div>
+  </body>
+</html>

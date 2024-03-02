@@ -1,0 +1,97 @@
+<!DOCTYPE html>                                                                                                                             
+
+<html lang = "en">                                                                                                                          
+    <head>
+        <meta charset = "UTF-8">                                                                                                            
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">                                                        
+        <link rel = "stylesheet" href = "static/style.css">                                                                                        
+        <title>BananaAirlines</title>
+        <script>
+          function bookFlight() {
+              // You can add your cancellation logic here.
+              window.location.href = 'payFlight.html';
+          }
+
+          var timeout;
+          document.onmousemove = function(){
+            clearTimeout(timeout);
+            timeout = setTimeout(function(){location.href = '/index'}, 60000);
+          }
+        </script>                                                                                                               
+    </head>
+  <body>
+    <div class = "nav-bar">
+      <a id = "logo0" href = "/index"><img class = "logo" src = "static/images/icon.png" alt = "Logo">Banana<span>Airlines</a>
+      <ul>
+        <li><a href = "/bookFlights">Book Flight<i class = "dropdown-link"></i></a>
+        </li>
+        <li><a href = "/myFlights">My Flights<i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/myFlights">My Flights</a></li>
+              <li><a href = "/checkIn">Check In</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a>Discover<i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/tiers">Tiers</a></li>
+              <li><a href = "/popular">Popular</a></li>
+            </ul>
+          </div>
+        </li>
+        <li id = "logoAccount01"><a id = "logoAccount0" href = "/account"><img class = "logoAccount" src = "static/images/iconAccount.png" alt = "Logo"><i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/account">Account Details</a></li>
+              <li><a id = "logOutButton" href = "/logout">Log Out</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class = "hero">
+      <div class="available-flights-container">
+        <div class = "available-flights-container2">
+        <div class="account-box">
+            <h2 class="account-title">Available Flights</h2>
+            {% for flight, o, capacity, passengers in flights_offers %}
+              <div class="flight-box">
+                <h2>Flight Details</h2>
+                <form action="/payFlight" method="POST">
+                  <p><strong>Flight Code:</strong> {{ flight[0] }}</p>
+                  <p><strong>Departure:</strong> {{ flight[1] }}</p>
+                  <p><strong>Destination:</strong> {{ flight[2] }}</p>
+                  <p><strong>Distance:</strong> {{ flight[5] }} km</p>
+                  <p><strong>Departure Time:</strong> {{ flight[3] }} UTC</p>
+                  <p><strong>Arrival Time:</strong> {{ flight[4] }} UTC</p>
+                  <div class = "available-total">Total: €{{ o[0] }},-</div>
+                  <input class="book-button" type="submit" value ="Book Flight">
+                
+                  <input type="hidden" name="price_economy" value="{{ o[0] }}">
+                  <input type="hidden" name="price_business" value="{{ o[1] }}">
+                  <input type="hidden" name="price_firstclass" value="{{ o[2] }}">
+                  <input type="hidden" name="Flight_Code" value="{{ flight[0] }}">
+                  <input type="hidden" name="Departure" value="{{ flight[1] }}">
+                  <input type="hidden" name="Destination" value="{{ flight[2] }}">
+                  <input type="hidden" name="Departure_Time" value="{{ flight[3] }}">
+                  <input type="hidden" name="Arrival_Time" value="{{ flight[4] }}">
+                  <input type="hidden" name="Distance" value="{{ flight[5] }}">
+                  <input type="hidden" name="Capacity_Economy" value="{{ capacity[0] }}">
+                  <input type="hidden" name="Capacity_Business" value="{{ capacity[1] }}">
+                  <input type="hidden" name="Capacity_FirstClass" value="{{ capacity[2] }}">
+                  <input type="hidden" name="passengers" value="{{ passengers[0] }}">
+                </form>
+              </div>
+            {% endfor %}
+        
+            
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class ="hero2"></div>
+    <div class ="hero3"></div>
+  </body>
+</html>

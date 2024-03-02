@@ -1,0 +1,176 @@
+<!DOCTYPE html>                                                                                                                             
+
+<html lang = "en">                                                                                                                          
+    <head>
+        <meta charset = "UTF-8">                                                                                                           
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">                                                        
+        <link rel = "stylesheet" href = "static/style.css">                                                                                        
+        <title>BananaAirlines</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script>
+          window.onload = function() {
+            var dateInput = document.getElementById('datum');
+            var submitButton = document.querySelector('input[type="submit"]');
+            
+            // Disable the button initially
+            submitButton.disabled = true;
+            
+            // Enable the button when a date is selected
+            dateInput.onchange = function() {
+                if (dateInput.value) {
+                    submitButton.disabled = false;
+                } else {
+                    submitButton.disabled = true;
+                }
+            };
+          };
+          $(document).ready(function() {
+            $.ajax({
+                url: "/get_departure_cities",
+                type: "GET",
+                success: function(response) {
+                    var cities = response;
+                    $('#von').empty();
+                    $('#von').append('<option value="">Please select a county</option>');
+                    cities.forEach(function(city) {
+                        $('#von').append('<option value="' + city + '">' + city + '</option>');
+                    });
+                }
+            });
+        
+            $('#von').change(function() {
+              var departureCity = $(this).val();
+              console.log("Departure City: ", departureCity);  // Debugging line
+              $.ajax({
+                  url: "/get_destination_cities",
+                  type: "GET",
+                  data: {departure: departureCity},
+                  success: function(response) {
+                      var cities = response;
+                      console.log("Destination Cities: ", cities);  // Debugging line
+                      $('#nach').empty();
+                      $('#nach').append('<option value="">Please select a county</option>');
+                      cities.forEach(function(city) {
+                          $('#nach').append('<option value="' + city + '">' + city + '</option>');
+                      });
+                  }
+              });
+            });
+
+            $('#von, #nach').change(function() {
+              var departureCity = $('#von').val();
+              var destinationCity = $('#nach').val();
+              if (departureCity && destinationCity) {
+                  $.ajax({
+                      url: "/get_flight_dates",
+                      type: "GET",
+                      data: {departure: departureCity, destination: destinationCity},
+                      success: function(response) {
+                          var availableDates = response;
+                          if ($('#datum').hasClass('flatpickr-input')) {
+                              $('#datum').flatpickr().destroy();  // Destroy the old datepicker
+                          }
+                          $('#datum').flatpickr({  // Create a new datepicker
+                              enable: availableDates,
+                              dateFormat: "d-m-Y"
+                          });
+                      }
+                  });
+              }
+            });
+          });
+        </script>                                                                                                    
+    </head>
+  <body>
+    <div class = "nav-bar">
+      <a id = "logo0" href = "/index"><img class = "logo" src = "static/images/icon.png" alt = "Logo">Banana<span>Airlines</a>
+      <ul>
+        <li><a href = "/signIn">Book Flight<i class = "dropdown-link"></i></a>
+        </li>
+        <li><a href = "/signIn">My Flights<i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/signIn">My Flights</a></li>
+              <li><a href = "/signIn">Check In</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a>Discover<i class = "dropdown-link"></i></a>
+            <div class = "dropdown-menu">
+              <ul>
+                <li><a href = "/signIn">Tiers</a></li>
+                <li><a href = "/signIn">Popular</a></li>
+              </ul>
+            </div>
+        </li>
+      </ul>
+      <a id = "sign-in-button" href = "/signIn">Sign In</a>
+    </div>
+    <div class = "hero">
+      <div>
+        <div class = "welcomming">
+          Ladies and gentlemen,
+          </br>
+          Distinguished guests,
+          </br>
+          Honored patrons,
+          </br>
+          It is with great pleasure and immense pride 
+          </br>
+          that I extend to you all a warm and gracious
+          </br>
+          welcome to our Airline - BananaAirlines. 
+          </br>
+          We gurantee a marvelous, swift and secure 
+          </br>
+          flight to your next destination.
+          </br>
+          We also serve Bananas.
+          </br>
+          Enjoy.
+        </div>
+     </div>
+    </div>
+    <div class = "hero2">
+      <div class="content">
+        <div class="form-container">
+          <soak> <h2>Book your ticket here</h2> </soak> 
+          <br>    </br> 
+          <form action="/signIn" method="POST">
+            <label for="von">Departure:</label>
+            <select id="von" name="von" required>
+              <option value="">Please select a county</option>
+
+            </select> 
+            <label for="nach">Destination:</label>
+            <select id="nach" name="nach" required>
+              <option value="">Please select a county</option>
+
+            </select>
+            <label for="datum">Departure Date:</label>
+            <input type="date" id="datum" name="datum" required>
+            <label for="passagier">Number of Passengers:</label>
+            <input type="number" id="passagier" name="passagier" min="1" required>
+            <label for="flightCode">Discount Code</label>
+            <input type="text" id="flightCode" name="flightCode">
+            <input type="submit" value="Search for Ticket">
+          </from>
+        </div>
+      </div>
+      <section class="popular-container-containerIndex">
+        <div class="popular-container">
+          <a class="no-decoration"><div class="item item-1">Greece</div></a>
+          <a class="no-decoration"><div class="item item-2">Japan</div></a>
+          <a class="no-decoration"><div class="item item-3">Turkey</div></a>
+          <a class="no-decoration"><div class="item item-4">USA</div></a>
+          <a class="no-decoration"><div class="item item-5">Hawaii</div></a>
+          <a class="no-decoration"><div class="item item-6">France</div></a>
+        </div>
+      </section>
+    </div>
+    <div class = "hero3"></div>
+  </body>
+</html>

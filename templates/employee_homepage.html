@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+    </style>
+    <script type="text/javascript">
+        $(window).on('load', function() {
+            $('#requestsTable').show();
+        });
+
+        $(document).ready(function() {
+            $('#flights').click(function() {
+                // TODO: Fetch the flight data from the server and insert it into the table
+                $('#flightsTable').show();
+                $('#addFlightButton').show();
+                $('#editFlightButton').show();
+                $('#removeFlightButton').show();
+                $('#offersTable').hide();
+                $('#editOfferButton').hide();
+                $('#requestsTable').hide();
+            });
+
+            $('#addFlightButton').click(function() {
+                // Create a new row
+                var $row = $('<tr>');
+
+                // Create cells with input fields
+                var $selectCell = $('<td>').append($('<input type="checkbox">'));
+                var $flightCodeCell = $('<td>').append($('<input type="text" class="flightCodeInput" placeholder="Enter flight code">'));
+                var $aircraftCell = $('<td>').append($('<input type="text" class="aircraftInput" placeholder="Enter aircraft">'));
+                var $capacityCell = $('<td>').append($('<input type="number" id="capacity" name="capacity" min="0" class="capacityInput" placeholder="Enter capacity">'));
+                var $capacityEconomyCell = $('<td>').append($('<input type="text" class="CapacityEconomy" name="CapacityEconomy" id="CapacityEconomy" placeholder="Enter capacity of Economy">'));
+                var $capacityBusinessCell = $('<td>').append($('<input type="text" class="CapacityBusiness" id="CapacityBusiness" name="CapacityBusiness" placeholder="Enter capacity of Business">'));
+                var $capacityFirstClassCell = $('<td>').append($('<input type="text" class="CapacityFirstClass" id="CapacityFirstClass" name="CapacityFirstClass" placeholder="Enter capacity of First Class">'));
+                var $sourceAirportCell = $('<td>').append($('<input type="text" class="sourceAirportInput" placeholder="Enter departure airport">'));
+                var $destinationAirportCell = $('<td>').append($('<input type="text" class="destinationAirportInput" placeholder="Enter destination airport">'));
+                var $departureTimeCell = $('<td>').append($('<input type="text" class="departureTimeInput" placeholder="Enter departure time">'));
+                var $arrivalTimeCell = $('<td>').append($('<input type="text" class="arrivalTimeInput" placeholder="Enter arrival time">'));
+                var $distanceCell = $('<td>').append($('<input type="number" id="distance" name="distance" min="0" class="distanceInput" placeholder="Enter distance">'));
+                var $priceEconomyCell = $('<td>').append($('<input type="number" id="priceEconomy" name="priceEconomy" min="0" class="priceEconomy" placeholder="Enter price for economy class">'));
+                var $priceBusinessCell = $('<td>').append($('<input type="number" id="priceBusiness" name="priceBusiness" min="0" class="priceBusiness" placeholder="Enter price for business class">'));
+                var $priceFirstCell = $('<td>').append($('<input type="number" id="priceFirst" name="priceFirst" min="0" class="priceFirst" placeholder="Enter price for first class">'));
+                
+                // Append cells to the row
+                $row.append($selectCell, $flightCodeCell, $aircraftCell, $capacityCell, $capacityEconomyCell, $capacityBusinessCell, $capacityFirstClassCell, $sourceAirportCell, $departureTimeCell,$destinationAirportCell, $arrivalTimeCell, $distanceCell, $priceEconomyCell, $priceBusinessCell, $priceFirstCell);
+                
+                // Append the row to the table body
+                $('#flightsTable tbody').append($row);
+                
+                // Attach a keypress event listener to the row
+                $row.keypress(function(e) {
+                    if (e.which == 13) { // Enter key pressed
+                        e.preventDefault();
+                
+                        // Replace each input field with text node containing entered data and prepare data for server
+                        var rowData = {};
+                        var allFilled = true;
+                        $(this).find('input[type=text], input[type=number], input[type=datetime-local]').each(function() {
+                            var enteredData = $(this).val();
+                            if (enteredData == '') {
+                                allFilled = false;
+                                return false; // Break out of the loop
+                            }
+                            if ($(this).attr('type') == 'datetime-local') {
+                                enteredData = moment(enteredData).format('YYYY-MM-DD HH:mm:ss');
+                            }
+                            $(this).replaceWith(document.createTextNode(enteredData));
+                            rowData[$(this).attr('class')] = enteredData; // Assuming the class of the input field corresponds to the column name in your database
+                        });
+                
+                        if (!allFilled) {
+                            alert('Please fill all the form');
+                            return;
+                        }
+                
+                        // Send data to server
+                        $.ajax({
+                            url: '/employee_insert',
+                            type: 'POST',
+                            contentType: 'application/json',
+                            data: JSON.stringify(rowData),
+                        }).done(function() {
+                            console.log('Data sent successfully');
+                        }).fail(function(jqXHR, textStatus, errorThrown) {
+                            console.log('Error: ' + textStatus + ': ' + errorThrown);
+                        });
+                    }
+                });
+                
+            });                    
+            
+            $('#editFlightButton').click(function() {
+                // Make the flight code and actions editable for selected rows
+                $('#flightsTable tbody tr').each(function() {
+                    var $row = $(this);
+                    if ($row.find('input[type="checkbox"]').is(':checked')) {
+                        var old_aircraftId = $row.find('td:nth-child(2)').text();
+                        ['td:nth-child(2)', 'td:nth-child(3)', 'td:nth-child(4)', 'td:nth-child(5)', 'td:nth-child(6)', 'td:nth-child(7)', 'td:nth-child(8)', 'td:nth-child(9)', 'td:nth-child(10)', 'td:nth-child(11)', 'td:nth-child(12)', 'td:nth-child(13)', 'td:nth-child(14)', 'td:nth-child(15)'].forEach(function(selector) {
+                            var $cell = $row.find(selector);
+                            var text = $cell.text();
+                            var $input = $('<input type="text">').val(text);
+                            $cell.empty().append($input);
+                        });
+            
+                        // Add a change event handler to the input field
+                        $('input[type="text"]').keypress(function(e) {
+                            if (e.which == 13) { // Enter key
+                                e.preventDefault(); // Prevent form submission
+            
+                                // Iterate over all input fields
+                                var emptyField = false;
+                                $('input[type="text"]').each(function() {
+                                    var $input = $(this);
+                                    var newText = $input.val();
+                                    if (newText == '') {
+                                        emptyField = true;
+                                        return false; // Break out of the loop
+                                    }
+                                });
+                                if (emptyField) {
+                                    alert('The box is not allowed to be empty');
+                                    return;
+                                }
+            
+                                $('input[type="text"]').each(function() {
+                                    var $input = $(this);
+                                    var newText = $input.val();
+                                    var $cell = $input.parent();
+                                    $cell.text(newText);
+                                });
+            
+                                $row.find('input[type="checkbox"]').prop('checked', false);
+            
+                                $.ajax({
+                                    url: '/employee_update',
+                                    method: 'POST',
+                                    contentType: 'application/json',
+                                    data: JSON.stringify({
+                                        aircraftname: $row.find('td:nth-child(3)').text(),
+                                        new_aircraftId: $row.find('td:nth-child(2)').text(),
+                                        old_aircraftId: old_aircraftId,
+                                        capacity: $row.find('td:nth-child(4)').text(),
+                                        capacity_economy : $row.find('td:nth-child(5)').text(),
+                                        capacity_business :  $row.find('td:nth-child(6)').text(),
+                                        capacity_firstclass : $row.find('td:nth-child(7)').text(),
+                                        departure : $row.find('td:nth-child(8)').text(),
+                                        departuretime : $row.find('td:nth-child(9)').text(),
+                                        destination: $row.find('td:nth-child(10)').text(),
+                                        arrivaltime : $row.find('td:nth-child(11)').text(),
+                                        distance : $row.find('td:nth-child(12)').text(),
+                                        price_economy: $row.find('td:nth-child(13)').text(),
+                                        price_business : $row.find('td:nth-child(14)').text(),
+                                        price_firstclass : $row.find('td:nth-child(15)').text()
+                                    })
+                                });
+                            }
+                        });
+                    }
+                });
+            });
+            
+            
+            $('#removeFlightButton').click(function() {
+                // Remove selected rows
+                $('#flightsTable tbody tr').each(function() {
+                    var $row = $(this);
+                    if ($row.find('input[type="checkbox"]').is(':checked')) {
+                        var aircraftId = $row.find('td:nth-child(2)').text(); // Assuming the aircraftId is in the second column
+            
+                        // Send a delete request to the server
+                        $.ajax({
+                            url: '/employee_delete',
+                            method: 'POST',
+                            contentType: 'application/json',
+                            data: JSON.stringify({
+                                aircraftId: aircraftId
+                            })
+                        }).done(function() {
+                            console.log('Data deleted successfully');
+                        }).fail(function(jqXHR, textStatus, errorThrown) {
+                            console.log('Error: ' + textStatus + ': ' + errorThrown);
+                        });
+                        $row.remove();
+                    }
+                });
+            });
+            
+            $('#offers').click(function() {
+                $('#flightsTable').hide();
+                $('#addFlightButton').hide();
+                $('#editFlightButton').hide();
+                $('#removeFlightButton').hide();
+                $('#offersTable').show();
+                $('#editOfferButton').show();
+                $('#requestsTable').hide();
+            });
+
+            $('#editOfferButton').click(function() {
+                // Get the selected row
+                var row = $('input[type="checkbox"]:checked').closest('tr');
+                
+                // Get the offer cell from the selected row
+                var offerCell = row.find('td:eq(2)');
+                
+                // Create an input box with the current offer as the value
+                var inputBox = $('<input type="text">').val(offerCell.text());
+                
+                // Replace the offer cell with the input box
+                offerCell.html(inputBox);
+                
+                // Focus the input box
+                inputBox.focus();
+            
+                // When the Enter key is pressed, update the offer and send it to Flask
+                inputBox.on('keydown', function(e) {
+                    if (e.which == 13) {  // Check if Enter key is pressed
+                        e.preventDefault();  // Prevent form submission
+            
+                        var newOffer = $(this).val().trim();
+                        
+                        // Check if the new offer is empty
+                        if (!newOffer) {
+                            alert('Offer cannot be empty');
+                            return;
+                        }
+                        
+                        // Replace the input box with the new offer
+                        $(this).parent().text(newOffer);
+            
+                        // Get tier from the first cell of the row
+                        var tier = row.find('td:nth-child(2)').text();
+                        var offer = row.find('td:nth-child(3)').text();
+                        
+                        // Send the updated data to Flask through AJAX
+                        $.ajax({
+                            url: '/update_offer',
+                            type: 'POST',
+                            contentType: 'application/json',
+                            data: JSON.stringify({ 
+                                'newOffer': offer, 
+                                'tier': tier 
+                            }),
+                            success: function(response) {
+                                console.log(response);
+                            },
+                            error: function(error) {
+                                console.log(error);
+                            }
+                        });
+            
+                        // Uncheck the checkbox
+                        row.find('input[type="checkbox"]').prop('checked', false);
+                    }
+                });
+            });
+            
+            $('#requests').click(function() {
+                $('#flightsTable').hide();
+                $('#addFlightButton').hide();
+                $('#editFlightButton').hide();
+                $('#removeFlightButton').hide();
+                $('#offersTable').hide();
+                $('#editOfferButton').hide();
+                $('#requestsTable').show();
+            });
+
+            $('.acceptButton, .declineButton').click(function(e) {
+                e.preventDefault();
+                var ticketId = $(this).data('ticket');
+                var response = $(this).hasClass('acceptButton') ? 1 : 0;  
+                var customer6 = $(this).data('customer6');
+                var customer7 = $(this).data('customer7');
+                $.ajax({
+                    url: '/cancellationrequest',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ 
+                        'response': response, 
+                        'ticket': ticketId,
+                        'class' : customer6,
+                        'distance' : customer7
+                        
+                    }),
+                    success: function(response) {
+                        console.log(response);
+                        location.reload();
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+            });
+            
+            $('#logoutButton').click(function(e) {
+                e.preventDefault();
+                window.location.href = '/logout_employee';
+            });
+                  
+        });
+
+        
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Employee Website</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="flights">Flights</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="offers">Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="requests">Requests</a>
+                </li>
+            </ul>
+            {% for value in values %}
+                <span class="navbar-text mr-2" style="color: black;">Welcome, {{ value[1] }}</span>
+            {% endfor %}
+            <button class="btn btn-primary" style="background-color: #8dc6ff; border-color: #8dc6ff;" id="logoutButton">Logout</button>
+        </div>
+    </nav>    
+    
+    <!-- Die Flüge Tabelle -->
+    <table id="flightsTable" class="table" style="display: none;">
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>Flight Code</th>
+                <th>Aircraft</th>
+                <th>Total Capacity</th>
+                <th>Economy Capacity</th>
+                <th>Business Capacity</th>
+                <th>First Class Capacity</th>
+                <th>Departure</th>
+                <th>Departure Time</th>
+                <th>Destination</th>
+                <th>Arrival Time</th>
+                <th>Distance</th>
+                <th>Price Economy</th>
+                <th>Price Business</th>
+                <th>Price First Class</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for aircraft in aircrafts %}
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>{{ aircraft[1] }}</td> <!-- Flight Code -->
+                <td>{{ aircraft[0] }}</td> <!-- Aircraft Name -->
+                <td>{{ aircraft[2] }}</td> <!-- Total Capacity -->
+                <!-- Add the new columns here -->
+                <td>{{ aircraft[3] }}</td> <!-- Economy Capacity -->
+                <td>{{ aircraft[4] }}</td> <!-- Business Capacity -->
+                <td>{{ aircraft[5] }}</td> <!-- First Class Capacity -->
+                <td>{{ aircraft[6] }}</td> <!-- Source Airport -->
+                <td>{{ aircraft[8] }}</td> <!-- Destination Airport -->
+                <td>{{ aircraft[7] }}</td> <!-- Departure Time -->
+                <td>{{ aircraft[9] }}</td> <!-- Arrival Time -->
+                <td>{{ aircraft[10] }}</td> <!-- Distance -->
+                <td>{{ aircraft[11] }}</td> <!-- Price Economy -->
+                <td>{{ aircraft[12] }}</td> <!-- Price Business -->
+                <td>{{ aircraft[13] }}</td> <!-- Price First Class -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <button id="addFlightButton" style="display: none;">Add Flight</button>
+    <button id="editFlightButton" style="display: none;">Edit Flight</button>
+    <button id="removeFlightButton" style="display: none;">Remove Flight</button>
+    
+    <!-- Die Angebote Tabelle -->
+    <table id="offersTable" class="table" style="display: none;">
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>Tier</th>
+                <th>Offer</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for offer in offers %}
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>{{ offer[0] }}</td>
+                <td contenteditable="true">{{ offer[1] }}</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+    <button id="editOfferButton" style="display: none;">Edit Offer</button>
+    
+    <!-- Die Anfragen Tabelle -->
+    <table id="requestsTable" style="display: none;" class="table">
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Email</th>  
+                <th>Client ID </th>
+                <th>Ticket ID</th>
+                <th>Flight Code</th>
+                <th>Reason</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for customer in customers %}
+            <tr>
+                <td>{{ customer[0] }}</td>
+                <td>{{ customer[1] }}</td>
+                <td>{{ customer[2] }}</td>
+                <td>{{ customer[3] }}</td>
+                <td>{{ customer[4] }}</td>
+                <td>{{ customer[5] }}</td>
+                <td style="display: none;">{{ customer[6] }}</td> <!-- Hidden td for customer[6] -->
+                <td style="display: none;">{{ customer[7] }}</td>
+                <td>
+                    <form>
+                        <input type="submit" class="acceptButton" data-ticket="{{ customer[3] }}" data-customer6="{{ customer[6] }}" data-customer7="{{ customer[7] }}" value="Accept">
+                        <input type="submit" class="declineButton" data-ticket="{{ customer[3] }}" data-customer6="{{ customer[6] }}" data-customer7="{{ customer[7] }}" value="Decline">
+                    </form>
+                </td>
+                <!-- You can add more columns as per your requirements -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
+

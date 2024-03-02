@@ -1,0 +1,241 @@
+<!DOCTYPE html>                                                                                                                             
+
+<html lang = "en">                                                                                                                          
+    <head>
+        <meta charset = "UTF-8">                                                                                                            
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">                                                        
+        <link rel = "stylesheet" href = "static/style.css">                                                                                        
+        <title>BananaAirlines</title>
+        <script>
+          function generateRandomString(length) {
+            var result = '';
+            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            for (var i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return result;
+          }
+          
+          function getCurrentDateUTC() {
+            var date = new Date();
+            var day = String(date.getUTCDate()).padStart(2, '0');
+            var month = String(date.getUTCMonth() + 1).padStart(2, '0'); //January is 0!
+            var year = date.getUTCFullYear();
+            return day + '-' + month + '-' + year;
+          }
+        
+          window.onload = function() {
+            // Assuming you have functions generateRandomString and getCurrentDateUTC defined
+            document.querySelector('#PurchaseDate').value = getCurrentDateUTC();
+            document.getElementById('submitBtn').disabled = true;
+
+            var passengers = {{ request.form.passengers }}; // replace this with the actual value
+
+            for (var i = 0; i < passengers; i++) {
+              document.querySelector('#TicketID' + i).value = generateRandomString(5);
+            }
+          }
+
+          // Set a timeout to redirect to the homepage after 5 minutes
+          setTimeout(function() {
+            window.location.href = "/index";
+          }, 60000);  // 300000 milliseconds = 5 minutes
+
+          var previousLink = null;
+          var extraBaggageFee = 19.99;
+          var basePrice = 0;
+          function updatePrice() {
+              var price = basePrice;
+
+              // Check if extra baggage is selected
+              var extraBaggageYes = document.getElementById('extraBaggageYes');
+              if (extraBaggageYes.checked) {
+                  price += extraBaggageFee * {{ request.form.passengers }};
+              }
+              document.getElementById('finalPrice').value = price.toFixed(2);
+              document.querySelector('.pay-total').textContent = 'Total: ' + price.toFixed(2) + '€,-';
+          }
+
+          // Add event listener to radio buttons
+          var extraBaggageYes = document.getElementById('extraBaggageYes');
+          var extraBaggageNo = document.getElementById('extraBaggageNo');
+
+          extraBaggageYes.addEventListener('change', updatePrice);
+          extraBaggageNo.addEventListener('change', updatePrice);
+
+          function selectClass(event, price, className) {
+              var buttons = document.getElementsByClassName('pay-class-button');
+              
+              // If a button was previously clicked, reset its color and enable it
+              if (previousLink && previousLink.style.backgroundColor != "red") {
+                  previousLink.style.backgroundColor = "";
+                  previousLink.disabled = false;
+              }
+
+              // Set the clicked button
+              event.target.style.backgroundColor = "green";
+              event.target.disabled = true;
+
+              // Store the clicked button in previousLink
+              previousLink = event.target;
+
+              // Save the base price
+              basePrice = parseFloat(price);
+
+              document.getElementById('selectedClass').value = className
+              document.getElementById('submitBtn').disabled = false;
+              
+              // Update the total price
+              updatePrice();
+          }
+          
+
+        </script>
+        <style>
+          .pay-class-button:disabled {
+              cursor: not-allowed;
+          }
+        </style>                                                                                                
+    </head>
+  <body>
+    <div class = "nav-bar">
+      <a id = "logo0" href = "/index"><img class = "logo" src = "static/images/icon.png" alt = "Logo">Banana<span>Airlines</a>
+      <ul>
+        <li><a href = "/bookFlights">Book Flight<i class = "dropdown-link"></i></a>
+        </li>
+        <li><a href = "/myFlights">My Flights<i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/myFlights">My Flights</a></li>
+              <li><a href = "/checkIn">Check In</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a>Discover<i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/tiers">Tiers</a></li>
+              <li><a href = "/popular">Popular</a></li>
+            </ul>
+          </div>
+        </li>
+        <li id = "logoAccount01"><a id = "logoAccount0" href = "/account"><img class = "logoAccount" src = "static/images/iconAccount.png" alt = "Logo"><i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/account">Account Details</a></li>
+              <li><a id = "logOutButton" href = "/logout">Log Out</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class = "hero">
+        <div class="pay-flight-container">
+            <div class="pay-flight-form">
+              <h2 class="pay-flight-title">Pay Flight</h2>
+                <form action="/Finish_Booking" method="POST">
+                  {% for row in value %}
+                    <div class="account-info">
+                        <strong>First Name: {{ row[0] }}</strong>
+                    </div>
+                    <div class="account-info">
+                        <strong>Last Name: {{ row[1] }}</strong>
+                    </div>
+                    <div class="account-info">
+                        <strong>Email: {{ row[2] }}</strong>
+                    </div>
+                    <div class="account-info">
+                        <strong>User ID: {{ row[3] }}</strong>
+                    </div>
+                    <div class="account-info">
+                        <strong>Tier Status: {{ row[4] }}</strong>
+                    </div>
+                    <div class="account-info">
+                        <strong>Miles: {{ row[5] }}</strong>
+                    </div>
+                    <input type="hidden" name="UserID" value="{{ row[3] }}">
+                  {% endfor %}
+                    <label for="flightCode">Credit Card Number</label>
+                    <input type="text" id="flightCode" name="flightCode" required>
+                    <label for="flightCode">Credit Card Exparation Date</label>
+                    <input type="text" id="flightCode" name="flightCode" required>
+                    <label for="flightCode">Credit Card CVV</label>
+                    <input type="text" id="flightCode" name="flightCode" required>
+                    <div class="pay-flight-extra-baggage-options">
+                        <label for="extraBaggage">Extra Baggage:</label>
+                        <input type="radio" id="extraBaggageYes" name="extraBaggage" value="1">
+                        <label for="extraBaggageYes">Yes</label>
+                        <input type="radio" id="extraBaggageNo" name="extraBaggage" value="0" checked>
+                        <label for="extraBaggageNo">No</label>
+                    </div>
+                    <p class="pay-flight-extra-baggage-message">*Additional 19.99€ will be charged for Extra Baggage.</p>
+                    <div class="pay-class-container">
+                        <div class="pay-class-economy-block">
+                          <span class="pay-class-name">Economy Class</span>
+                          <p class="pay-class-description">Basic amenities for a comfortable journey.</p>
+                          <p class="pay-class-description">Seats left: {{ request.form.Capacity_Economy }}</p>
+                          <p class="pay-class-description">{{ request.form.price_economy }}€,-</p>
+                          {% set passengers = request.form.passengers | int %}
+                          {% set capacity_economy = request.form.Capacity_Economy | int %}
+                          {% if passengers > capacity_economy %}
+                              <button class="pay-class-button" disabled style="background-color: red; color: white;">Not Enough Seat</button>
+                          {% else %}
+                              <a href="#" class="pay-class-button" onclick="selectClass(event,{{ request.form.price_economy }}, 'Economy'); return false;">Select</a>
+                          {% endif %}
+
+                        </div>
+                        <div class="pay-class-business-block">
+                          <span class="pay-class-name">Business Class</span>
+                          <p class="pay-class-description">Enhanced services and spacious seating.</p>
+                          <p class="pay-class-description">Seats left: {{ request.form.Capacity_Business }}</p>
+                          <p class="pay-class-description">{{ request.form.price_business }}€,-</p>
+                          {% set passengers = request.form.passengers | int %}
+                          {% set capacity_business = request.form.Capacity_Business | int %}
+                          {% if passengers > capacity_business %}
+                              <button class="pay-class-button" disabled style="background-color: red; color: white;">Not Enough Seat</button>
+                          {% else %}
+                              <a href="#" class="pay-class-button" onclick="selectClass(event,{{ request.form.price_business }}, 'Business'); return false;">Select</a>
+                          {% endif %}
+                          
+                        </div>
+                        <div class="pay-class-first-block">
+                          <span class="pay-class-name">First<br>Class</span>
+                          <p class="pay-class-description">Luxury travel with top-notch amenities and serving.</p>
+                          <p class="pay-class-description">Seats left: {{ request.form.Capacity_FirstClass }}</p>
+                          <p class="pay-class-description">{{ request.form.price_firstclass }}€,-</p>
+                          {% set passengers = request.form.passengers | int %}
+                          {% set capacity_first = request.form.Capacity_FirstClass | int %}
+                          {% if passengers > capacity_first %}
+                              <button class="pay-class-button" disabled style="background-color: red; color: white;">Not Enough Seat</button>
+                          {% else %}
+                              <a href="#" class="pay-class-button" onclick="selectClass(event,{{ request.form.price_firstclass }}, 'First Class'); return false;">Select</a>
+                          {% endif %}
+                        </div>
+                  </div>
+                  <div class = "pay-total">Total: 0€,-</div>
+                  <div class="pay-flight-button-container">
+                      <input class="pay-flight-pay-button" id="submitBtn" type="submit", value="Confirm and book Flight">
+                      <button class="pay-flight-pay-button" type="submit"><a class="no-decoration" href="/index">Do not book Flight</a></button>
+                  </div>
+                  <input type="hidden" name="FlightCode" value="{{ request.form.Flight_Code }}">
+                  <input type="hidden" name="passengers" value="{{ request.form.passengers }}">
+                  <input type="hidden" name="Departure" value="{{ request.form.Departure }}"> 
+                  <input type="hidden" name="DepartureTime" value="{{ request.form.Departure_Time }}"> 
+                  <input type="hidden" name="Destination" value="{{ request.form.Destination }}"> 
+                  <input type="hidden" name="arrivalTime" value="{{ request.form.Arrival_Time }}"> 
+                  <input type="hidden" name="Distance" value="{{ request.form.Distance }}">  
+                  {% set num_passengers = request.form.passengers|int %}
+                  {% for i in range(num_passengers) %}
+                      <input type="hidden" id="TicketID{{ i }}" name="TicketID{{ i }}">
+                  {% endfor %}
+                  <input type="hidden" id="PurchaseDate" name="PurchaseDate">  
+                  <input type="hidden" id="selectedClass" name="selectedClass">
+                  <input type="hidden" id="finalPrice" name="finalPrice">   
+                </form>
+          </div>
+      </div>
+  </div>
+  <div class="hero2"></div>
+  <div class="hero3"></div>
+  </body>
+</html>

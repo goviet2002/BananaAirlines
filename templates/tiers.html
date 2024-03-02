@@ -1,0 +1,70 @@
+<!DOCTYPE html>                                                                                                                             
+
+<html lang = "en">                                                                                                                          
+    <head>
+        <meta charset = "UTF-8">                                                                                                            
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">                                                        
+        <link rel = "stylesheet" href = "static/style.css">                                                                                        
+        <title>BananaAirlines</title>   
+        <script>
+          var timeout;
+          document.onmousemove = function(){
+            clearTimeout(timeout);
+            timeout = setTimeout(function(){location.href = '/index'}, 60000);
+          }
+        </script>                                                                                                            
+    </head>
+  <body>
+    <div class = "nav-bar">
+      <a id = "logo0" href = "/index"><img class = "logo" src = "static/images/icon.png" alt = "Logo">Banana<span>Airlines</a>
+      <ul>
+        <li><a href = "/bookFlights">Book Flight<i class = "dropdown-link"></i></a>
+        </li>
+        <li><a href = "/myFlights">My Flights<i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/myFlights">My Flights</a></li>
+              <li><a href = "/checkIn">Check In</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a id = "website-indicator">Discover<i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/tiers">Tiers</a></li>
+              <li><a href = "/popular">Popular</a></li>
+            </ul>
+          </div>
+        </li>
+        <li id = "logoAccount01"><a id = "logoAccount0" href = "/account"><img class = "logoAccount" src = "static/images/iconAccount.png" alt = "Logo"><i class = "dropdown-link"></i></a>
+          <div class = "dropdown-menu">
+            <ul>
+              <li><a href = "/account">Account Details</a></li>
+              <li><a id = "logOutButton" href = "/logout">Log Out</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class = "hero">
+      <div class="tier-container">
+        <div class="tier-form">
+          <h2 class="tier-title">Tiers</h2>
+                <label for="firstName">
+                  There are different Tiers that give you special offers 
+                  while flying with us. The higher your Tier the more beneficial it will be for
+                  you. You earn Tier-Points with each mile you fly with us.
+                </label>
+                <label id = "tier-bronze" for="lastName"><span> Bronze Tier (0-9999 Miles): <span><br> 5% discount for every flight <br> x2 miles earned for Business Class flight <br> x3 miles earned for First Class flight</label>
+                <label id = "tier-silver" for="bookingID"><span> Silver Tier (10000-19999 Miles): <span><br> Extra banana servings<br> 7% discount for flight <br> x2 miles earned for Business Class flight <br> x3 miles earned for First Class flight</label>
+                <label id = "tier-gold" for="flightCode"><span> Gold Tier (20000+ Miles): <span><br> Free Wifi and onboard program <br> 7% discount for flight <br> x2 miles earned for Business Class flight <br> x3 miles earned for First Class flight.</label>
+                <div class="button-container">
+                  <button class="pay-button" type="submit"><a class="no-decoration" href="/bookFlights">Let's get started!</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <div class = "hero2"></div>
+  </body>
+</html>
