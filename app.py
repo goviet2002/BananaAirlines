@@ -302,6 +302,13 @@ class SQL:
             WHERE "AircraftID" = %s;
             """
     sql_getflight_cancel = 'SELECT "FlightCode" FROM ticket WHERE "TicketID" = %s'
+    sql_payflight = '''
+        SELECT c."FirstName", c."LastName", c."Email", u."UserID", c."Tier", c."MilesEarned", o."Offers"
+        FROM "user" u
+        JOIN client c ON u."UserID" = c."ClientID"
+        JOIN offer o ON c."Tier" = o."Tier"
+        WHERE u."UserID" = %s
+        '''
     
 @app.route('/')
 @app.route('/index')
@@ -660,15 +667,8 @@ def payFlight():
         conn = get_conn()
 
         cur = conn.cursor()
-        
-        sql1 = '''
-        SELECT c."FirstName", c."LastName", c."Email", u."UserID", c."Tier", c."MilesEarned", o."Offers"
-        FROM user u
-        JOIN client c ON u."UserID" = c."ClientID"
-        JOIN offer o ON c."Tier" = o."Tier"
-        WHERE u."UserID" = %s
-        '''
-        cur.execute(sql1, (session['UserID'],))
+
+        cur.execute(SQL.sql_payflight, (session['UserID'],))
         data = cur.fetchall()
 
         Logger.log("User is paying flight")
