@@ -1,2001 +1,2001 @@
 -- Classes
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3000', 420, 765, 897);
+('BN3000', 830, 1031, 1293);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3001', 390, 737, 1122);
+('BN3001', 257, 577, 700);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3002', 322, 653, 1152);
+('BN3002', 356, 850, 1319);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3003', 296, 685, 842);
+('BN3003', 728, 988, 1251);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3004', 217, 329, 779);
+('BN3004', 700, 848, 1287);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3005', 321, 603, 806);
+('BN3005', 849, 1037, 1172);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3006', 293, 419, 544);
+('BN3006', 490, 683, 1002);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3007', 372, 714, 981);
+('BN3007', 694, 913, 1155);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3008', 718, 1126, 1301);
+('BN3008', 310, 418, 765);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3009', 830, 1048, 1513);
+('BN3009', 872, 1029, 1279);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3010', 785, 1202, 1661);
+('BN3010', 527, 663, 1151);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3011', 125, 239, 350);
+('BN3011', 324, 455, 629);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3012', 203, 382, 761);
+('BN3012', 600, 1099, 1538);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3013', 286, 403, 697);
+('BN3013', 451, 939, 1352);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3014', 579, 712, 907);
+('BN3014', 443, 564, 1030);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3015', 718, 1073, 1518);
+('BN3015', 776, 1106, 1594);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3016', 367, 840, 1187);
+('BN3016', 331, 632, 763);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3017', 714, 1044, 1172);
+('BN3017', 370, 833, 992);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3018', 880, 1241, 1500);
+('BN3018', 711, 919, 1167);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3019', 759, 942, 1390);
+('BN3019', 423, 911, 1159);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3020', 484, 806, 1255);
+('BN3020', 257, 583, 966);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3021', 582, 945, 1075);
+('BN3021', 607, 932, 1370);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3022', 497, 908, 1262);
+('BN3022', 463, 759, 1082);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3023', 205, 615, 792);
+('BN3023', 172, 615, 787);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3024', 851, 1168, 1490);
+('BN3024', 477, 648, 1063);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3025', 831, 999, 1339);
+('BN3025', 663, 883, 1114);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3026', 565, 779, 1050);
+('BN3026', 863, 1343, 1663);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3027', 314, 812, 1111);
+('BN3027', 412, 790, 928);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3028', 217, 417, 778);
+('BN3028', 301, 434, 712);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3029', 373, 644, 1014);
+('BN3029', 744, 886, 1197);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3030', 511, 816, 999);
+('BN3030', 498, 852, 1121);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3031', 371, 471, 602);
+('BN3031', 105, 599, 874);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3032', 586, 801, 1082);
+('BN3032', 828, 1069, 1517);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3033', 603, 920, 1061);
+('BN3033', 124, 368, 662);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3034', 880, 1196, 1541);
+('BN3034', 472, 847, 1280);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3035', 126, 376, 608);
+('BN3035', 187, 413, 770);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3036', 440, 696, 812);
+('BN3036', 758, 995, 1150);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3037', 628, 1077, 1368);
+('BN3037', 824, 1256, 1412);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3038', 421, 582, 719);
+('BN3038', 656, 1010, 1225);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3039', 650, 1095, 1415);
+('BN3039', 201, 496, 743);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3040', 441, 722, 1147);
+('BN3040', 304, 405, 827);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3041', 280, 384, 573);
+('BN3041', 645, 982, 1356);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3042', 773, 1193, 1394);
+('BN3042', 236, 720, 960);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3043', 564, 993, 1440);
+('BN3043', 876, 1109, 1564);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3044', 674, 1155, 1465);
+('BN3044', 101, 586, 1068);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3045', 895, 1077, 1178);
+('BN3045', 554, 724, 949);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3046', 500, 876, 1026);
+('BN3046', 682, 949, 1306);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3047', 515, 760, 912);
+('BN3047', 851, 1196, 1336);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3048', 599, 798, 941);
+('BN3048', 520, 834, 951);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3049', 203, 497, 908);
+('BN3049', 753, 870, 1098);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3050', 628, 836, 1196);
+('BN3050', 779, 1081, 1417);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3051', 737, 868, 1298);
+('BN3051', 792, 936, 1188);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3052', 603, 951, 1134);
+('BN3052', 276, 587, 918);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3053', 578, 778, 1237);
+('BN3053', 876, 1019, 1314);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3054', 289, 575, 945);
+('BN3054', 167, 622, 1001);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3055', 411, 758, 1249);
+('BN3055', 797, 1179, 1479);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3056', 258, 579, 1016);
+('BN3056', 405, 755, 1212);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3057', 367, 867, 1268);
+('BN3057', 364, 676, 843);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3058', 404, 586, 1010);
+('BN3058', 470, 589, 722);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3059', 170, 659, 903);
+('BN3059', 114, 461, 571);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3060', 899, 1224, 1722);
+('BN3060', 282, 490, 771);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3061', 479, 879, 1335);
+('BN3061', 206, 504, 967);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3062', 164, 372, 624);
+('BN3062', 701, 921, 1363);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3063', 221, 643, 789);
+('BN3063', 762, 915, 1364);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3064', 682, 841, 1256);
+('BN3064', 799, 1281, 1589);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3065', 680, 1003, 1274);
+('BN3065', 331, 503, 643);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3066', 217, 570, 1068);
+('BN3066', 569, 815, 1270);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3067', 344, 458, 810);
+('BN3067', 337, 810, 1015);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3068', 421, 870, 1155);
+('BN3068', 839, 1236, 1566);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3069', 351, 614, 784);
+('BN3069', 697, 1073, 1252);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3070', 488, 919, 1342);
+('BN3070', 673, 963, 1153);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3071', 530, 1025, 1148);
+('BN3071', 446, 743, 881);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3072', 491, 643, 847);
+('BN3072', 104, 590, 879);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3073', 765, 1239, 1594);
+('BN3073', 834, 1027, 1430);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3074', 127, 538, 764);
+('BN3074', 818, 1098, 1436);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3075', 775, 950, 1143);
+('BN3075', 779, 898, 1247);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3076', 467, 951, 1411);
+('BN3076', 378, 697, 1092);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3077', 640, 1012, 1388);
+('BN3077', 151, 457, 904);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3078', 492, 799, 1170);
+('BN3078', 836, 946, 1364);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3079', 894, 1115, 1405);
+('BN3079', 817, 1188, 1656);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3080', 756, 1245, 1606);
+('BN3080', 187, 301, 431);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3081', 800, 1108, 1567);
+('BN3081', 446, 766, 1129);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3082', 827, 1144, 1405);
+('BN3082', 259, 628, 1108);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3083', 577, 746, 860);
+('BN3083', 207, 388, 509);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3084', 254, 628, 1019);
+('BN3084', 411, 894, 1332);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3085', 716, 1072, 1355);
+('BN3085', 686, 822, 1187);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3086', 789, 923, 1224);
+('BN3086', 573, 688, 1117);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3087', 188, 292, 747);
+('BN3087', 786, 1139, 1334);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3088', 186, 683, 1054);
+('BN3088', 763, 970, 1199);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3089', 216, 619, 854);
+('BN3089', 846, 1070, 1447);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3090', 740, 1228, 1634);
+('BN3090', 410, 847, 1331);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3091', 243, 359, 844);
+('BN3091', 817, 940, 1308);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3092', 836, 1328, 1647);
+('BN3092', 435, 698, 935);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3093', 708, 902, 1385);
+('BN3093', 873, 1016, 1403);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3094', 706, 1054, 1201);
+('BN3094', 306, 587, 745);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3095', 866, 1251, 1660);
+('BN3095', 441, 865, 1140);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3096', 625, 776, 946);
+('BN3096', 291, 751, 1138);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3097', 161, 426, 530);
+('BN3097', 153, 484, 943);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3098', 425, 619, 993);
+('BN3098', 234, 428, 741);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3099', 208, 583, 1028);
+('BN3099', 530, 672, 1011);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3100', 465, 790, 963);
+('BN3100', 639, 884, 1168);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3101', 493, 863, 1179);
+('BN3101', 519, 796, 926);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3102', 770, 993, 1401);
+('BN3102', 852, 1185, 1622);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3103', 443, 776, 1190);
+('BN3103', 815, 990, 1288);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3104', 749, 1055, 1440);
+('BN3104', 529, 961, 1289);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3105', 694, 972, 1419);
+('BN3105', 397, 892, 1034);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3106', 102, 346, 666);
+('BN3106', 626, 815, 1106);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3107', 531, 714, 870);
+('BN3107', 783, 1088, 1342);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3108', 888, 1359, 1816);
+('BN3108', 690, 1136, 1515);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3109', 719, 1131, 1517);
+('BN3109', 792, 1012, 1498);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3110', 747, 1142, 1597);
+('BN3110', 429, 570, 884);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3111', 864, 1290, 1452);
+('BN3111', 187, 674, 1053);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3112', 171, 424, 867);
+('BN3112', 808, 957, 1264);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3113', 244, 465, 569);
+('BN3113', 492, 679, 994);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3114', 699, 963, 1097);
+('BN3114', 464, 650, 1021);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3115', 809, 1281, 1532);
+('BN3115', 884, 1042, 1374);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3116', 659, 1084, 1439);
+('BN3116', 883, 1248, 1411);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3117', 865, 1033, 1361);
+('BN3117', 605, 930, 1123);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3118', 381, 627, 975);
+('BN3118', 231, 483, 816);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3119', 725, 986, 1304);
+('BN3119', 472, 972, 1398);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3120', 123, 474, 939);
+('BN3120', 129, 333, 647);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3121', 662, 1110, 1361);
+('BN3121', 537, 989, 1298);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3122', 723, 1099, 1203);
+('BN3122', 468, 639, 972);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3123', 340, 615, 1035);
+('BN3123', 633, 1058, 1556);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3124', 734, 1215, 1702);
+('BN3124', 229, 557, 846);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3125', 543, 915, 1321);
+('BN3125', 551, 809, 1042);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3126', 110, 325, 804);
+('BN3126', 431, 634, 880);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3127', 305, 518, 648);
+('BN3127', 296, 589, 919);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3128', 119, 270, 467);
+('BN3128', 235, 367, 742);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3129', 657, 1036, 1464);
+('BN3129', 666, 1039, 1359);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3130', 711, 825, 1277);
+('BN3130', 259, 520, 693);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3131', 188, 664, 798);
+('BN3131', 316, 450, 796);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3132', 366, 724, 992);
+('BN3132', 811, 965, 1363);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3133', 705, 959, 1153);
+('BN3133', 396, 826, 1185);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3134', 542, 786, 953);
+('BN3134', 568, 685, 1117);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3135', 299, 506, 631);
+('BN3135', 617, 1075, 1339);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3136', 660, 864, 1294);
+('BN3136', 584, 932, 1055);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3137', 274, 468, 652);
+('BN3137', 859, 1356, 1492);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3138', 134, 234, 408);
+('BN3138', 425, 630, 1039);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3139', 690, 1145, 1404);
+('BN3139', 525, 862, 1205);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3140', 480, 828, 1034);
+('BN3140', 204, 478, 857);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3141', 357, 849, 1178);
+('BN3141', 744, 993, 1350);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3142', 537, 761, 1198);
+('BN3142', 491, 630, 1112);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3143', 822, 953, 1448);
+('BN3143', 140, 365, 526);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3144', 133, 530, 680);
+('BN3144', 368, 854, 1335);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3145', 415, 778, 987);
+('BN3145', 245, 688, 879);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3146', 837, 1317, 1760);
+('BN3146', 238, 434, 770);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3147', 578, 1027, 1273);
+('BN3147', 660, 909, 1103);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3148', 279, 479, 868);
+('BN3148', 635, 1021, 1299);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3149', 378, 485, 829);
+('BN3149', 312, 723, 1120);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3150', 474, 617, 859);
+('BN3150', 601, 1056, 1400);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3151', 248, 367, 648);
+('BN3151', 653, 941, 1154);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3152', 314, 558, 1049);
+('BN3152', 279, 425, 629);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3153', 713, 930, 1430);
+('BN3153', 679, 1173, 1291);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3154', 596, 1069, 1243);
+('BN3154', 103, 283, 392);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3155', 421, 704, 1149);
+('BN3155', 246, 681, 1094);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3156', 132, 573, 994);
+('BN3156', 891, 1382, 1836);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3157', 794, 1221, 1333);
+('BN3157', 560, 994, 1409);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3158', 220, 619, 943);
+('BN3158', 641, 1050, 1181);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3159', 194, 453, 854);
+('BN3159', 146, 247, 372);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3160', 139, 246, 598);
+('BN3160', 362, 639, 926);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3161', 165, 584, 831);
+('BN3161', 761, 1240, 1531);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3162', 678, 1026, 1358);
+('BN3162', 211, 672, 1102);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3163', 779, 1009, 1345);
+('BN3163', 536, 999, 1488);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3164', 705, 1179, 1652);
+('BN3164', 835, 1091, 1577);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3165', 694, 1010, 1339);
+('BN3165', 129, 609, 955);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3166', 391, 814, 1173);
+('BN3166', 120, 398, 688);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3167', 560, 746, 1023);
+('BN3167', 776, 1026, 1132);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3168', 736, 1210, 1343);
+('BN3168', 131, 304, 767);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3169', 837, 1035, 1142);
+('BN3169', 296, 416, 893);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3170', 848, 1184, 1561);
+('BN3170', 553, 820, 1029);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3171', 339, 537, 771);
+('BN3171', 524, 813, 1286);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3172', 266, 509, 653);
+('BN3172', 305, 582, 805);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3173', 885, 1295, 1619);
+('BN3173', 632, 764, 1153);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3174', 880, 1260, 1598);
+('BN3174', 699, 951, 1208);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3175', 213, 374, 523);
+('BN3175', 427, 698, 899);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3176', 581, 1044, 1428);
+('BN3176', 610, 744, 915);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3177', 646, 759, 1049);
+('BN3177', 488, 893, 1108);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3178', 694, 945, 1111);
+('BN3178', 293, 613, 884);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3179', 463, 814, 1107);
+('BN3179', 544, 920, 1356);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3180', 831, 1172, 1490);
+('BN3180', 675, 964, 1366);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3181', 673, 882, 1186);
+('BN3181', 231, 375, 697);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3182', 150, 476, 662);
+('BN3182', 174, 433, 773);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3183', 561, 1016, 1390);
+('BN3183', 462, 844, 1183);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3184', 129, 570, 898);
+('BN3184', 579, 916, 1224);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3185', 687, 855, 1147);
+('BN3185', 120, 603, 1019);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3186', 654, 788, 1140);
+('BN3186', 828, 1289, 1670);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3187', 241, 393, 599);
+('BN3187', 457, 567, 977);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3188', 688, 1188, 1576);
+('BN3188', 425, 526, 939);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3189', 546, 991, 1253);
+('BN3189', 739, 996, 1195);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3190', 343, 652, 1152);
+('BN3190', 278, 612, 914);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3191', 468, 813, 1255);
+('BN3191', 145, 435, 679);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3192', 260, 378, 869);
+('BN3192', 333, 657, 811);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3193', 368, 779, 1076);
+('BN3193', 418, 595, 728);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3194', 781, 1080, 1512);
+('BN3194', 188, 335, 625);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3195', 800, 1103, 1410);
+('BN3195', 190, 512, 844);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3196', 746, 1068, 1323);
+('BN3196', 496, 776, 1214);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3197', 531, 744, 889);
+('BN3197', 276, 576, 683);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3198', 366, 809, 939);
+('BN3198', 334, 775, 1169);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3199', 637, 998, 1214);
+('BN3199', 856, 1348, 1499);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3200', 123, 420, 809);
+('BN3200', 892, 1364, 1792);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3201', 476, 823, 1266);
+('BN3201', 469, 839, 1218);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3202', 763, 873, 1299);
+('BN3202', 493, 710, 866);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3203', 270, 689, 883);
+('BN3203', 740, 1067, 1198);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3204', 628, 802, 1289);
+('BN3204', 115, 257, 457);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3205', 757, 1008, 1122);
+('BN3205', 218, 352, 531);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3206', 810, 1031, 1296);
+('BN3206', 802, 1229, 1464);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3207', 213, 359, 824);
+('BN3207', 124, 473, 755);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3208', 711, 985, 1290);
+('BN3208', 650, 1016, 1139);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3209', 789, 1152, 1592);
+('BN3209', 251, 492, 984);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3210', 339, 604, 944);
+('BN3210', 873, 1298, 1571);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3211', 569, 972, 1190);
+('BN3211', 505, 989, 1124);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3212', 789, 983, 1216);
+('BN3212', 630, 873, 1227);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3213', 673, 1089, 1428);
+('BN3213', 437, 751, 1239);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3214', 896, 1375, 1692);
+('BN3214', 557, 783, 1173);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3215', 244, 556, 742);
+('BN3215', 243, 388, 720);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3216', 295, 639, 739);
+('BN3216', 534, 1033, 1383);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3217', 730, 1178, 1482);
+('BN3217', 494, 600, 771);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3218', 354, 472, 629);
+('BN3218', 786, 1065, 1517);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3219', 677, 948, 1203);
+('BN3219', 567, 861, 1314);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3220', 346, 460, 671);
+('BN3220', 260, 665, 998);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3221', 731, 1135, 1285);
+('BN3221', 554, 709, 1173);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3222', 412, 622, 927);
+('BN3222', 234, 540, 698);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3223', 893, 1063, 1465);
+('BN3223', 220, 427, 679);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3224', 354, 493, 634);
+('BN3224', 484, 891, 1144);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3225', 686, 826, 981);
+('BN3225', 725, 1225, 1669);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3226', 366, 798, 1003);
+('BN3226', 166, 651, 856);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3227', 865, 1338, 1785);
+('BN3227', 816, 988, 1328);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3228', 568, 791, 1046);
+('BN3228', 882, 1118, 1555);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3229', 437, 569, 815);
+('BN3229', 546, 994, 1416);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3230', 593, 970, 1386);
+('BN3230', 118, 545, 713);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3231', 682, 849, 1228);
+('BN3231', 686, 957, 1106);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3232', 632, 1025, 1162);
+('BN3232', 674, 1029, 1398);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3233', 119, 381, 741);
+('BN3233', 260, 402, 839);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3234', 562, 686, 1128);
+('BN3234', 219, 523, 827);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3235', 460, 705, 1007);
+('BN3235', 221, 526, 743);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3236', 269, 458, 765);
+('BN3236', 831, 1119, 1257);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3237', 769, 947, 1432);
+('BN3237', 848, 1241, 1729);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3238', 574, 845, 1202);
+('BN3238', 535, 960, 1370);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3239', 689, 834, 1128);
+('BN3239', 487, 671, 1042);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3240', 462, 873, 1326);
+('BN3240', 653, 771, 1000);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3241', 386, 829, 1256);
+('BN3241', 451, 593, 1014);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3242', 718, 1084, 1508);
+('BN3242', 862, 1258, 1530);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3243', 186, 327, 799);
+('BN3243', 536, 828, 1030);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3244', 103, 273, 650);
+('BN3244', 449, 580, 896);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3245', 820, 1195, 1376);
+('BN3245', 327, 773, 1264);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3246', 243, 429, 847);
+('BN3246', 326, 802, 1085);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3247', 106, 471, 943);
+('BN3247', 384, 798, 1054);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3248', 222, 676, 1173);
+('BN3248', 874, 1290, 1687);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3249', 784, 1183, 1297);
+('BN3249', 287, 686, 910);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3250', 509, 788, 1197);
+('BN3250', 568, 698, 1067);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3251', 762, 1188, 1483);
+('BN3251', 322, 623, 873);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3252', 372, 569, 1023);
+('BN3252', 315, 661, 1035);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3253', 464, 776, 1247);
+('BN3253', 549, 1046, 1253);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3254', 628, 736, 1124);
+('BN3254', 184, 546, 885);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3255', 564, 938, 1387);
+('BN3255', 665, 1147, 1494);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3256', 173, 485, 847);
+('BN3256', 391, 762, 874);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3257', 355, 509, 645);
+('BN3257', 132, 539, 821);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3258', 288, 672, 1024);
+('BN3258', 244, 515, 771);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3259', 127, 320, 755);
+('BN3259', 413, 847, 1273);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3260', 582, 699, 1057);
+('BN3260', 171, 605, 887);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3261', 158, 500, 676);
+('BN3261', 689, 871, 1178);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3262', 744, 1176, 1287);
+('BN3262', 626, 949, 1361);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3263', 763, 994, 1431);
+('BN3263', 280, 604, 935);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3264', 317, 506, 804);
+('BN3264', 312, 714, 1145);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3265', 112, 399, 654);
+('BN3265', 208, 356, 845);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3266', 678, 1052, 1220);
+('BN3266', 202, 398, 516);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3267', 346, 679, 857);
+('BN3267', 411, 735, 1005);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3268', 647, 902, 1191);
+('BN3268', 451, 881, 1085);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3269', 595, 817, 1196);
+('BN3269', 475, 737, 860);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3270', 176, 669, 827);
+('BN3270', 189, 292, 514);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3271', 463, 761, 1126);
+('BN3271', 487, 944, 1231);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3272', 784, 906, 1015);
+('BN3272', 179, 628, 848);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3273', 151, 272, 512);
+('BN3273', 588, 1036, 1423);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3274', 233, 590, 924);
+('BN3274', 194, 462, 666);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3275', 445, 599, 903);
+('BN3275', 758, 1187, 1352);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3276', 828, 1124, 1566);
+('BN3276', 526, 914, 1071);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3277', 512, 664, 1140);
+('BN3277', 717, 968, 1210);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3278', 687, 1103, 1307);
+('BN3278', 385, 845, 975);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3279', 139, 254, 511);
+('BN3279', 468, 814, 933);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3280', 500, 618, 1011);
+('BN3280', 419, 807, 1001);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3281', 693, 962, 1079);
+('BN3281', 588, 766, 1099);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3282', 828, 1265, 1493);
+('BN3282', 622, 892, 1216);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3283', 718, 1044, 1207);
+('BN3283', 756, 947, 1345);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3284', 304, 535, 760);
+('BN3284', 326, 778, 1235);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3285', 740, 1127, 1258);
+('BN3285', 892, 1155, 1504);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3286', 607, 1021, 1190);
+('BN3286', 604, 782, 1214);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3287', 138, 299, 447);
+('BN3287', 408, 667, 923);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3288', 296, 651, 885);
+('BN3288', 769, 1092, 1575);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3289', 357, 807, 1002);
+('BN3289', 745, 1175, 1494);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3290', 744, 969, 1281);
+('BN3290', 424, 724, 1185);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3291', 370, 786, 1002);
+('BN3291', 430, 675, 1130);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3292', 580, 821, 1083);
+('BN3292', 801, 1058, 1234);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3293', 700, 1099, 1352);
+('BN3293', 134, 484, 595);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3294', 635, 984, 1389);
+('BN3294', 621, 973, 1336);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3295', 353, 694, 875);
+('BN3295', 813, 1289, 1395);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3296', 319, 505, 881);
+('BN3296', 400, 733, 868);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3297', 372, 502, 815);
+('BN3297', 234, 422, 817);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3298', 766, 1138, 1574);
+('BN3298', 391, 686, 875);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3299', 335, 480, 698);
+('BN3299', 790, 1253, 1356);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3300', 570, 1070, 1393);
+('BN3300', 762, 964, 1172);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3301', 344, 759, 1096);
+('BN3301', 877, 1125, 1489);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3302', 406, 674, 1174);
+('BN3302', 699, 1090, 1484);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3303', 461, 820, 1058);
+('BN3303', 714, 1180, 1482);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3304', 833, 1102, 1449);
+('BN3304', 771, 1195, 1575);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3305', 516, 712, 879);
+('BN3305', 124, 323, 556);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3306', 287, 659, 1159);
+('BN3306', 279, 651, 1145);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3307', 146, 597, 807);
+('BN3307', 449, 920, 1262);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3308', 223, 649, 1132);
+('BN3308', 397, 717, 932);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3309', 858, 1001, 1242);
+('BN3309', 399, 781, 1088);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3310', 438, 770, 1002);
+('BN3310', 630, 968, 1324);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3311', 281, 702, 1048);
+('BN3311', 462, 624, 899);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3312', 368, 841, 1286);
+('BN3312', 407, 862, 1275);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3313', 310, 749, 1245);
+('BN3313', 219, 452, 801);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3314', 550, 924, 1285);
+('BN3314', 130, 603, 924);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3315', 701, 933, 1287);
+('BN3315', 754, 1148, 1545);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3316', 371, 717, 1175);
+('BN3316', 524, 907, 1166);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3317', 671, 872, 1311);
+('BN3317', 281, 423, 588);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3318', 781, 904, 1343);
+('BN3318', 681, 799, 1123);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3319', 826, 1225, 1404);
+('BN3319', 182, 682, 801);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3320', 755, 1095, 1499);
+('BN3320', 366, 562, 705);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3321', 487, 826, 1112);
+('BN3321', 361, 764, 1261);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3322', 685, 926, 1358);
+('BN3322', 434, 837, 1035);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3323', 133, 534, 999);
+('BN3323', 489, 931, 1275);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3324', 859, 1352, 1713);
+('BN3324', 850, 1144, 1502);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3325', 202, 449, 557);
+('BN3325', 332, 817, 1217);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3326', 196, 688, 925);
+('BN3326', 169, 578, 981);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3327', 407, 873, 1353);
+('BN3327', 731, 993, 1204);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3328', 546, 698, 947);
+('BN3328', 273, 663, 867);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3329', 456, 558, 866);
+('BN3329', 883, 1234, 1473);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3330', 765, 1078, 1422);
+('BN3330', 856, 1323, 1481);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3331', 437, 818, 1303);
+('BN3331', 425, 621, 770);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3332', 431, 601, 862);
+('BN3332', 438, 689, 943);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3333', 372, 603, 985);
+('BN3333', 353, 464, 594);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3334', 333, 689, 854);
+('BN3334', 292, 443, 919);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3335', 576, 878, 1367);
+('BN3335', 499, 851, 1021);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3336', 679, 839, 1103);
+('BN3336', 461, 961, 1079);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3337', 423, 730, 1174);
+('BN3337', 879, 1357, 1779);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3338', 105, 534, 652);
+('BN3338', 417, 730, 838);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3339', 786, 1243, 1484);
+('BN3339', 237, 432, 921);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3340', 555, 923, 1267);
+('BN3340', 659, 894, 1319);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3341', 690, 831, 1201);
+('BN3341', 405, 631, 789);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3342', 157, 351, 535);
+('BN3342', 306, 786, 1231);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3343', 786, 1189, 1439);
+('BN3343', 667, 815, 1143);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3344', 664, 914, 1224);
+('BN3344', 885, 1274, 1737);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3345', 618, 779, 1217);
+('BN3345', 865, 1123, 1303);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3346', 237, 397, 764);
+('BN3346', 312, 645, 829);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3347', 177, 533, 741);
+('BN3347', 354, 558, 952);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3348', 565, 781, 1240);
+('BN3348', 268, 747, 851);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3349', 366, 835, 1311);
+('BN3349', 754, 1187, 1649);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3350', 417, 589, 748);
+('BN3350', 292, 540, 794);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3351', 590, 819, 1085);
+('BN3351', 714, 963, 1321);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3352', 638, 830, 1248);
+('BN3352', 333, 487, 897);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3353', 382, 675, 845);
+('BN3353', 634, 1053, 1181);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3354', 200, 301, 432);
+('BN3354', 822, 1009, 1137);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3355', 544, 813, 1254);
+('BN3355', 124, 298, 629);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3356', 112, 307, 520);
+('BN3356', 355, 793, 1120);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3357', 514, 889, 1157);
+('BN3357', 522, 917, 1228);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3358', 663, 846, 947);
+('BN3358', 440, 597, 979);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3359', 604, 824, 1100);
+('BN3359', 254, 551, 1013);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3360', 458, 608, 1011);
+('BN3360', 883, 1223, 1502);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3361', 661, 1119, 1256);
+('BN3361', 856, 1318, 1440);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3362', 528, 990, 1135);
+('BN3362', 537, 794, 1035);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3363', 640, 1054, 1254);
+('BN3363', 673, 1044, 1523);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3364', 845, 998, 1113);
+('BN3364', 606, 1085, 1453);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3365', 851, 1093, 1485);
+('BN3365', 398, 596, 779);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3366', 323, 650, 775);
+('BN3366', 271, 408, 797);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3367', 276, 642, 981);
+('BN3367', 477, 798, 976);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3368', 610, 724, 1188);
+('BN3368', 499, 957, 1385);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3369', 877, 988, 1465);
+('BN3369', 744, 1136, 1624);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3370', 411, 537, 652);
+('BN3370', 597, 920, 1335);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3371', 744, 1179, 1527);
+('BN3371', 233, 568, 829);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3372', 324, 598, 1042);
+('BN3372', 846, 1010, 1465);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3373', 500, 729, 1124);
+('BN3373', 324, 654, 1107);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3374', 739, 1007, 1424);
+('BN3374', 543, 840, 1100);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3375', 386, 793, 896);
+('BN3375', 839, 1310, 1800);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3376', 317, 812, 915);
+('BN3376', 402, 761, 1055);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3377', 685, 1048, 1434);
+('BN3377', 397, 579, 735);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3378', 334, 755, 998);
+('BN3378', 513, 650, 935);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3379', 559, 738, 1095);
+('BN3379', 549, 752, 927);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3380', 738, 857, 1306);
+('BN3380', 151, 271, 624);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3381', 748, 1160, 1637);
+('BN3381', 790, 1097, 1347);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3382', 138, 470, 697);
+('BN3382', 629, 1096, 1546);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3383', 254, 446, 750);
+('BN3383', 895, 1243, 1728);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3384', 257, 361, 558);
+('BN3384', 764, 867, 1059);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3385', 640, 885, 1294);
+('BN3385', 488, 694, 903);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3386', 471, 858, 1351);
+('BN3386', 425, 612, 1059);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3387', 630, 887, 1300);
+('BN3387', 507, 757, 1237);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3388', 354, 710, 946);
+('BN3388', 777, 985, 1134);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3389', 554, 657, 1006);
+('BN3389', 638, 785, 1086);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3390', 697, 860, 1283);
+('BN3390', 780, 971, 1196);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3391', 279, 563, 977);
+('BN3391', 282, 653, 787);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3392', 606, 768, 1223);
+('BN3392', 900, 1361, 1839);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3393', 430, 777, 1100);
+('BN3393', 743, 1012, 1452);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3394', 559, 1021, 1355);
+('BN3394', 780, 1248, 1645);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3395', 741, 1113, 1245);
+('BN3395', 552, 996, 1263);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3396', 853, 1191, 1591);
+('BN3396', 435, 634, 974);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3397', 366, 811, 1291);
+('BN3397', 795, 1159, 1333);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3398', 683, 939, 1219);
+('BN3398', 256, 527, 988);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3399', 220, 568, 828);
+('BN3399', 516, 670, 799);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3400', 592, 921, 1022);
+('BN3400', 763, 1132, 1594);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3401', 452, 884, 1382);
+('BN3401', 407, 768, 1072);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3402', 654, 1088, 1431);
+('BN3402', 404, 874, 1145);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3403', 819, 1089, 1238);
+('BN3403', 226, 401, 711);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3404', 315, 482, 907);
+('BN3404', 371, 505, 980);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3405', 218, 588, 932);
+('BN3405', 802, 909, 1283);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3406', 609, 884, 1007);
+('BN3406', 653, 1089, 1280);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3407', 412, 521, 706);
+('BN3407', 188, 519, 824);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3408', 315, 444, 941);
+('BN3408', 629, 766, 1034);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3409', 319, 448, 883);
+('BN3409', 888, 1186, 1494);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3410', 800, 1275, 1722);
+('BN3410', 283, 744, 1107);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3411', 432, 668, 1116);
+('BN3411', 201, 417, 536);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3412', 476, 685, 1113);
+('BN3412', 368, 577, 1032);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3413', 665, 1056, 1339);
+('BN3413', 433, 681, 1121);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3414', 318, 785, 929);
+('BN3414', 444, 610, 843);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3415', 844, 1092, 1436);
+('BN3415', 509, 721, 1130);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3416', 749, 978, 1453);
+('BN3416', 737, 1083, 1305);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3417', 572, 1043, 1430);
+('BN3417', 475, 869, 1245);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3418', 496, 599, 716);
+('BN3418', 280, 396, 872);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3419', 167, 540, 895);
+('BN3419', 873, 1295, 1494);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3420', 401, 798, 992);
+('BN3420', 810, 1170, 1387);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3421', 719, 833, 1013);
+('BN3421', 299, 417, 878);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3422', 292, 639, 773);
+('BN3422', 497, 898, 1143);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3423', 553, 1022, 1277);
+('BN3423', 722, 1215, 1443);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3424', 809, 1039, 1538);
+('BN3424', 311, 433, 890);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3425', 464, 703, 918);
+('BN3425', 264, 440, 682);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3426', 707, 939, 1163);
+('BN3426', 700, 1083, 1240);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3427', 278, 545, 730);
+('BN3427', 857, 1106, 1222);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3428', 743, 1174, 1378);
+('BN3428', 219, 529, 767);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3429', 214, 606, 856);
+('BN3429', 410, 819, 1221);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3430', 367, 486, 705);
+('BN3430', 664, 1162, 1511);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3431', 130, 251, 481);
+('BN3431', 120, 555, 714);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3432', 176, 281, 692);
+('BN3432', 862, 1030, 1239);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3433', 888, 1231, 1349);
+('BN3433', 575, 720, 924);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3434', 287, 461, 810);
+('BN3434', 567, 715, 946);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3435', 325, 775, 904);
+('BN3435', 752, 974, 1338);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3436', 252, 507, 986);
+('BN3436', 389, 505, 855);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3437', 654, 839, 1217);
+('BN3437', 124, 507, 846);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3438', 164, 501, 635);
+('BN3438', 763, 887, 1158);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3439', 852, 1067, 1358);
+('BN3439', 853, 1034, 1220);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3440', 500, 703, 1182);
+('BN3440', 854, 1231, 1709);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3441', 834, 1332, 1507);
+('BN3441', 773, 1162, 1441);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3442', 406, 532, 633);
+('BN3442', 113, 584, 769);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3443', 606, 1084, 1494);
+('BN3443', 741, 1008, 1110);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3444', 268, 742, 861);
+('BN3444', 746, 1155, 1444);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3445', 238, 464, 795);
+('BN3445', 618, 891, 1246);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3446', 563, 826, 1166);
+('BN3446', 425, 565, 944);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3447', 632, 1088, 1211);
+('BN3447', 832, 1131, 1575);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3448', 859, 1301, 1436);
+('BN3448', 705, 1156, 1601);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3449', 197, 678, 1140);
+('BN3449', 213, 477, 856);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3450', 288, 512, 991);
+('BN3450', 840, 1082, 1217);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3451', 679, 846, 1042);
+('BN3451', 797, 936, 1396);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3452', 689, 1119, 1491);
+('BN3452', 801, 1058, 1207);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3453', 344, 814, 1089);
+('BN3453', 595, 875, 1138);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3454', 586, 722, 1143);
+('BN3454', 142, 277, 678);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3455', 589, 1000, 1248);
+('BN3455', 630, 1027, 1446);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3456', 768, 928, 1389);
+('BN3456', 538, 947, 1428);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3457', 829, 1220, 1591);
+('BN3457', 224, 611, 753);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3458', 603, 893, 1001);
+('BN3458', 467, 782, 1064);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3459', 450, 823, 934);
+('BN3459', 571, 697, 877);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3460', 467, 735, 1198);
+('BN3460', 370, 728, 1210);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3461', 128, 609, 885);
+('BN3461', 720, 860, 1270);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3462', 561, 773, 1212);
+('BN3462', 165, 398, 866);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3463', 546, 804, 1156);
+('BN3463', 814, 1148, 1575);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3464', 394, 617, 863);
+('BN3464', 136, 591, 743);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3465', 608, 975, 1282);
+('BN3465', 312, 787, 1002);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3466', 600, 861, 1349);
+('BN3466', 837, 1238, 1701);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3467', 106, 271, 589);
+('BN3467', 236, 708, 1041);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3468', 439, 550, 1002);
+('BN3468', 883, 1158, 1429);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3469', 866, 976, 1263);
+('BN3469', 749, 894, 1141);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3470', 111, 611, 1020);
+('BN3470', 751, 866, 1365);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3471', 900, 1194, 1422);
+('BN3471', 191, 445, 768);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3472', 638, 753, 1252);
+('BN3472', 708, 836, 1048);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3473', 776, 1082, 1518);
+('BN3473', 221, 615, 1046);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3474', 315, 526, 915);
+('BN3474', 437, 550, 920);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3475', 274, 577, 861);
+('BN3475', 346, 624, 1120);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3476', 358, 784, 893);
+('BN3476', 684, 871, 1021);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3477', 806, 1222, 1468);
+('BN3477', 169, 516, 803);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3478', 757, 1250, 1355);
+('BN3478', 351, 739, 970);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3479', 577, 854, 1186);
+('BN3479', 322, 570, 711);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3480', 878, 988, 1168);
+('BN3480', 397, 835, 1262);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3481', 886, 1320, 1558);
+('BN3481', 461, 574, 926);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3482', 475, 854, 1180);
+('BN3482', 202, 595, 965);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3483', 868, 1062, 1243);
+('BN3483', 494, 600, 1091);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3484', 595, 772, 1052);
+('BN3484', 796, 1080, 1480);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3485', 227, 383, 739);
+('BN3485', 738, 960, 1113);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3486', 878, 1149, 1339);
+('BN3486', 308, 764, 927);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3487', 139, 576, 753);
+('BN3487', 874, 1069, 1253);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3488', 641, 885, 1028);
+('BN3488', 523, 887, 997);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3489', 585, 797, 987);
+('BN3489', 240, 436, 906);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3490', 571, 879, 1074);
+('BN3490', 671, 1099, 1200);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3491', 648, 859, 969);
+('BN3491', 680, 1148, 1505);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3492', 829, 1188, 1464);
+('BN3492', 510, 724, 1153);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3493', 564, 712, 1021);
+('BN3493', 644, 764, 1117);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3494', 567, 1041, 1247);
+('BN3494', 791, 1253, 1459);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3495', 546, 762, 950);
+('BN3495', 523, 666, 996);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3496', 205, 352, 456);
+('BN3496', 847, 1328, 1450);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3497', 666, 1051, 1325);
+('BN3497', 229, 625, 803);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3498', 306, 559, 696);
+('BN3498', 853, 1282, 1486);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3499', 156, 476, 893);
+('BN3499', 328, 560, 666);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3500', 534, 905, 1191);
+('BN3500', 604, 881, 1378);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3501', 751, 927, 1381);
+('BN3501', 361, 716, 1073);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3502', 127, 235, 697);
+('BN3502', 135, 425, 834);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3503', 371, 793, 994);
+('BN3503', 851, 1303, 1440);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3504', 793, 1034, 1344);
+('BN3504', 397, 675, 1008);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3505', 371, 839, 948);
+('BN3505', 821, 1224, 1477);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3506', 766, 998, 1234);
+('BN3506', 786, 1223, 1524);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3507', 110, 597, 727);
+('BN3507', 142, 370, 672);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3508', 450, 859, 1253);
+('BN3508', 159, 629, 865);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3509', 473, 640, 1064);
+('BN3509', 801, 1166, 1430);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3510', 242, 702, 1139);
+('BN3510', 805, 1062, 1177);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3511', 554, 775, 1233);
+('BN3511', 789, 1031, 1164);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3512', 349, 706, 1132);
+('BN3512', 254, 616, 945);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3513', 115, 426, 828);
+('BN3513', 414, 619, 1045);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3514', 497, 739, 1106);
+('BN3514', 819, 1239, 1638);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3515', 227, 628, 968);
+('BN3515', 274, 670, 903);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3516', 857, 1131, 1617);
+('BN3516', 214, 420, 586);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3517', 732, 1198, 1347);
+('BN3517', 163, 407, 512);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3518', 588, 873, 994);
+('BN3518', 175, 437, 552);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3519', 675, 880, 1263);
+('BN3519', 129, 361, 731);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3520', 784, 1217, 1649);
+('BN3520', 734, 1141, 1535);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3521', 632, 787, 1148);
+('BN3521', 525, 643, 757);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3522', 723, 986, 1317);
+('BN3522', 327, 569, 985);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3523', 833, 961, 1179);
+('BN3523', 839, 1081, 1285);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3524', 807, 1300, 1733);
+('BN3524', 298, 473, 829);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3525', 270, 585, 967);
+('BN3525', 666, 824, 1200);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3526', 785, 1089, 1210);
+('BN3526', 642, 935, 1319);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3527', 852, 1029, 1350);
+('BN3527', 553, 943, 1369);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3528', 555, 986, 1090);
+('BN3528', 841, 1077, 1234);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3529', 717, 1174, 1440);
+('BN3529', 577, 705, 807);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3530', 433, 739, 1064);
+('BN3530', 566, 793, 1161);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3531', 223, 614, 724);
+('BN3531', 701, 1093, 1357);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3532', 807, 1262, 1391);
+('BN3532', 478, 680, 1026);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3533', 180, 461, 669);
+('BN3533', 442, 655, 834);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3534', 614, 820, 1144);
+('BN3534', 618, 1088, 1416);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3535', 624, 1044, 1256);
+('BN3535', 829, 1276, 1488);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3536', 338, 535, 864);
+('BN3536', 517, 811, 1103);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3537', 885, 1085, 1312);
+('BN3537', 824, 956, 1247);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3538', 220, 483, 783);
+('BN3538', 787, 1074, 1355);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3539', 606, 1105, 1368);
+('BN3539', 666, 777, 1247);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3540', 643, 1076, 1541);
+('BN3540', 663, 1147, 1291);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3541', 134, 582, 881);
+('BN3541', 760, 894, 1374);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3542', 409, 721, 1000);
+('BN3542', 250, 388, 756);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3543', 622, 783, 1009);
+('BN3543', 732, 854, 1143);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3544', 789, 1015, 1282);
+('BN3544', 578, 732, 834);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3545', 763, 882, 997);
+('BN3545', 571, 875, 1293);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3546', 761, 1005, 1256);
+('BN3546', 800, 1203, 1668);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3547', 445, 665, 993);
+('BN3547', 503, 745, 888);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3548', 676, 1029, 1520);
+('BN3548', 863, 1135, 1517);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3549', 136, 497, 937);
+('BN3549', 214, 580, 744);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3550', 453, 585, 818);
+('BN3550', 764, 866, 1209);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3551', 744, 1113, 1577);
+('BN3551', 524, 884, 1030);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3552', 820, 1305, 1556);
+('BN3552', 421, 705, 888);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3553', 164, 353, 683);
+('BN3553', 198, 656, 1090);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3554', 699, 1109, 1468);
+('BN3554', 606, 1061, 1161);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3555', 629, 891, 1172);
+('BN3555', 793, 940, 1281);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3556', 345, 512, 795);
+('BN3556', 218, 585, 845);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3557', 427, 695, 915);
+('BN3557', 662, 1020, 1480);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3558', 590, 743, 1162);
+('BN3558', 339, 812, 977);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3559', 441, 673, 821);
+('BN3559', 773, 1088, 1305);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3560', 498, 604, 823);
+('BN3560', 288, 471, 704);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3561', 303, 788, 1211);
+('BN3561', 700, 933, 1196);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3562', 299, 618, 891);
+('BN3562', 426, 645, 763);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3563', 595, 819, 1089);
+('BN3563', 269, 518, 669);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3564', 888, 1181, 1615);
+('BN3564', 394, 749, 1080);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3565', 878, 1013, 1117);
+('BN3565', 292, 455, 563);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3566', 349, 735, 922);
+('BN3566', 778, 968, 1408);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3567', 208, 469, 622);
+('BN3567', 227, 396, 633);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3568', 115, 545, 758);
+('BN3568', 567, 744, 1033);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3569', 419, 911, 1227);
+('BN3569', 547, 844, 1032);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3570', 671, 955, 1071);
+('BN3570', 153, 478, 745);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3571', 719, 977, 1369);
+('BN3571', 702, 964, 1267);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3572', 461, 944, 1184);
+('BN3572', 599, 1079, 1530);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3573', 894, 1241, 1363);
+('BN3573', 494, 624, 1065);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3574', 600, 773, 911);
+('BN3574', 761, 1047, 1356);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3575', 417, 671, 1015);
+('BN3575', 800, 943, 1063);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3576', 100, 439, 929);
+('BN3576', 469, 692, 1116);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3577', 604, 858, 1101);
+('BN3577', 115, 477, 822);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3578', 531, 822, 1253);
+('BN3578', 715, 943, 1115);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3579', 862, 999, 1452);
+('BN3579', 740, 1108, 1271);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3580', 436, 706, 1152);
+('BN3580', 485, 595, 991);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3581', 822, 1147, 1474);
+('BN3581', 719, 961, 1304);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3582', 821, 1111, 1321);
+('BN3582', 406, 879, 1088);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3583', 193, 567, 795);
+('BN3583', 803, 908, 1103);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3584', 332, 594, 705);
+('BN3584', 869, 989, 1487);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3585', 860, 1141, 1365);
+('BN3585', 646, 910, 1043);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3586', 687, 1128, 1320);
+('BN3586', 489, 597, 817);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3587', 409, 688, 959);
+('BN3587', 169, 491, 707);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3588', 742, 1176, 1658);
+('BN3588', 422, 712, 1175);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3589', 795, 1252, 1613);
+('BN3589', 224, 522, 631);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3590', 174, 541, 975);
+('BN3590', 405, 819, 1095);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3591', 673, 1116, 1336);
+('BN3591', 842, 1332, 1725);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3592', 279, 718, 1171);
+('BN3592', 715, 980, 1201);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3593', 673, 974, 1172);
+('BN3593', 106, 359, 606);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3594', 249, 617, 913);
+('BN3594', 524, 693, 837);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3595', 742, 848, 1339);
+('BN3595', 597, 975, 1257);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3596', 100, 342, 640);
+('BN3596', 749, 1180, 1510);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3597', 751, 916, 1288);
+('BN3597', 633, 888, 992);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3598', 768, 1228, 1336);
+('BN3598', 359, 783, 1163);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3599', 366, 631, 915);
+('BN3599', 132, 326, 549);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3600', 477, 853, 1190);
+('BN3600', 821, 1126, 1257);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3601', 644, 959, 1415);
+('BN3601', 857, 1286, 1697);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3602', 664, 808, 988);
+('BN3602', 707, 931, 1228);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3603', 797, 1148, 1567);
+('BN3603', 618, 791, 1213);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3604', 735, 1043, 1270);
+('BN3604', 189, 351, 681);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3605', 267, 569, 835);
+('BN3605', 560, 822, 1131);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3606', 854, 1151, 1428);
+('BN3606', 123, 562, 801);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3607', 338, 657, 1102);
+('BN3607', 885, 1037, 1398);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3608', 815, 1226, 1336);
+('BN3608', 509, 907, 1175);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3609', 817, 1239, 1535);
+('BN3609', 854, 1056, 1372);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3610', 182, 398, 723);
+('BN3610', 621, 779, 944);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3611', 239, 496, 992);
+('BN3611', 443, 915, 1147);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3612', 502, 907, 1314);
+('BN3612', 875, 1325, 1454);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3613', 212, 565, 968);
+('BN3613', 815, 1063, 1255);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3614', 736, 1016, 1507);
+('BN3614', 471, 680, 927);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3615', 258, 388, 665);
+('BN3615', 591, 1017, 1358);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3616', 898, 1386, 1589);
+('BN3616', 466, 650, 955);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3617', 292, 729, 992);
+('BN3617', 772, 1074, 1232);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3618', 725, 1075, 1366);
+('BN3618', 860, 1342, 1654);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3619', 348, 530, 894);
+('BN3619', 295, 754, 915);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3620', 889, 1352, 1732);
+('BN3620', 410, 720, 826);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3621', 716, 836, 1112);
+('BN3621', 476, 809, 973);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3622', 448, 844, 1133);
+('BN3622', 326, 690, 956);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3623', 386, 568, 974);
+('BN3623', 752, 1181, 1677);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3624', 179, 517, 631);
+('BN3624', 443, 766, 1108);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3625', 191, 405, 692);
+('BN3625', 114, 233, 628);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3626', 427, 673, 963);
+('BN3626', 525, 984, 1309);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3627', 347, 682, 1075);
+('BN3627', 366, 482, 596);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3628', 759, 1048, 1280);
+('BN3628', 370, 803, 1107);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3629', 167, 404, 808);
+('BN3629', 226, 556, 806);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3630', 240, 346, 705);
+('BN3630', 607, 805, 1099);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3631', 303, 414, 593);
+('BN3631', 708, 1171, 1517);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3632', 781, 1012, 1511);
+('BN3632', 541, 883, 1176);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3633', 341, 664, 806);
+('BN3633', 736, 1074, 1474);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3634', 886, 1048, 1524);
+('BN3634', 356, 558, 802);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3635', 393, 839, 1168);
+('BN3635', 345, 775, 893);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3636', 200, 627, 1081);
+('BN3636', 269, 537, 717);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3637', 622, 793, 1101);
+('BN3637', 882, 1047, 1330);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3638', 571, 980, 1154);
+('BN3638', 750, 1049, 1487);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3639', 839, 1229, 1545);
+('BN3639', 786, 1028, 1354);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3640', 374, 696, 894);
+('BN3640', 339, 773, 1265);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3641', 897, 1315, 1469);
+('BN3641', 335, 810, 1091);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3642', 883, 1120, 1613);
+('BN3642', 385, 723, 1041);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3643', 316, 772, 1177);
+('BN3643', 425, 648, 759);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3644', 542, 1020, 1516);
+('BN3644', 217, 356, 651);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3645', 176, 588, 769);
+('BN3645', 584, 956, 1200);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3646', 171, 428, 725);
+('BN3646', 261, 575, 705);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3647', 154, 543, 1034);
+('BN3647', 625, 930, 1295);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3648', 127, 551, 663);
+('BN3648', 787, 1101, 1580);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3649', 222, 554, 682);
+('BN3649', 643, 971, 1168);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3650', 600, 1035, 1227);
+('BN3650', 734, 1012, 1402);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3651', 536, 812, 1182);
+('BN3651', 292, 514, 946);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3652', 376, 531, 1007);
+('BN3652', 591, 818, 1090);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3653', 512, 915, 1054);
+('BN3653', 162, 409, 843);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3654', 390, 632, 764);
+('BN3654', 237, 458, 725);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3655', 589, 704, 921);
+('BN3655', 145, 394, 792);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3656', 877, 1035, 1431);
+('BN3656', 165, 399, 835);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3657', 570, 1067, 1552);
+('BN3657', 653, 836, 1205);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3658', 481, 830, 1140);
+('BN3658', 717, 1212, 1444);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3659', 306, 467, 917);
+('BN3659', 174, 436, 680);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3660', 755, 1205, 1373);
+('BN3660', 292, 533, 898);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3661', 821, 924, 1233);
+('BN3661', 645, 904, 1309);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3662', 298, 602, 982);
+('BN3662', 861, 1163, 1649);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3663', 734, 927, 1289);
+('BN3663', 314, 544, 762);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3664', 359, 515, 979);
+('BN3664', 427, 637, 1065);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3665', 237, 724, 1171);
+('BN3665', 876, 1235, 1561);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3666', 755, 893, 1197);
+('BN3666', 354, 736, 1077);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3667', 256, 504, 896);
+('BN3667', 293, 406, 610);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3668', 475, 890, 1171);
+('BN3668', 846, 1052, 1186);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3669', 395, 514, 978);
+('BN3669', 330, 471, 612);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3670', 506, 694, 823);
+('BN3670', 237, 682, 913);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3671', 300, 535, 857);
+('BN3671', 524, 633, 1082);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3672', 667, 1062, 1304);
+('BN3672', 203, 659, 856);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3673', 546, 694, 973);
+('BN3673', 538, 776, 1159);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3674', 506, 792, 1058);
+('BN3674', 785, 1098, 1551);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3675', 641, 1096, 1198);
+('BN3675', 855, 1025, 1200);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3676', 772, 1133, 1430);
+('BN3676', 855, 1226, 1608);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3677', 218, 463, 888);
+('BN3677', 456, 560, 826);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3678', 763, 951, 1160);
+('BN3678', 394, 810, 1108);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3679', 474, 629, 869);
+('BN3679', 658, 1085, 1258);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3680', 130, 454, 883);
+('BN3680', 574, 949, 1297);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3681', 697, 1082, 1567);
+('BN3681', 751, 1204, 1661);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3682', 107, 527, 646);
+('BN3682', 498, 630, 942);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3683', 559, 882, 1046);
+('BN3683', 283, 484, 625);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3684', 204, 703, 1096);
+('BN3684', 410, 569, 680);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3685', 208, 323, 764);
+('BN3685', 558, 1041, 1521);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3686', 795, 1036, 1162);
+('BN3686', 340, 679, 1027);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3687', 197, 338, 668);
+('BN3687', 138, 511, 750);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3688', 685, 1072, 1413);
+('BN3688', 193, 595, 732);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3689', 845, 1179, 1579);
+('BN3689', 854, 1151, 1327);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3690', 405, 527, 957);
+('BN3690', 876, 1009, 1393);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3691', 452, 769, 1268);
+('BN3691', 867, 991, 1279);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3692', 381, 487, 664);
+('BN3692', 780, 1277, 1467);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3693', 310, 509, 695);
+('BN3693', 412, 763, 904);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3694', 484, 934, 1221);
+('BN3694', 435, 914, 1277);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3695', 291, 456, 647);
+('BN3695', 617, 738, 1173);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3696', 805, 921, 1383);
+('BN3696', 771, 1161, 1262);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3697', 591, 940, 1105);
+('BN3697', 876, 1227, 1611);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3698', 503, 821, 942);
+('BN3698', 754, 1093, 1332);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3699', 257, 397, 633);
+('BN3699', 886, 1207, 1703);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3700', 322, 664, 1012);
+('BN3700', 832, 969, 1114);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3701', 435, 835, 1264);
+('BN3701', 104, 599, 1036);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3702', 468, 644, 990);
+('BN3702', 519, 715, 970);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3703', 606, 960, 1250);
+('BN3703', 493, 927, 1143);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3704', 886, 1375, 1838);
+('BN3704', 355, 540, 698);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3705', 491, 602, 916);
+('BN3705', 579, 860, 1294);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3706', 796, 1096, 1482);
+('BN3706', 127, 381, 505);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3707', 421, 589, 1031);
+('BN3707', 884, 1119, 1432);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3708', 728, 961, 1208);
+('BN3708', 479, 929, 1064);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3709', 364, 476, 897);
+('BN3709', 386, 826, 970);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3710', 685, 956, 1148);
+('BN3710', 217, 714, 843);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3711', 551, 836, 1231);
+('BN3711', 489, 755, 1246);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3712', 117, 257, 489);
+('BN3712', 375, 841, 1184);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3713', 172, 519, 996);
+('BN3713', 471, 820, 1176);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3714', 405, 514, 768);
+('BN3714', 698, 824, 976);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3715', 177, 426, 791);
+('BN3715', 208, 400, 519);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3716', 617, 946, 1097);
+('BN3716', 403, 875, 1118);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3717', 500, 974, 1393);
+('BN3717', 232, 670, 1092);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3718', 161, 583, 989);
+('BN3718', 557, 992, 1205);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3719', 526, 816, 1222);
+('BN3719', 878, 982, 1119);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3720', 452, 826, 951);
+('BN3720', 586, 721, 1062);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3721', 586, 696, 917);
+('BN3721', 561, 1030, 1163);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3722', 119, 434, 815);
+('BN3722', 809, 1098, 1423);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3723', 133, 408, 832);
+('BN3723', 625, 844, 1074);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3724', 495, 600, 1098);
+('BN3724', 274, 756, 1072);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3725', 374, 690, 1007);
+('BN3725', 323, 538, 771);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3726', 474, 593, 837);
+('BN3726', 428, 612, 1090);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3727', 496, 944, 1413);
+('BN3727', 481, 802, 1296);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3728', 513, 884, 1151);
+('BN3728', 676, 1149, 1284);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3729', 186, 419, 809);
+('BN3729', 174, 450, 550);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3730', 614, 1069, 1555);
+('BN3730', 781, 1195, 1428);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3731', 542, 712, 947);
+('BN3731', 201, 460, 910);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3732', 898, 1129, 1418);
+('BN3732', 500, 637, 845);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3733', 124, 340, 768);
+('BN3733', 401, 570, 767);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3734', 692, 1029, 1310);
+('BN3734', 589, 1032, 1527);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3735', 790, 1011, 1294);
+('BN3735', 656, 960, 1224);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3736', 605, 1067, 1265);
+('BN3736', 748, 1086, 1198);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3737', 830, 1132, 1345);
+('BN3737', 852, 1296, 1463);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3738', 722, 893, 1021);
+('BN3738', 217, 382, 811);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3739', 888, 1300, 1455);
+('BN3739', 354, 688, 909);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3740', 535, 1014, 1333);
+('BN3740', 180, 364, 724);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3741', 825, 1263, 1459);
+('BN3741', 494, 889, 1213);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3742', 365, 608, 1070);
+('BN3742', 447, 913, 1137);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3743', 329, 660, 1065);
+('BN3743', 274, 711, 979);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3744', 198, 548, 662);
+('BN3744', 469, 857, 1319);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3745', 509, 959, 1307);
+('BN3745', 707, 1192, 1365);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3746', 613, 878, 1070);
+('BN3746', 589, 1056, 1212);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3747', 864, 1142, 1592);
+('BN3747', 472, 730, 913);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3748', 136, 546, 700);
+('BN3748', 627, 740, 999);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3749', 795, 993, 1215);
+('BN3749', 338, 673, 972);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3750', 220, 537, 845);
+('BN3750', 422, 906, 1098);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3751', 851, 1087, 1395);
+('BN3751', 457, 951, 1382);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3752', 414, 780, 1008);
+('BN3752', 407, 541, 1003);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3753', 892, 1200, 1511);
+('BN3753', 788, 1176, 1557);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3754', 258, 640, 827);
+('BN3754', 202, 312, 439);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3755', 776, 1176, 1279);
+('BN3755', 220, 323, 568);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3756', 394, 841, 1079);
+('BN3756', 393, 637, 762);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3757', 207, 641, 1054);
+('BN3757', 596, 743, 1117);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3758', 760, 1201, 1660);
+('BN3758', 374, 496, 612);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3759', 600, 805, 1183);
+('BN3759', 661, 766, 1036);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3760', 847, 1117, 1322);
+('BN3760', 400, 734, 941);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3761', 234, 603, 818);
+('BN3761', 853, 1021, 1121);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3762', 256, 389, 532);
+('BN3762', 681, 789, 1213);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3763', 656, 858, 976);
+('BN3763', 861, 1341, 1489);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3764', 747, 1179, 1297);
+('BN3764', 688, 868, 1002);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3765', 117, 220, 542);
+('BN3765', 447, 806, 979);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3766', 509, 876, 1133);
+('BN3766', 330, 542, 1000);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3767', 256, 438, 708);
+('BN3767', 731, 867, 1043);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3768', 457, 587, 1051);
+('BN3768', 807, 1085, 1296);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3769', 665, 1006, 1263);
+('BN3769', 484, 666, 925);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3770', 229, 420, 701);
+('BN3770', 699, 1003, 1104);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3771', 450, 686, 998);
+('BN3771', 763, 886, 1172);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3772', 510, 896, 1111);
+('BN3772', 319, 689, 1102);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3773', 433, 538, 843);
+('BN3773', 174, 485, 703);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3774', 168, 580, 808);
+('BN3774', 786, 1013, 1332);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3775', 478, 629, 825);
+('BN3775', 601, 775, 931);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3776', 470, 844, 1282);
+('BN3776', 364, 647, 1110);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3777', 134, 362, 583);
+('BN3777', 466, 830, 940);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3778', 494, 749, 999);
+('BN3778', 290, 526, 993);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3779', 182, 663, 814);
+('BN3779', 300, 525, 665);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3780', 687, 1057, 1501);
+('BN3780', 402, 759, 1232);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3781', 861, 1051, 1280);
+('BN3781', 304, 504, 704);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3782', 693, 901, 1254);
+('BN3782', 840, 1126, 1440);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3783', 877, 1158, 1477);
+('BN3783', 596, 953, 1154);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3784', 160, 566, 831);
+('BN3784', 608, 940, 1068);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3785', 147, 558, 812);
+('BN3785', 486, 736, 1021);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3786', 460, 832, 1152);
+('BN3786', 590, 1029, 1484);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3787', 720, 823, 1077);
+('BN3787', 799, 1138, 1580);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3788', 388, 547, 1046);
+('BN3788', 474, 748, 1162);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3789', 208, 310, 595);
+('BN3789', 778, 1275, 1381);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3790', 253, 740, 863);
+('BN3790', 181, 377, 529);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3791', 395, 550, 1022);
+('BN3791', 378, 552, 906);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3792', 858, 1275, 1711);
+('BN3792', 883, 1144, 1498);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3793', 594, 949, 1334);
+('BN3793', 585, 870, 988);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3794', 451, 683, 1150);
+('BN3794', 473, 602, 760);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3795', 540, 1006, 1503);
+('BN3795', 259, 545, 772);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3796', 534, 877, 1184);
+('BN3796', 552, 770, 920);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3797', 469, 745, 937);
+('BN3797', 441, 820, 1112);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3798', 671, 902, 1062);
+('BN3798', 345, 669, 885);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3799', 747, 1036, 1438);
+('BN3799', 531, 865, 1050);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3800', 477, 626, 954);
+('BN3800', 811, 972, 1114);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3801', 654, 952, 1185);
+('BN3801', 682, 918, 1027);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3802', 335, 444, 668);
+('BN3802', 443, 752, 1103);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3803', 842, 959, 1347);
+('BN3803', 161, 531, 768);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3804', 574, 826, 1286);
+('BN3804', 419, 785, 1069);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3805', 563, 929, 1275);
+('BN3805', 505, 680, 1168);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3806', 565, 965, 1154);
+('BN3806', 840, 1144, 1286);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3807', 217, 420, 890);
+('BN3807', 518, 628, 814);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3808', 710, 1208, 1455);
+('BN3808', 639, 1035, 1333);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3809', 689, 905, 1401);
+('BN3809', 289, 653, 1092);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3810', 668, 782, 964);
+('BN3810', 363, 607, 989);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3811', 768, 1219, 1349);
+('BN3811', 236, 607, 915);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3812', 739, 863, 1036);
+('BN3812', 891, 1043, 1296);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3813', 605, 827, 1175);
+('BN3813', 868, 1004, 1104);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3814', 761, 1063, 1290);
+('BN3814', 709, 1143, 1597);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3815', 791, 1159, 1361);
+('BN3815', 272, 585, 687);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3816', 505, 847, 1163);
+('BN3816', 767, 880, 1164);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3817', 755, 1198, 1640);
+('BN3817', 463, 949, 1116);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3818', 756, 1250, 1732);
+('BN3818', 845, 1237, 1516);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3819', 861, 1031, 1414);
+('BN3819', 144, 558, 1041);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3820', 238, 465, 638);
+('BN3820', 371, 526, 973);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3821', 530, 717, 1076);
+('BN3821', 898, 1181, 1289);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3822', 182, 645, 843);
+('BN3822', 613, 719, 1071);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3823', 453, 703, 1061);
+('BN3823', 563, 894, 1050);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3824', 662, 1084, 1512);
+('BN3824', 308, 486, 978);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3825', 424, 588, 710);
+('BN3825', 289, 570, 845);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3826', 505, 873, 1108);
+('BN3826', 862, 1302, 1668);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3827', 877, 1082, 1275);
+('BN3827', 643, 859, 1294);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3828', 796, 980, 1244);
+('BN3828', 398, 723, 1025);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3829', 823, 979, 1118);
+('BN3829', 701, 1090, 1264);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3830', 362, 487, 629);
+('BN3830', 375, 514, 729);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3831', 478, 604, 925);
+('BN3831', 512, 975, 1355);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3832', 897, 1081, 1400);
+('BN3832', 256, 718, 1045);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3833', 851, 1300, 1475);
+('BN3833', 546, 849, 1125);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3834', 784, 949, 1194);
+('BN3834', 898, 1217, 1416);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3835', 191, 615, 948);
+('BN3835', 432, 705, 1122);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3836', 735, 907, 1285);
+('BN3836', 313, 626, 879);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3837', 690, 1011, 1163);
+('BN3837', 220, 701, 1104);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3838', 503, 959, 1234);
+('BN3838', 282, 389, 758);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3839', 591, 1017, 1321);
+('BN3839', 738, 992, 1195);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3840', 503, 931, 1418);
+('BN3840', 404, 867, 1193);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3841', 626, 945, 1225);
+('BN3841', 196, 628, 1127);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3842', 819, 1171, 1461);
+('BN3842', 831, 1313, 1696);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3843', 515, 824, 1150);
+('BN3843', 800, 981, 1438);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3844', 684, 931, 1351);
+('BN3844', 131, 551, 654);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3845', 341, 822, 1167);
+('BN3845', 182, 678, 868);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3846', 899, 1278, 1590);
+('BN3846', 693, 825, 1095);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3847', 514, 966, 1084);
+('BN3847', 534, 898, 1249);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3848', 818, 1077, 1177);
+('BN3848', 209, 409, 880);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3849', 322, 606, 804);
+('BN3849', 207, 491, 719);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3850', 543, 924, 1202);
+('BN3850', 130, 233, 409);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3851', 196, 380, 595);
+('BN3851', 831, 966, 1301);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3852', 721, 889, 1208);
+('BN3852', 436, 536, 723);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3853', 198, 558, 683);
+('BN3853', 600, 909, 1095);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3854', 529, 679, 1069);
+('BN3854', 240, 405, 884);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3855', 357, 848, 1313);
+('BN3855', 676, 1092, 1359);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3856', 385, 679, 1021);
+('BN3856', 224, 557, 872);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3857', 262, 656, 961);
+('BN3857', 859, 1353, 1654);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3858', 370, 486, 675);
+('BN3858', 583, 938, 1121);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3859', 432, 605, 748);
+('BN3859', 889, 1012, 1155);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3860', 611, 838, 949);
+('BN3860', 711, 1109, 1490);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3861', 870, 1341, 1472);
+('BN3861', 876, 1068, 1493);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3862', 120, 371, 603);
+('BN3862', 234, 637, 741);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3863', 663, 958, 1310);
+('BN3863', 846, 1201, 1685);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3864', 281, 461, 918);
+('BN3864', 260, 546, 719);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3865', 667, 1140, 1563);
+('BN3865', 844, 1295, 1557);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3866', 112, 333, 588);
+('BN3866', 629, 955, 1138);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3867', 413, 717, 835);
+('BN3867', 479, 904, 1135);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3868', 394, 873, 1135);
+('BN3868', 195, 359, 526);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3869', 617, 914, 1327);
+('BN3869', 785, 1168, 1550);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3870', 628, 952, 1302);
+('BN3870', 691, 1183, 1658);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3871', 488, 907, 1382);
+('BN3871', 522, 676, 1003);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3872', 449, 736, 939);
+('BN3872', 203, 450, 927);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3873', 117, 270, 375);
+('BN3873', 423, 726, 1126);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3874', 546, 1007, 1205);
+('BN3874', 227, 366, 589);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3875', 845, 1318, 1755);
+('BN3875', 227, 336, 561);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3876', 507, 798, 1265);
+('BN3876', 687, 956, 1128);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3877', 319, 623, 728);
+('BN3877', 393, 755, 1047);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3878', 303, 615, 868);
+('BN3878', 327, 767, 1100);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3879', 552, 721, 1071);
+('BN3879', 569, 818, 1259);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3880', 121, 255, 540);
+('BN3880', 859, 1196, 1533);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3881', 447, 653, 791);
+('BN3881', 645, 889, 1172);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3882', 840, 1218, 1396);
+('BN3882', 239, 384, 721);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3883', 880, 1114, 1223);
+('BN3883', 213, 683, 787);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3884', 826, 1254, 1687);
+('BN3884', 279, 466, 571);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3885', 189, 674, 1051);
+('BN3885', 511, 854, 971);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3886', 611, 1087, 1216);
+('BN3886', 145, 540, 826);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3887', 884, 1123, 1557);
+('BN3887', 159, 333, 493);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3888', 237, 344, 572);
+('BN3888', 445, 754, 1117);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3889', 872, 1265, 1403);
+('BN3889', 308, 533, 857);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3890', 544, 885, 1097);
+('BN3890', 769, 1268, 1725);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3891', 218, 718, 996);
+('BN3891', 262, 742, 1067);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3892', 367, 499, 783);
+('BN3892', 740, 1137, 1471);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3893', 297, 771, 968);
+('BN3893', 816, 1216, 1336);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3894', 304, 654, 1037);
+('BN3894', 660, 828, 1153);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3895', 145, 355, 755);
+('BN3895', 700, 1021, 1472);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3896', 720, 1021, 1344);
+('BN3896', 367, 624, 728);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3897', 555, 743, 899);
+('BN3897', 535, 975, 1160);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3898', 119, 334, 698);
+('BN3898', 299, 645, 878);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3899', 622, 741, 882);
+('BN3899', 660, 1062, 1426);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3900', 897, 1237, 1719);
+('BN3900', 603, 990, 1131);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3901', 778, 1105, 1335);
+('BN3901', 486, 855, 1127);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3902', 427, 849, 1143);
+('BN3902', 534, 875, 1117);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3903', 521, 621, 760);
+('BN3903', 730, 956, 1446);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3904', 848, 995, 1367);
+('BN3904', 219, 508, 868);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3905', 392, 883, 1043);
+('BN3905', 691, 1137, 1567);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3906', 841, 1319, 1709);
+('BN3906', 598, 1084, 1305);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3907', 243, 584, 763);
+('BN3907', 514, 815, 1069);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3908', 882, 1051, 1426);
+('BN3908', 115, 593, 806);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3909', 684, 912, 1201);
+('BN3909', 528, 709, 1088);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3910', 447, 898, 1113);
+('BN3910', 565, 987, 1148);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3911', 538, 782, 1203);
+('BN3911', 558, 745, 1089);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3912', 851, 1208, 1391);
+('BN3912', 300, 582, 1000);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3913', 644, 1019, 1331);
+('BN3913', 622, 1099, 1501);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3914', 419, 702, 1019);
+('BN3914', 712, 924, 1239);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3915', 688, 880, 1109);
+('BN3915', 200, 624, 1037);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3916', 157, 454, 909);
+('BN3916', 675, 825, 944);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3917', 229, 371, 705);
+('BN3917', 295, 596, 925);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3918', 809, 1186, 1591);
+('BN3918', 546, 851, 1041);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3919', 728, 995, 1476);
+('BN3919', 207, 331, 801);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3920', 491, 650, 923);
+('BN3920', 616, 988, 1298);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3921', 736, 1032, 1220);
+('BN3921', 506, 905, 1182);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3922', 629, 1064, 1207);
+('BN3922', 510, 790, 1289);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3923', 185, 567, 736);
+('BN3923', 570, 792, 1228);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3924', 600, 913, 1246);
+('BN3924', 610, 934, 1039);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3925', 279, 693, 1064);
+('BN3925', 148, 573, 966);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3926', 776, 1155, 1623);
+('BN3926', 276, 509, 940);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3927', 664, 970, 1465);
+('BN3927', 773, 1130, 1555);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3928', 870, 1122, 1501);
+('BN3928', 589, 977, 1457);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3929', 625, 1017, 1362);
+('BN3929', 198, 305, 437);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3930', 498, 630, 896);
+('BN3930', 438, 615, 1079);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3931', 432, 726, 1034);
+('BN3931', 570, 1067, 1489);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3932', 209, 685, 1094);
+('BN3932', 495, 729, 949);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3933', 202, 342, 655);
+('BN3933', 465, 920, 1393);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3934', 834, 1129, 1520);
+('BN3934', 719, 1086, 1194);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3935', 410, 794, 1274);
+('BN3935', 678, 1035, 1514);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3936', 671, 949, 1211);
+('BN3936', 400, 616, 991);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3937', 527, 955, 1099);
+('BN3937', 468, 590, 806);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3938', 484, 910, 1403);
+('BN3938', 350, 580, 809);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3939', 520, 706, 1018);
+('BN3939', 419, 791, 1116);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3940', 484, 820, 1032);
+('BN3940', 385, 614, 797);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3941', 813, 1044, 1241);
+('BN3941', 703, 940, 1308);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3942', 753, 1121, 1553);
+('BN3942', 629, 771, 1041);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3943', 754, 1153, 1577);
+('BN3943', 881, 1298, 1548);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3944', 738, 899, 1370);
+('BN3944', 417, 907, 1290);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3945', 768, 990, 1175);
+('BN3945', 453, 713, 1180);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3946', 730, 918, 1135);
+('BN3946', 555, 668, 788);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3947', 787, 987, 1126);
+('BN3947', 557, 777, 969);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3948', 770, 1024, 1379);
+('BN3948', 132, 620, 828);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3949', 699, 823, 1267);
+('BN3949', 436, 737, 964);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3950', 776, 1276, 1565);
+('BN3950', 171, 394, 570);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3951', 523, 853, 982);
+('BN3951', 714, 1174, 1405);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3952', 108, 533, 896);
+('BN3952', 697, 822, 1198);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3953', 153, 618, 829);
+('BN3953', 613, 851, 966);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3954', 539, 664, 780);
+('BN3954', 314, 635, 991);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3955', 235, 594, 719);
+('BN3955', 507, 936, 1102);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3956', 351, 757, 1141);
+('BN3956', 541, 735, 990);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3957', 812, 1012, 1130);
+('BN3957', 503, 924, 1247);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3958', 133, 422, 869);
+('BN3958', 679, 1103, 1383);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3959', 679, 892, 1254);
+('BN3959', 330, 677, 846);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3960', 203, 438, 747);
+('BN3960', 611, 943, 1087);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3961', 498, 939, 1055);
+('BN3961', 792, 1200, 1460);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3962', 352, 481, 673);
+('BN3962', 323, 451, 629);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3963', 773, 1171, 1522);
+('BN3963', 584, 791, 1000);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3964', 844, 1210, 1656);
+('BN3964', 179, 520, 696);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3965', 681, 1154, 1344);
+('BN3965', 832, 1156, 1385);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3966', 720, 1032, 1139);
+('BN3966', 799, 1037, 1393);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3967', 125, 471, 773);
+('BN3967', 582, 855, 1217);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3968', 322, 778, 1266);
+('BN3968', 164, 329, 485);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3969', 467, 624, 780);
+('BN3969', 475, 727, 1115);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3970', 377, 813, 943);
+('BN3970', 392, 700, 830);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3971', 817, 1178, 1351);
+('BN3971', 316, 651, 763);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3972', 386, 600, 705);
+('BN3972', 392, 851, 1278);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3973', 161, 461, 696);
+('BN3973', 371, 491, 784);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3974', 805, 1234, 1364);
+('BN3974', 728, 1006, 1130);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3975', 394, 867, 987);
+('BN3975', 507, 907, 1393);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3976', 756, 910, 1300);
+('BN3976', 521, 826, 1141);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3977', 429, 681, 893);
+('BN3977', 726, 1124, 1382);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3978', 186, 635, 848);
+('BN3978', 158, 598, 812);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3979', 119, 367, 673);
+('BN3979', 139, 573, 1038);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3980', 660, 1081, 1348);
+('BN3980', 875, 1244, 1568);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3981', 216, 508, 896);
+('BN3981', 148, 306, 596);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3982', 158, 652, 752);
+('BN3982', 364, 510, 973);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3983', 581, 812, 1152);
+('BN3983', 202, 478, 785);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3984', 116, 435, 751);
+('BN3984', 551, 850, 1291);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3985', 880, 1204, 1666);
+('BN3985', 575, 877, 1222);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3986', 277, 614, 1050);
+('BN3986', 415, 908, 1156);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3987', 496, 837, 1123);
+('BN3987', 703, 844, 1171);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3988', 559, 709, 914);
+('BN3988', 830, 1314, 1487);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3989', 875, 1318, 1628);
+('BN3989', 204, 507, 936);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3990', 154, 340, 775);
+('BN3990', 663, 957, 1343);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3991', 159, 580, 859);
+('BN3991', 160, 315, 504);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3992', 879, 1171, 1646);
+('BN3992', 713, 973, 1300);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3993', 288, 578, 1052);
+('BN3993', 585, 926, 1085);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3994', 624, 771, 953);
+('BN3994', 483, 919, 1255);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3995', 425, 682, 822);
+('BN3995', 251, 565, 931);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3996', 127, 349, 833);
+('BN3996', 817, 1257, 1476);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3997', 637, 978, 1314);
+('BN3997', 364, 470, 860);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3998', 448, 792, 1136);
+('BN3998', 400, 856, 1315);
 INSERT INTO class ("flightID", "Price_Economy", "Price_Business", "Price_FirstClass") VALUES
-('BN3999', 808, 1076, 1434);
+('BN3999', 856, 1235, 1530);

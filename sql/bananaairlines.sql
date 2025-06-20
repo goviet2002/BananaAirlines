@@ -27,16 +27,6 @@ INSERT INTO aircraft ("AircraftID", "AircraftName", "Capacity", "Capacity_Econom
   ('BN1014', 'Boeing 737', 400, 346, 30, 0),
   ('BN1015', 'Airbus A350', 330, 296, 13, 0),
   ('BN1016', 'Boeing 777', 400, 349, 46, 0);
-  ('BN2001', 'Boeing 767', 300, 250, 40, 10),
-  ('BN2002', 'Airbus A320', 180, 150, 24, 6),
-  ('BN2003', 'Boeing 757', 220, 180, 30, 10),
-  ('BN2004', 'Airbus A340', 350, 300, 40, 10),
-  ('BN2005', 'Boeing 737 MAX', 200, 170, 24, 6),
-  ('BN2006', 'Airbus A321neo', 240, 200, 30, 10),
-  ('BN2007', 'Boeing 787-9', 280, 230, 40, 10),
-  ('BN2008', 'Airbus A350-1000', 370, 320, 40, 10),
-  ('BN2009', 'Boeing 747-8', 410, 350, 50, 10),
-  ('BN2010', 'Airbus A380-800', 500, 400, 80, 20);
 
 -- Table: cities
 CREATE TABLE IF NOT EXISTS cities (
@@ -57,7 +47,7 @@ INSERT INTO cities ("City", "Code") VALUES
   ('Istanbul', 'IST'),
   ('Moscow', 'SVO'),
   ('Hawaii', 'HNL'),
-  ('Athens', 'ATH');
+  ('Athens', 'ATH'),
   ('London', 'LHR'),
   ('Dubai', 'DXB'),
   ('Singapore', 'SIN'),

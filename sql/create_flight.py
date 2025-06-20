@@ -47,4 +47,27 @@ with open('classes.sql', 'w', encoding='utf-8') as f:
     for s in class_sql:
         f.write(s + '\n')
 
-print("SQL files 'flights.sql' and 'classes.sql' have been created.")
+models = [
+    'Boeing 737', 'Boeing 747', 'Boeing 757', 'Boeing 767', 'Boeing 777', 'Boeing 787',
+    'Airbus A320', 'Airbus A321', 'Airbus A330', 'Airbus A340', 'Airbus A350', 'Airbus A380'
+]
+
+aircraft_sql = []
+for i in range(1001, 4000):
+    aircraft_id = f'BN{i:04d}'
+    aircraft_name = random.choice(models)
+    capacity = random.choice([180, 220, 240, 300, 330, 350, 370, 400, 410, 500])
+    capacity_economy = int(capacity * random.uniform(0.6, 0.8))
+    capacity_business = int(capacity * random.uniform(0.1, 0.2))
+    capacity_first = capacity - capacity_economy - capacity_business
+    aircraft_sql.append(
+        f'''INSERT INTO aircraft ("AircraftID", "AircraftName", "Capacity", "Capacity_Economy", "Capacity_Business", "Capacity_FirstClass") VALUES
+('{aircraft_id}', '{aircraft_name}', {capacity}, {capacity_economy}, {capacity_business}, {capacity_first});'''
+    )
+
+with open('aircrafts.sql', 'w', encoding='utf-8') as f:
+    f.write('-- Aircrafts\n')
+    for s in aircraft_sql:
+        f.write(s + '\n')
+
+print("SQL files 'flights.sql', 'classes.sql', and 'aircrafts.sql' have been created.")
