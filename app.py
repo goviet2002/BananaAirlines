@@ -1,20 +1,30 @@
 from flask import Flask, render_template, request, session, jsonify
-import string, random, mysql.connector
+import string, random, psycopg2
 from datetime import datetime, timedelta
+import os
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
 app.permanent_session_lifetime = timedelta(minutes=1)
 
 config = {
-    'host': '127.0.0.1',
-    'port': 3306,
-    'user': 'root',
-    'password': '---', #Password of your MariaDB
-    'database': '---' #Database name
+    'host': os.environ.get('DB_HOST', 'localhost'),
+    'port': os.environ.get('DB_PORT', 5432),
+    'user': os.environ.get('DB_USER', 'postgres'),
+    'password': os.environ.get('DB_PASSWORD', ''),
+    'database': os.environ.get('DB_NAME', 'postgres')
 }
 
-conn = mysql.connector.connect(**config)
+def get_conn():
+    return psycopg2.connect(
+        host=config['host'],
+        port=config['port'],
+        user=config['user'],
+        password=config['password'],
+        dbname=config['database']
+    )
+    
+conn = get_conn()
 
 cur = conn.cursor()
 
@@ -29,7 +39,7 @@ class Logger:
 			t.write(f"{level}: {str}\n")
    
 def generate_unique_id():
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
     while True:
@@ -45,8 +55,8 @@ class SQL:
         SELECT f.FlightCode, 
         CONCAT(c1.City, ' (', f.SourceAirport, ')') AS SourceCity, 
         CONCAT(c2.City, ' (', f.DestinationAirport, ')') AS DestinationCity, f.Distance, 
-        DATE_FORMAT(f.DepartureTime, '%d-%m-%Y %H:%i') as DepartureTime, 
-        DATE_FORMAT(f.ArrivalTime, '%d-%m-%Y %H:%i') as ArrivalTime, t.Status, t.TicketID,
+        TO_CHAR(f.DepartureTime, 'DD-MM-YYYY HH24:MI') as DepartureTime, 
+        TO_CHAR(f.ArrivalTime, 'DD-MM-YYYY HH24:MI') as ArrivalTime, t.Status, t.TicketID,
         CASE 
             WHEN t.Baggage = 1 THEN 'Yes'
             ELSE 'No'
@@ -84,7 +94,7 @@ class SQL:
     """
     sql1_login = '''
         SELECT u.*
-        FROM user u
+        FROM "user" u
         WHERE u.username = %s AND u.password = %s
     '''
     sql2_login = '''
@@ -97,19 +107,18 @@ class SQL:
         FROM employee e
         WHERE e.EmployeeID = %s
     '''
-    sql1_register = "INSERT INTO user (username, UserID, password, UserType) VALUES (%s, %s, %s, %s)"
-    sql2_register = "INSERT INTO client (ClientID, FirstName, LastName, Email, MilesEarned, Tier, Birthdate, Gender, MobileNumber, Country) \
-                    VALUES (%s, %s, %s, %s, 0, %s, %s, %s,%s,%s)"
+    sql1_register = "INSERT INTO \"user\" (username, UserID, password, UserType) VALUES (%s, %s, %s, %s)"
+    sql2_register = "INSERT INTO client (ClientID, FirstName, LastName, Email, MilesEarned, Tier, Birthdate, Gender, MobileNumber, Country) VALUES (%s, %s, %s, %s, 0, %s, %s, %s, %s, %s)"
     sql3_register = """
-        SELECT client.FirstName, client.LastName, client.Email, user.UserID, client.Tier, client.MilesEarned, offer.Offers 
+        SELECT client.FirstName, client.LastName, client.Email, "user".UserID, client.Tier, client.MilesEarned, offer.Offers 
         FROM client 
-        JOIN user ON client.ClientID = user.UserID 
+        JOIN "user" ON client.ClientID = "user".UserID 
         JOIN offer ON client.Tier = offer.Tier 
-        WHERE client.Email = ? AND user.username = ?
+        WHERE client.Email = %s AND "user".username = %s
         """
     sql1_account = '''
         SELECT c.FirstName, c.LastName, c.Email, u.UserID, c.Tier, c.MilesEarned, o.Offers
-        FROM user u
+        FROM "user" u
         JOIN client c ON u.UserID = c.ClientID
         JOIN offer o ON c.Tier = o.Tier
         WHERE u.UserID = %s
@@ -121,7 +130,7 @@ class SQL:
         ELSE 'Flight not available'
     END as SourceCity, 
     CASE 
-        WHEN f.DepartureTime IS NOT NULL THEN DATE_FORMAT(f.DepartureTime, '%d-%m-%Y %H:%i')
+        WHEN f.DepartureTime IS NOT NULL THEN TO_CHAR(f.DepartureTime, 'DD-MM-YYYY HH24:MI')
         ELSE 'Flight not available'
     END as DepartureTime, 
     CASE 
@@ -129,7 +138,7 @@ class SQL:
         ELSE 'Flight not available'
     END as DestinationCity, 
     CASE 
-        WHEN f.ArrivalTime IS NOT NULL THEN DATE_FORMAT(f.ArrivalTime, '%d-%m-%Y %H:%i')
+        WHEN f.ArrivalTime IS NOT NULL THEN TO_CHAR(f.ArrivalTime, 'DD-MM-YYYY HH24:MI')
         ELSE 'Flight not available'
     END as ArrivalTime, 
     t.FlightCode, t.Class, t.Paid, t.Status,
@@ -145,7 +154,7 @@ class SQL:
         WHEN t.Class = 'Economy' AND f.Distance IS NOT NULL THEN f.Distance
         WHEN t.Class = 'Business' AND f.Distance IS NOT NULL THEN f.Distance * 2
         WHEN t.Class = 'First Class' AND f.Distance IS NOT NULL THEN f.Distance * 3
-        ELSE 'Flight not available'
+        ELSE NULL
     END as Miles
         FROM ticket t
         LEFT JOIN flight f ON t.FlightCode = f.FlightCode
@@ -155,10 +164,10 @@ class SQL:
         WHERE t.UserID = %s
         ORDER BY 
             CASE 
-                WHEN DepartureTime = 'Flight not available' THEN 0
+                WHEN (CASE WHEN f.DepartureTime IS NOT NULL THEN TO_CHAR(f.DepartureTime, 'DD-MM-YYYY HH24:MI') ELSE 'Flight not available' END) = 'Flight not available' THEN 0
                 ELSE 1
-            END,
-            DepartureTime DESC;
+            END DESC,
+            f.DepartureTime DESC;
         '''
     sql1_bookflight = """
     SELECT f.FlightCode, CONCAT(c1.City, ' (', f.SourceAirport , ')'), 
@@ -167,17 +176,17 @@ class SQL:
     FROM flight f
     JOIN cities c1 ON f.SourceAirport = c1.Code
     JOIN cities c2 ON f.DestinationAirport = c2.Code
-    WHERE f.SourceAirport = ? AND f.DestinationAirport = ? AND DATE(f.DepartureTime) >= ?
+    WHERE f.SourceAirport = %s AND f.DestinationAirport = %s AND DATE(f.DepartureTime) >= %s
     """
     sql2_bookflight = """
     SELECT Tier
     FROM client
-    WHERE ClientID = ?
+    WHERE ClientID = %s
     """
     sql3_bookflight = """
     SELECT Capacity_Economy, Capacity_Business, Capacity_FirstClass
     FROM aircraft a JOIN flight f ON a.AircraftID = f.FlightCode
-    WHERE f.SourceAirport = ? AND f.DestinationAirport = ? AND DATE(f.DepartureTime) >= ?
+    WHERE f.SourceAirport = %s AND f.DestinationAirport = %s AND DATE(f.DepartureTime) >= %s
     """
     sql4_bookflight = """
     SELECT
@@ -189,16 +198,16 @@ class SQL:
     JOIN 
     class AS cl ON f.FlightCode = cl.flightID
     WHERE 
-        f.SourceAirport = ? AND f.DestinationAirport = ? AND DATE(f.DepartureTime) >= ?
+        f.SourceAirport = %s AND f.DestinationAirport = %s AND DATE(f.DepartureTime) >= %s
     """
     sql5_bookflight = """
         SELECT Offers
         FROM offer
-        WHERE Tier = ?
+        WHERE Tier = %s
     """
     sql1_finishbooking = """
         INSERT INTO ticket(TicketID, UserID, PurchaseDate, FlightCode, Class, CheckIn, Baggage, Paid, Status, Request) 
-        VALUES (?, ?, ?, ?, ?, 0, ?, ?, ?, ?);
+        VALUES (%s, %s, %s, %s, %s, 0, %s, %s, %s, %s);
         """
     sql2_finishbooking = """
             UPDATE aircraft 
@@ -211,18 +220,18 @@ class SQL:
         UPDATE client 
         SET MilesEarned = MilesEarned + 
             CASE 
-                WHEN ? = 'Economy' THEN ? * 1 * ?
-                WHEN ? = 'Business' THEN ? * 2 * ?
-                WHEN ? = 'First Class' THEN ? * 3 * ?
+                WHEN %s = 'Economy' THEN %s * 1 * %s
+                WHEN %s = 'Business' THEN %s * 2 * %s
+                WHEN %s = 'First Class' THEN %s * 3 * %s
             END
-        WHERE ClientID = ?;
+        WHERE ClientID = %s;
         """
     sql4_finishbooking = """
         SELECT FirstName, LastName
         FROM client
-        WHERE ClientID = ?
+        WHERE ClientID = %s
         """
-    sql_cancel_client = 'UPDATE ticket SET Request = 1, Reason = ? WHERE TicketID = ?'
+    sql_cancel_client = 'UPDATE ticket SET Request = 1, Reason = %s WHERE TicketID = %s'
     sql_validate ="""
     SELECT client.FirstName, client.LastName, ticket.CheckIn
     FROM ticket JOIN client ON ticket.UserID = client.ClientID 
@@ -232,22 +241,22 @@ class SQL:
     sql1_insert = """      
         INSERT INTO aircraft (AircraftID, AircraftName,Capacity,
         Capacity_Economy,Capacity_Business,Capacity_FirstClass) 
-        VALUES (?, ?, ?, ? ,? ,? )
+        VALUES (%s, %s, %s, %s, %s, %s )
     """
     sql2_insert = """      
         INSERT INTO flight (FlightCode, SourceAirport, DestinationAirport,DepartureTime,ArrivalTime,Distance)
-        VALUES (?, ?, ?, ?,?,?)
+        VALUES (%s, %s, %s, %s, %s, %s)
     """
-    sql3_insert = """INSERT INTO class (flightID,Price_Economy,Price_Business,Price_FirstClass) VALUES (?, ?, ?, ?)"""
+    sql3_insert = """INSERT INTO class (flightID,Price_Economy,Price_Business,Price_FirstClass) VALUES (%s, %s, %s, %s)"""
     sql_flights = """
-    SELECT a.aircraftname, f.FlightCode, a.capacity, 
+    SELECT a."AircraftName", f.FlightCode, a.Capacity, 
     a.Capacity_Economy, a.Capacity_Business, 
     a.Capacity_FirstClass, f.SourceAirport, 
     f.DestinationAirport, f.DepartureTime, 
     f.ArrivalTime, f.Distance, c.Price_Economy, 
     c.Price_Business, c.Price_FirstClass
     FROM aircraft a
-    JOIN flight f ON a.aircraftID = f.FlightCode
+    JOIN flight f ON a.AircraftID = f.FlightCode
     JOIN class c ON f.FlightCode = c.flightID
     """
     sql_offer = """
@@ -267,34 +276,34 @@ class SQL:
     sql3_delete_em = 'DELETE FROM flight WHERE FlightCode = %s'
     sql_update_offer_em = "UPDATE offer SET Offers = %s WHERE Tier = %s"
     sql_customer_em = """
-    SELECT CONCAT(c.FirstName, " ", c.LastName), c.Email, c.ClientID, t.TicketID, t.FlightCode, t.Reason, t.Class, f.Distance
+    SELECT c.FirstName || ' ' || c.LastName, c.Email, c.ClientID, t.TicketID, t.FlightCode, t.Reason, t.Class, f.Distance
     FROM client c
     JOIN ticket t ON c.ClientID = t.UserID
     JOIN flight f ON t.FlightCode = f.FlightCode
     WHERE t.Request = 1
     """
-    sql_cancel_delete = "DELETE FROM ticket WHERE TicketID = ?"
+    sql_cancel_delete = "DELETE FROM ticket WHERE TicketID = %s"
     sql_delete_updatemiles = """
             UPDATE client
             SET MilesEarned = CASE 
-                WHEN ? = 'Economy' THEN MilesEarned - ?
-                WHEN ? = 'Business' THEN MilesEarned - 2 * ?
-                WHEN ? = 'First Class' THEN MilesEarned - 3 * ?
+                WHEN %s = 'Economy' THEN MilesEarned - %s
+                WHEN %s = 'Business' THEN MilesEarned - 2 * %s
+                WHEN %s = 'First Class' THEN MilesEarned - 3 * %s
                 ELSE MilesEarned
             END;
             """
-    sql_delete_update_decline = "UPDATE ticket SET Request = 0 WHERE TicketID = ?"
-    sql_check_email = 'SELECT * FROM client WHERE Email = ?'
-    sql_check_username = 'SELECT * FROM user WHERE username = ?'
+    sql_delete_update_decline = "UPDATE ticket SET Request = 0 WHERE TicketID = %s"
+    sql_check_email = 'SELECT * FROM client WHERE Email = %s'
+    sql_check_username = 'SELECT * FROM "user" WHERE username = %s'
     sql_update_capacity = """
             UPDATE aircraft
             SET 
-                Capacity_Economy = CASE WHEN ? = 'Economy' THEN Capacity_Economy + 1 ELSE Capacity_Economy END,
-                Capacity_Business = CASE WHEN ? = 'Business' THEN Capacity_Business + 1 ELSE Capacity_Business END,
-                Capacity_FirstClass = CASE WHEN ? = 'First Class' THEN Capacity_FirstClass + 1 ELSE Capacity_FirstClass END
-            WHERE AircraftID = ?;
+                Capacity_Economy = CASE WHEN %s = 'Economy' THEN Capacity_Economy + 1 ELSE Capacity_Economy END,
+                Capacity_Business = CASE WHEN %s = 'Business' THEN Capacity_Business + 1 ELSE Capacity_Business END,
+                Capacity_FirstClass = CASE WHEN %s = 'First Class' THEN Capacity_FirstClass + 1 ELSE Capacity_FirstClass END
+            WHERE AircraftID = %s;
             """
-    sql_getflight_cancel = "SELECT FlightCode FROM ticket WHERE TicketID = ?"
+    sql_getflight_cancel = "SELECT FlightCode FROM ticket WHERE TicketID = %s"
     
 @app.route('/')
 @app.route('/index')
@@ -308,7 +317,7 @@ def homepage():
 
 @app.route('/get_departure_cities', methods=['GET'])
 def get_departure_cities():
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
     
@@ -324,7 +333,7 @@ def get_destination_cities():
     departure_city = request.args.get('departure')
     Logger.log(f"Departure City: {departure_city}", 'info')
     
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
     
@@ -342,7 +351,7 @@ def get_destination_cities():
 def get_flight_dates():
     departure_city = request.args.get('departure')
     destination_city = request.args.get('destination')
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
     
@@ -364,7 +373,7 @@ def get_flight_dates():
 @app.route('/signIn', methods =['GET', 'POST'])
 def login():
     msg = ''
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
     
@@ -423,7 +432,7 @@ def check_email():
     data = request.get_json()
     email = data['email']
 
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
 
@@ -447,7 +456,7 @@ def check_username():
     data = request.get_json()
     username = data['username']
 
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
 
@@ -468,7 +477,7 @@ def check_username():
 
 @app.route('/signUp', methods =['GET', 'POST'])
 def register():
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
     if (request.method == 'POST' and 'create_username' in request.form and 'create_password' in request.form and 'country' in request.form
@@ -512,7 +521,7 @@ def register():
   
 @app.route('/account', methods=['GET'])
 def account_detail():
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
     if 'loggedin' in session:
@@ -579,7 +588,7 @@ def popular():
 
 @app.route('/availableFlights', methods=['POST'])
 def availableFlights():
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
     
@@ -650,7 +659,7 @@ def availableFlights():
 @app.route('/payFlight', methods=['POST'])
 def payFlight(): 
     if 'loggedin' in session:
-        conn = mysql.connector.connect(**config)
+        conn = get_conn()
 
         cur = conn.cursor()
         
@@ -673,7 +682,7 @@ def payFlight():
 @app.route('/Finish_Booking', methods=['POST'])
 def finish_booking():
     if request.method == 'POST':
-        conn = mysql.connector.connect(**config)
+        conn = get_conn()
 
         cur = conn.cursor()
         
@@ -771,7 +780,7 @@ def finish_booking():
 @app.route('/myFlights')
 def myFlights():
     if 'loggedin' in session:
-        conn = mysql.connector.connect(**config)
+        conn = get_conn()
 
         cur = conn.cursor()
     
@@ -787,7 +796,7 @@ def myFlights():
 @app.route('/Cancel_Client', methods=['GET', 'POST'])
 def Cancel_Client():
     if request.method == 'POST':
-        conn = mysql.connector.connect(**config)
+        conn = get_conn()
 
         cur = conn.cursor()
         
@@ -814,7 +823,7 @@ def checkin():
 
 @app.route('/validate_names', methods=['POST'])
 def validate_names():
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
     bookingID = request.form['bookingID']
@@ -827,7 +836,7 @@ def validate_names():
 
 @app.route('/update_checkin', methods=['POST'])
 def update_checkin():
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
     bookingID = request.form['bookingID']
@@ -844,7 +853,7 @@ def finish_checkin():
 
 @app.route('/employee_insert', methods=['POST'])
 def insert():
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
     if request.method == 'POST':
@@ -878,7 +887,7 @@ def insert():
 
 @app.route('/employee_update', methods=['POST'])
 def update():
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
     if request.method == 'POST':
@@ -927,7 +936,7 @@ def update():
 
 @app.route('/employee_delete', methods=['POST'])
 def employee_delete():
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
     if request.method == 'POST':
@@ -958,7 +967,7 @@ def employee_delete():
  
 @app.route('/update_offer', methods=['POST'])
 def update_offer():
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
     if request.method == 'POST':
@@ -987,7 +996,7 @@ def update_offer():
 
 @app.route('/cancellationrequest', methods=['POST'])
 def cancellation():
-    conn = mysql.connector.connect(**config)
+    conn = get_conn()
 
     cur = conn.cursor()
 
