@@ -40,173 +40,171 @@ class Logger:
    
 def generate_unique_id():
     conn = get_conn()
-
     cur = conn.cursor()
     while True:
         id = ''.join(random.choices(string.ascii_uppercase, k=5)) + ''.join(random.choices(string.digits, k=5))
         # Check if this ID already exists in the database
-        cur.execute("SELECT * FROM user WHERE UserID = %s", (id,))
+        cur.execute('SELECT * FROM "user" WHERE "UserID" = %s', (id,))
         if not cur.fetchone():
-            # If not, we can use this ID
             return id
 
 class SQL:
     sql1_myFlights = """
-        SELECT f.FlightCode, 
-        CONCAT(c1.City, ' (', f.SourceAirport, ')') AS SourceCity, 
-        CONCAT(c2.City, ' (', f.DestinationAirport, ')') AS DestinationCity, f.Distance, 
-        TO_CHAR(f.DepartureTime, 'DD-MM-YYYY HH24:MI') as DepartureTime, 
-        TO_CHAR(f.ArrivalTime, 'DD-MM-YYYY HH24:MI') as ArrivalTime, t.Status, t.TicketID,
+        SELECT f."FlightCode", 
+        CONCAT(c1."City", ' (', f."SourceAirport", ')') AS SourceCity, 
+        CONCAT(c2."City", ' (', f."DestinationAirport", ')') AS DestinationCity, f."Distance", 
+        TO_CHAR(f."DepartureTime", 'DD-MM-YYYY HH24:MI') as DepartureTime, 
+        TO_CHAR(f."ArrivalTime", 'DD-MM-YYYY HH24:MI') as ArrivalTime, t."Status", t."TicketID",
         CASE 
-            WHEN t.Baggage = 1 THEN 'Yes'
+            WHEN t."Baggage" = 1 THEN 'Yes'
             ELSE 'No'
         END as Baggage,
         CASE 
-            WHEN t.Request = 1 THEN 'Yes'
+            WHEN t."Request" = 1 THEN 'Yes'
             ELSE 'No'
         END as Request, 
         CASE 
-            WHEN t.CheckIn = 1 THEN 'Yes'
+            WHEN t."CheckIn" = 1 THEN 'Yes'
             ELSE 'No'
         END as CheckIn
         FROM flight f
-        JOIN cities c1 ON f.SourceAirport = c1.Code
-        JOIN cities c2 ON f.DestinationAirport = c2.Code
-        JOIN ticket t ON f.FlightCode = t.FlightCode
-        JOIN client cl ON cl.ClientID = t.UserID
-        WHERE cl.ClientID = %s AND f.DepartureTime > NOW()
+        JOIN cities c1 ON f."SourceAirport" = c1."Code"
+        JOIN cities c2 ON f."DestinationAirport" = c2."Code"
+        JOIN ticket t ON f."FlightCode" = t."FlightCode"
+        JOIN client cl ON cl."ClientID" = t."UserID"
+        WHERE cl."ClientID" = %s AND f."DepartureTime" > NOW()
     """
     sql_get_departure = """
-    SELECT DISTINCT cities.City 
-    FROM flight JOIN cities ON flight.SourceAirport = cities.Code
+    SELECT DISTINCT cities."City" 
+    FROM flight JOIN cities ON flight."SourceAirport" = cities."Code"
     """
-    sql1_get_destination = "SELECT Code FROM cities WHERE City = %s"
+    sql1_get_destination = 'SELECT "Code" FROM cities WHERE "City" = %s'
     sql2_get_destination = """
-        SELECT DISTINCT cities.City 
+        SELECT DISTINCT cities."City" 
         FROM flight 
-        JOIN cities ON flight.DestinationAirport = cities.Code 
-        WHERE flight.SourceAirport = %s
+        JOIN cities ON flight."DestinationAirport" = cities."Code" 
+        WHERE flight."SourceAirport" = %s
         """
     sql_get_date = """
-    SELECT DISTINCT DATE(DepartureTime) 
+    SELECT DISTINCT DATE("DepartureTime") 
     FROM flight 
-    WHERE SourceAirport = %s AND DestinationAirport = %s AND DepartureTime > NOW()
+    WHERE "SourceAirport" = %s AND "DestinationAirport" = %s AND "DepartureTime" > NOW()
     """
     sql1_login = '''
         SELECT u.*
         FROM "user" u
-        WHERE u.username = %s AND u.password = %s
+        WHERE u."username" = %s AND u."password" = %s
     '''
     sql2_login = '''
         SELECT c.*
         FROM client c
-        WHERE c.ClientID = %s
+        WHERE c."ClientID" = %s
     '''
     sql3_login = '''
         SELECT e.*
         FROM employee e
-        WHERE e.EmployeeID = %s
+        WHERE e."EmployeeID" = %s
     '''
-    sql1_register = "INSERT INTO \"user\" (username, UserID, password, UserType) VALUES (%s, %s, %s, %s)"
-    sql2_register = "INSERT INTO client (ClientID, FirstName, LastName, Email, MilesEarned, Tier, Birthdate, Gender, MobileNumber, Country) VALUES (%s, %s, %s, %s, 0, %s, %s, %s, %s, %s)"
+    sql1_register = 'INSERT INTO "user" ("username", "UserID", "password", "UserType") VALUES (%s, %s, %s, %s)'
+    sql2_register = 'INSERT INTO client ("ClientID", "FirstName", "LastName", "Email", "MilesEarned", "Tier", "Birthdate", "Gender", "MobileNumber", "Country") VALUES (%s, %s, %s, %s, 0, %s, %s, %s, %s, %s)'
     sql3_register = """
-        SELECT client.FirstName, client.LastName, client.Email, "user".UserID, client.Tier, client.MilesEarned, offer.Offers 
+        SELECT client."FirstName", client."LastName", client."Email", "user"."UserID", client."Tier", client."MilesEarned", offer."Offers" 
         FROM client 
-        JOIN "user" ON client.ClientID = "user".UserID 
-        JOIN offer ON client.Tier = offer.Tier 
-        WHERE client.Email = %s AND "user".username = %s
+        JOIN "user" ON client."ClientID" = "user"."UserID" 
+        JOIN offer ON client."Tier" = offer."Tier" 
+        WHERE client."Email" = %s AND "user"."username" = %s
         """
     sql1_account = '''
-        SELECT c.FirstName, c.LastName, c.Email, u.UserID, c.Tier, c.MilesEarned, o.Offers
+        SELECT c."FirstName", c."LastName", c."Email", u."UserID", c."Tier", c."MilesEarned", o."Offers"
         FROM "user" u
-        JOIN client c ON u.UserID = c.ClientID
-        JOIN offer o ON c.Tier = o.Tier
-        WHERE u.UserID = %s
+        JOIN client c ON u."UserID" = c."ClientID"
+        JOIN offer o ON c."Tier" = o."Tier"
+        WHERE u."UserID" = %s
         '''
     sql2_account = '''
-        SELECT t.TicketID, 
+        SELECT t."TicketID", 
     CASE 
-        WHEN f.SourceAirport IS NOT NULL THEN CONCAT(c1.City, ' (', f.SourceAirport, ')')
+        WHEN f."SourceAirport" IS NOT NULL THEN CONCAT(c1."City", ' (', f."SourceAirport", ')')
         ELSE 'Flight not available'
     END as SourceCity, 
     CASE 
-        WHEN f.DepartureTime IS NOT NULL THEN TO_CHAR(f.DepartureTime, 'DD-MM-YYYY HH24:MI')
+        WHEN f."DepartureTime" IS NOT NULL THEN TO_CHAR(f."DepartureTime", 'DD-MM-YYYY HH24:MI')
         ELSE 'Flight not available'
     END as DepartureTime, 
     CASE 
-        WHEN f.DestinationAirport IS NOT NULL THEN CONCAT(c2.City, ' (', f.DestinationAirport, ')')
+        WHEN f."DestinationAirport" IS NOT NULL THEN CONCAT(c2."City", ' (', f."DestinationAirport", ')')
         ELSE 'Flight not available'
     END as DestinationCity, 
     CASE 
-        WHEN f.ArrivalTime IS NOT NULL THEN TO_CHAR(f.ArrivalTime, 'DD-MM-YYYY HH24:MI')
+        WHEN f."ArrivalTime" IS NOT NULL THEN TO_CHAR(f."ArrivalTime", 'DD-MM-YYYY HH24:MI')
         ELSE 'Flight not available'
     END as ArrivalTime, 
-    t.FlightCode, t.Class, t.Paid, t.Status,
+    t."FlightCode", t."Class", t."Paid", t."Status",
     CASE 
-        WHEN t.CheckIn = 1 THEN 'Yes'
+        WHEN t."CheckIn" = 1 THEN 'Yes'
         ELSE 'No'
     END as CheckIn,
     CASE 
-        WHEN t.Baggage = 1 THEN 'Yes'
+        WHEN t."Baggage" = 1 THEN 'Yes'
         ELSE 'No'
     END as Baggage,
     CASE 
-        WHEN t.Class = 'Economy' AND f.Distance IS NOT NULL THEN f.Distance
-        WHEN t.Class = 'Business' AND f.Distance IS NOT NULL THEN f.Distance * 2
-        WHEN t.Class = 'First Class' AND f.Distance IS NOT NULL THEN f.Distance * 3
+        WHEN t."Class" = 'Economy' AND f."Distance" IS NOT NULL THEN f."Distance"
+        WHEN t."Class" = 'Business' AND f."Distance" IS NOT NULL THEN f."Distance" * 2
+        WHEN t."Class" = 'First Class' AND f."Distance" IS NOT NULL THEN f."Distance" * 3
         ELSE NULL
     END as Miles
         FROM ticket t
-        LEFT JOIN flight f ON t.FlightCode = f.FlightCode
-        LEFT JOIN class p ON f.FlightCode = p.flightID
-        LEFT JOIN cities c1 ON f.SourceAirport = c1.Code
-        LEFT JOIN cities c2 ON f.DestinationAirport = c2.Code
-        WHERE t.UserID = %s
+        LEFT JOIN flight f ON t."FlightCode" = f."FlightCode"
+        LEFT JOIN class p ON f."FlightCode" = p."flightID"
+        LEFT JOIN cities c1 ON f."SourceAirport" = c1."Code"
+        LEFT JOIN cities c2 ON f."DestinationAirport" = c2."Code"
+        WHERE t."UserID" = %s
         ORDER BY 
             CASE 
-                WHEN (CASE WHEN f.DepartureTime IS NOT NULL THEN TO_CHAR(f.DepartureTime, 'DD-MM-YYYY HH24:MI') ELSE 'Flight not available' END) = 'Flight not available' THEN 0
+                WHEN (CASE WHEN f."DepartureTime" IS NOT NULL THEN TO_CHAR(f."DepartureTime", 'DD-MM-YYYY HH24:MI') ELSE 'Flight not available' END) = 'Flight not available' THEN 0
                 ELSE 1
             END DESC,
-            f.DepartureTime DESC;
+            f."DepartureTime" DESC;
         '''
     sql1_bookflight = """
-    SELECT f.FlightCode, CONCAT(c1.City, ' (', f.SourceAirport , ')'), 
-            CONCAT(c2.City, ' (', f.DestinationAirport , ')'),  
-            f.DepartureTime, f.ArrivalTime, f.Distance 
+    SELECT f."FlightCode", CONCAT(c1."City", ' (', f."SourceAirport" , ')'), 
+            CONCAT(c2."City", ' (', f."DestinationAirport" , ')'),  
+            f."DepartureTime", f."ArrivalTime", f."Distance" 
     FROM flight f
-    JOIN cities c1 ON f.SourceAirport = c1.Code
-    JOIN cities c2 ON f.DestinationAirport = c2.Code
-    WHERE f.SourceAirport = %s AND f.DestinationAirport = %s AND DATE(f.DepartureTime) >= %s
+    JOIN cities c1 ON f."SourceAirport" = c1."Code"
+    JOIN cities c2 ON f."DestinationAirport" = c2."Code"
+    WHERE f."SourceAirport" = %s AND f."DestinationAirport" = %s AND DATE(f."DepartureTime") >= %s
     """
     sql2_bookflight = """
     SELECT Tier
     FROM client
-    WHERE ClientID = %s
+    WHERE "ClientID" = %s
     """
     sql3_bookflight = """
     SELECT Capacity_Economy, Capacity_Business, Capacity_FirstClass
-    FROM aircraft a JOIN flight f ON a.AircraftID = f.FlightCode
-    WHERE f.SourceAirport = %s AND f.DestinationAirport = %s AND DATE(f.DepartureTime) >= %s
+    FROM aircraft a JOIN flight f ON a."AircraftID" = f."FlightCode"
+    WHERE f."SourceAirport" = %s AND f."DestinationAirport" = %s AND DATE(f."DepartureTime") >= %s
     """
     sql4_bookflight = """
     SELECT
-        cl.Price_Economy,
-        cl.Price_Business,
-        cl.Price_FirstClass
+        cl."Price_Economy",
+        cl."Price_Business",
+        cl."Price_FirstClass"
     FROM 
     flight AS f
     JOIN 
-    class AS cl ON f.FlightCode = cl.flightID
+    class AS cl ON f."FlightCode" = cl."flightID"
     WHERE 
-        f.SourceAirport = %s AND f.DestinationAirport = %s AND DATE(f.DepartureTime) >= %s
+        f."SourceAirport" = %s AND f."DestinationAirport" = %s AND DATE(f."DepartureTime") >= %s
     """
     sql5_bookflight = """
         SELECT Offers
         FROM offer
-        WHERE Tier = %s
+        WHERE "Tier" = %s
     """
     sql1_finishbooking = """
-        INSERT INTO ticket(TicketID, UserID, PurchaseDate, FlightCode, Class, CheckIn, Baggage, Paid, Status, Request) 
+        INSERT INTO ticket("TicketID", "UserID", "PurchaseDate", "FlightCode", "Class", "CheckIn", "Baggage", "Paid", "Status", "Request") 
         VALUES (%s, %s, %s, %s, %s, 0, %s, %s, %s, %s);
         """
     sql2_finishbooking = """
@@ -214,50 +212,50 @@ class SQL:
             SET Capacity_Economy = CASE WHEN %s = 'Economy' THEN Capacity_Economy - %s ELSE Capacity_Economy END,
                 Capacity_Business = CASE WHEN %s = 'Business' THEN Capacity_Business - %s ELSE Capacity_Business END,
                 Capacity_FirstClass = CASE WHEN %s = 'First Class' THEN Capacity_FirstClass - %s ELSE Capacity_FirstClass END
-            WHERE AircraftID = %s
+            WHERE "AircraftID" = %s
             """
     sql3_finishbooking = """
         UPDATE client 
-        SET MilesEarned = MilesEarned + 
+        SET "MilesEarned" = "MilesEarned" + 
             CASE 
                 WHEN %s = 'Economy' THEN %s * 1 * %s
                 WHEN %s = 'Business' THEN %s * 2 * %s
                 WHEN %s = 'First Class' THEN %s * 3 * %s
             END
-        WHERE ClientID = %s;
+        WHERE "ClientID" = %s;
         """
     sql4_finishbooking = """
-        SELECT FirstName, LastName
+        SELECT "FirstName", "LastName"
         FROM client
-        WHERE ClientID = %s
+        WHERE "ClientID" = %s
         """
-    sql_cancel_client = 'UPDATE ticket SET Request = 1, Reason = %s WHERE TicketID = %s'
+    sql_cancel_client = 'UPDATE ticket SET "Request" = 1, "Reason" = %s WHERE "TicketID" = %s'
     sql_validate ="""
-    SELECT client.FirstName, client.LastName, ticket.CheckIn
-    FROM ticket JOIN client ON ticket.UserID = client.ClientID 
-    WHERE ticket.TicketID = %s
+    SELECT client."FirstName", client."LastName", ticket."CheckIn"
+    FROM ticket JOIN client ON ticket."UserID" = client."ClientID" 
+    WHERE ticket."TicketID" = %s
     """
-    sql_update_checkin = "UPDATE ticket SET CheckIn = 1 WHERE TicketID = %s"
+    sql_update_checkin = 'UPDATE ticket SET "CheckIn" = 1 WHERE "TicketID" = %s'
     sql1_insert = """      
-        INSERT INTO aircraft (AircraftID, AircraftName,Capacity,
-        Capacity_Economy,Capacity_Business,Capacity_FirstClass) 
+        INSERT INTO aircraft ("AircraftID", "AircraftName","Capacity",
+        "Capacity_Economy","Capacity_Business","Capacity_FirstClass") 
         VALUES (%s, %s, %s, %s, %s, %s )
     """
     sql2_insert = """      
-        INSERT INTO flight (FlightCode, SourceAirport, DestinationAirport,DepartureTime,ArrivalTime,Distance)
+        INSERT INTO flight ("FlightCode", "SourceAirport", "DestinationAirport","DepartureTime","ArrivalTime","Distance")
         VALUES (%s, %s, %s, %s, %s, %s)
     """
-    sql3_insert = """INSERT INTO class (flightID,Price_Economy,Price_Business,Price_FirstClass) VALUES (%s, %s, %s, %s)"""
+    sql3_insert = """INSERT INTO class ("flightID","Price_Economy","Price_Business","Price_FirstClass") VALUES (%s, %s, %s, %s)"""
     sql_flights = """
-    SELECT a."AircraftName", f.FlightCode, a.Capacity, 
-    a.Capacity_Economy, a.Capacity_Business, 
-    a.Capacity_FirstClass, f.SourceAirport, 
-    f.DestinationAirport, f.DepartureTime, 
-    f.ArrivalTime, f.Distance, c.Price_Economy, 
-    c.Price_Business, c.Price_FirstClass
+    SELECT a."AircraftName", f."FlightCode", a."Capacity", 
+    a."Capacity_Economy", a."Capacity_Business", 
+    a."Capacity_FirstClass", f."SourceAirport", 
+    f."DestinationAirport", f."DepartureTime", 
+    f."ArrivalTime", f."Distance", c."Price_Economy", 
+    c."Price_Business", c."Price_FirstClass"
     FROM aircraft a
-    JOIN flight f ON a.AircraftID = f.FlightCode
-    JOIN class c ON f.FlightCode = c.flightID
+    JOIN flight f ON a."AircraftID" = f."FlightCode"
+    JOIN class c ON f."FlightCode" = c."flightID"
     """
     sql_offer = """
     SELECT * FROM offer
@@ -276,32 +274,32 @@ class SQL:
     sql3_delete_em = 'DELETE FROM flight WHERE FlightCode = %s'
     sql_update_offer_em = "UPDATE offer SET Offers = %s WHERE Tier = %s"
     sql_customer_em = """
-    SELECT c.FirstName || ' ' || c.LastName, c.Email, c.ClientID, t.TicketID, t.FlightCode, t.Reason, t.Class, f.Distance
+    SELECT c."FirstName" || ' ' || c."LastName", c."Email", c."ClientID", t."TicketID", t."FlightCode", t."Reason", t."Class", f."Distance"
     FROM client c
-    JOIN ticket t ON c.ClientID = t.UserID
-    JOIN flight f ON t.FlightCode = f.FlightCode
-    WHERE t.Request = 1
+    JOIN ticket t ON c."ClientID" = t."UserID"
+    JOIN flight f ON t."FlightCode" = f."FlightCode"
+    WHERE t."Request" = 1
     """
     sql_cancel_delete = "DELETE FROM ticket WHERE TicketID = %s"
     sql_delete_updatemiles = """
             UPDATE client
-            SET MilesEarned = CASE 
-                WHEN %s = 'Economy' THEN MilesEarned - %s
-                WHEN %s = 'Business' THEN MilesEarned - 2 * %s
-                WHEN %s = 'First Class' THEN MilesEarned - 3 * %s
-                ELSE MilesEarned
+            SET "MilesEarned" = CASE 
+                WHEN %s = 'Economy' THEN "MilesEarned" - %s
+                WHEN %s = 'Business' THEN "MilesEarned" - 2 * %s
+                WHEN %s = 'First Class' THEN "MilesEarned" - 3 * %s
+                ELSE "MilesEarned"
             END;
             """
-    sql_delete_update_decline = "UPDATE ticket SET Request = 0 WHERE TicketID = %s"
-    sql_check_email = 'SELECT * FROM client WHERE Email = %s'
-    sql_check_username = 'SELECT * FROM "user" WHERE username = %s'
+    sql_delete_update_decline = 'UPDATE ticket SET "Request" = 0 WHERE "TicketID" = %s'
+    sql_check_email = 'SELECT * FROM client WHERE "Email" = %s'
+    sql_check_username = 'SELECT * FROM "user" WHERE "username" = %s'
     sql_update_capacity = """
             UPDATE aircraft
             SET 
                 Capacity_Economy = CASE WHEN %s = 'Economy' THEN Capacity_Economy + 1 ELSE Capacity_Economy END,
                 Capacity_Business = CASE WHEN %s = 'Business' THEN Capacity_Business + 1 ELSE Capacity_Business END,
                 Capacity_FirstClass = CASE WHEN %s = 'First Class' THEN Capacity_FirstClass + 1 ELSE Capacity_FirstClass END
-            WHERE AircraftID = %s;
+            WHERE "AircraftID" = %s;
             """
     sql_getflight_cancel = "SELECT FlightCode FROM ticket WHERE TicketID = %s"
     
@@ -664,11 +662,11 @@ def payFlight():
         cur = conn.cursor()
         
         sql1 = '''
-        SELECT c.FirstName, c.LastName, c.Email, u.UserID, c.Tier, c.MilesEarned, o.Offers
+        SELECT c."FirstName", c."LastName", c."Email", u."UserID", c."Tier", c."MilesEarned", o."Offers"
         FROM user u
-        JOIN client c ON u.UserID = c.ClientID
-        JOIN offer o ON c.Tier = o.Tier
-        WHERE u.UserID = %s
+        JOIN client c ON u."UserID" = c."ClientID"
+        JOIN offer o ON c."Tier" = o."Tier"
+        WHERE u."UserID" = %s
         '''
         cur.execute(sql1, (session['UserID'],))
         data = cur.fetchall()
