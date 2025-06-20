@@ -176,13 +176,13 @@ class SQL:
     JOIN cities c2 ON f."DestinationAirport" = c2."Code"
     WHERE f."SourceAirport" = %s AND f."DestinationAirport" = %s AND DATE(f."DepartureTime") >= %s
     """
-    sql2_bookflight = """
-    SELECT Tier
+    sql2_bookflight = '''
+    SELECT "Tier"
     FROM client
     WHERE "ClientID" = %s
-    """
+    '''
     sql3_bookflight = """
-    SELECT Capacity_Economy, Capacity_Business, Capacity_FirstClass
+    SELECT "Capacity_Economy", "Capacity_Business", "Capacity_FirstClass"
     FROM aircraft a JOIN flight f ON a."AircraftID" = f."FlightCode"
     WHERE f."SourceAirport" = %s AND f."DestinationAirport" = %s AND DATE(f."DepartureTime") >= %s
     """
@@ -199,7 +199,7 @@ class SQL:
         f."SourceAirport" = %s AND f."DestinationAirport" = %s AND DATE(f."DepartureTime") >= %s
     """
     sql5_bookflight = """
-        SELECT Offers
+        SELECT "Offers"
         FROM offer
         WHERE "Tier" = %s
     """
@@ -209,9 +209,9 @@ class SQL:
         """
     sql2_finishbooking = """
             UPDATE aircraft 
-            SET Capacity_Economy = CASE WHEN %s = 'Economy' THEN Capacity_Economy - %s ELSE Capacity_Economy END,
-                Capacity_Business = CASE WHEN %s = 'Business' THEN Capacity_Business - %s ELSE Capacity_Business END,
-                Capacity_FirstClass = CASE WHEN %s = 'First Class' THEN Capacity_FirstClass - %s ELSE Capacity_FirstClass END
+            SET "Capacity_Economy" = CASE WHEN %s = 'Economy' THEN "Capacity_Economy" - %s ELSE "Capacity_Economy" END,
+                "Capacity_Business" = CASE WHEN %s = 'Business' THEN "Capacity_Business" - %s ELSE "Capacity_Business" END,
+                "Capacity_FirstClass" = CASE WHEN %s = 'First Class' THEN "Capacity_FirstClass" - %s ELSE "Capacity_FirstClass" END
             WHERE "AircraftID" = %s
             """
     sql3_finishbooking = """
@@ -261,18 +261,18 @@ class SQL:
     SELECT * FROM offer
     ORDER BY 
         CASE 
-            WHEN tier = 'Bronze' THEN 1
-            WHEN tier = 'Silver' THEN 2
-            WHEN tier = 'Gold' THEN 3
+            WHEN "Tier" = 'Bronze' THEN 1
+            WHEN "Tier" = 'Silver' THEN 2
+            WHEN "Tier" = 'Gold' THEN 3
             ELSE 4
         END"""
-    sql1_update_flight_em = "UPDATE class SET flightID = %s, Price_Economy =%s, Price_Business = %s, Price_FirstClass = %s WHERE flightID = %s"
-    sql2_update_flight_em = "UPDATE flight SET FlightCode = %s, SourceAirport = %s, DestinationAirport = %s, DepartureTime = %s ,ArrivalTime = %s ,Distance = %s WHERE FlightCode = %s"
-    sql3_update_flight_em = "UPDATE aircraft SET AircraftID = %s, AircraftName = %s, Capacity = %s, Capacity_Economy = %s , Capacity_Business = %s, Capacity_FirstClass = %s WHERE AircraftID = %s"
-    sql1_delete_em = 'DELETE FROM aircraft WHERE AircraftID = %s'
-    sql2_delete_em = 'DELETE FROM class WHERE flightID = %s'
-    sql3_delete_em = 'DELETE FROM flight WHERE FlightCode = %s'
-    sql_update_offer_em = "UPDATE offer SET Offers = %s WHERE Tier = %s"
+    sql1_update_flight_em = 'UPDATE class SET "flightID" = %s, "Price_Economy" =%s, "Price_Business" = %s, "Price_FirstClass" = %s WHERE "flightID" = %s'
+    sql2_update_flight_em = 'UPDATE flight SET "FlightCode" = %s, "SourceAirport" = %s, "DestinationAirport" = %s, "DepartureTime" = %s ,"ArrivalTime" = %s ,"Distance" = %s WHERE "FlightCode" = %s'
+    sql3_update_flight_em = 'UPDATE aircraft SET "AircraftID" = %s, "AircraftName" = %s, "Capacity" = %s, "Capacity_Economy" = %s , "Capacity_Business" = %s, "Capacity_FirstClass" = %s WHERE "AircraftID" = %s'
+    sql1_delete_em = 'DELETE FROM aircraft WHERE "AircraftID" = %s'
+    sql2_delete_em = 'DELETE FROM class WHERE "flightID" = %s'
+    sql3_delete_em = 'DELETE FROM flight WHERE "FlightCode" = %s'
+    sql_update_offer_em = 'UPDATE offer SET "Offers" = %s WHERE "Tier" = %s'
     sql_customer_em = """
     SELECT c."FirstName" || ' ' || c."LastName", c."Email", c."ClientID", t."TicketID", t."FlightCode", t."Reason", t."Class", f."Distance"
     FROM client c
@@ -280,7 +280,7 @@ class SQL:
     JOIN flight f ON t."FlightCode" = f."FlightCode"
     WHERE t."Request" = 1
     """
-    sql_cancel_delete = "DELETE FROM ticket WHERE TicketID = %s"
+    sql_cancel_delete = 'DELETE FROM ticket WHERE "TicketID" = %s'
     sql_delete_updatemiles = """
             UPDATE client
             SET "MilesEarned" = CASE 
@@ -296,12 +296,12 @@ class SQL:
     sql_update_capacity = """
             UPDATE aircraft
             SET 
-                Capacity_Economy = CASE WHEN %s = 'Economy' THEN Capacity_Economy + 1 ELSE Capacity_Economy END,
-                Capacity_Business = CASE WHEN %s = 'Business' THEN Capacity_Business + 1 ELSE Capacity_Business END,
-                Capacity_FirstClass = CASE WHEN %s = 'First Class' THEN Capacity_FirstClass + 1 ELSE Capacity_FirstClass END
+                "Capacity_Economy" = CASE WHEN %s = 'Economy' THEN "Capacity_Economy" + 1 ELSE "Capacity_Economy" END,
+                "Capacity_Business" = CASE WHEN %s = 'Business' THEN "Capacity_Business" + 1 ELSE "Capacity_Business" END,
+                "Capacity_FirstClass" = CASE WHEN %s = 'First Class' THEN "Capacity_FirstClass" + 1 ELSE "Capacity_FirstClass" END
             WHERE "AircraftID" = %s;
             """
-    sql_getflight_cancel = "SELECT FlightCode FROM ticket WHERE TicketID = %s"
+    sql_getflight_cancel = 'SELECT "FlightCode" FROM ticket WHERE "TicketID" = %s'
     
 @app.route('/')
 @app.route('/index')
