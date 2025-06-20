@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session, jsonify
-import string, random, mariadb
+import string, random, mysql.connector
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
@@ -14,7 +14,8 @@ config = {
     'database': '---' #Database name
 }
 
-conn = mariadb.connect(**config)
+conn = mysql.connector.connect(**config)
+
 cur = conn.cursor()
 
 def close_db(cur, conn):
@@ -28,7 +29,8 @@ class Logger:
 			t.write(f"{level}: {str}\n")
    
 def generate_unique_id():
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
     while True:
         id = ''.join(random.choices(string.ascii_uppercase, k=5)) + ''.join(random.choices(string.digits, k=5))
@@ -62,7 +64,7 @@ class SQL:
         JOIN cities c2 ON f.DestinationAirport = c2.Code
         JOIN ticket t ON f.FlightCode = t.FlightCode
         JOIN client cl ON cl.ClientID = t.UserID
-        WHERE cl.ClientID = ? AND f.DepartureTime > NOW()
+        WHERE cl.ClientID = %s AND f.DepartureTime > NOW()
     """
     sql_get_departure = """
     SELECT DISTINCT cities.City 
@@ -306,7 +308,8 @@ def homepage():
 
 @app.route('/get_departure_cities', methods=['GET'])
 def get_departure_cities():
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
     
     cur.execute(SQL.sql_get_departure)
@@ -321,7 +324,8 @@ def get_destination_cities():
     departure_city = request.args.get('departure')
     Logger.log(f"Departure City: {departure_city}", 'info')
     
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
     
     # Convert city name to code
@@ -338,7 +342,8 @@ def get_destination_cities():
 def get_flight_dates():
     departure_city = request.args.get('departure')
     destination_city = request.args.get('destination')
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
     
     # Convert departure city name to code
@@ -359,7 +364,8 @@ def get_flight_dates():
 @app.route('/signIn', methods =['GET', 'POST'])
 def login():
     msg = ''
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
     
     if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
@@ -417,7 +423,8 @@ def check_email():
     data = request.get_json()
     email = data['email']
 
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
 
     # Query the database to check if the email exists
@@ -440,7 +447,8 @@ def check_username():
     data = request.get_json()
     username = data['username']
 
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
 
     # Query the database to check if the email exists
@@ -460,7 +468,8 @@ def check_username():
 
 @app.route('/signUp', methods =['GET', 'POST'])
 def register():
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
     if (request.method == 'POST' and 'create_username' in request.form and 'create_password' in request.form and 'country' in request.form
     and 'birthdate' in request.form and 'gender' in request.form and 'mobile_number' in request.form    
@@ -503,7 +512,8 @@ def register():
   
 @app.route('/account', methods=['GET'])
 def account_detail():
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
     if 'loggedin' in session:
         cur.execute(SQL.sql1_account, (session['UserID'],))
@@ -569,7 +579,8 @@ def popular():
 
 @app.route('/availableFlights', methods=['POST'])
 def availableFlights():
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
     
      # Get form data
@@ -639,7 +650,8 @@ def availableFlights():
 @app.route('/payFlight', methods=['POST'])
 def payFlight(): 
     if 'loggedin' in session:
-        conn = mariadb.connect(**config)
+        conn = mysql.connector.connect(**config)
+
         cur = conn.cursor()
         
         sql1 = '''
@@ -661,7 +673,8 @@ def payFlight():
 @app.route('/Finish_Booking', methods=['POST'])
 def finish_booking():
     if request.method == 'POST':
-        conn = mariadb.connect(**config)
+        conn = mysql.connector.connect(**config)
+
         cur = conn.cursor()
         
         flight_code = request.form.get('FlightCode')
@@ -758,7 +771,8 @@ def finish_booking():
 @app.route('/myFlights')
 def myFlights():
     if 'loggedin' in session:
-        conn = mariadb.connect(**config)
+        conn = mysql.connector.connect(**config)
+
         cur = conn.cursor()
     
         cur.execute(SQL.sql1_myFlights, (session['UserID'],))
@@ -773,7 +787,8 @@ def myFlights():
 @app.route('/Cancel_Client', methods=['GET', 'POST'])
 def Cancel_Client():
     if request.method == 'POST':
-        conn = mariadb.connect(**config)
+        conn = mysql.connector.connect(**config)
+
         cur = conn.cursor()
         
         # Get the cancellation reason from the form data
@@ -799,7 +814,8 @@ def checkin():
 
 @app.route('/validate_names', methods=['POST'])
 def validate_names():
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
     bookingID = request.form['bookingID']
     
@@ -811,7 +827,8 @@ def validate_names():
 
 @app.route('/update_checkin', methods=['POST'])
 def update_checkin():
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
     bookingID = request.form['bookingID']
     
@@ -827,7 +844,8 @@ def finish_checkin():
 
 @app.route('/employee_insert', methods=['POST'])
 def insert():
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
     if request.method == 'POST':
         
@@ -860,7 +878,8 @@ def insert():
 
 @app.route('/employee_update', methods=['POST'])
 def update():
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
     if request.method == 'POST':
         data = request.get_json()
@@ -908,7 +927,8 @@ def update():
 
 @app.route('/employee_delete', methods=['POST'])
 def employee_delete():
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
     if request.method == 'POST':
         data = request.get_json()
@@ -938,7 +958,8 @@ def employee_delete():
  
 @app.route('/update_offer', methods=['POST'])
 def update_offer():
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
     if request.method == 'POST':
         data = request.get_json()
@@ -966,7 +987,8 @@ def update_offer():
 
 @app.route('/cancellationrequest', methods=['POST'])
 def cancellation():
-    conn = mariadb.connect(**config)
+    conn = mysql.connector.connect(**config)
+
     cur = conn.cursor()
 
     if request.method == 'POST':
