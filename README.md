@@ -1,12 +1,10 @@
-### BananaAirlines – University Project
+# Banana Airlines – University Project
 
 This project is an airline booking website originally built on MariaDB, now migrated to PostgreSQL for cloud hosting with [Supabase](https://supabase.com/) and [Render](https://render.com/).
 
 **Live Demo:** [https://bananaairlines.onrender.com/](https://bananaairlines.onrender.com/) 
 
----
-
-#### 🗄️ Data Model
+## 🗄️ Data Model
 
 The data model is designed to support a full-featured airline booking system. Key tables include:
 
@@ -22,22 +20,22 @@ The data model is designed to support a full-featured airline booking system. Ke
 
 All relationships are enforced with foreign keys. The schema is defined in [`sql/bananaairlines.sql`](sql/bananaairlines.sql) and is compatible with PostgreSQL/Supabase.
 
-![alt text](https://github.com/goviet2002/BananaAirlines/tree/main/sql/dataModel.png)
+![alt text](https://github.com/goviet2002/BananaAirlines/blob/main/sql/dataModel.png)
 
----
 
-#### 🐍 Python Automation
+
+## 🐍 Python Automation
 
 - Python scripts (see [`sql/create_flight.py`](sql/create_flight.py)) are used to generate large numbers of flights, aircraft, and classes with realistic random data.
 - These scripts output SQL files (e.g., `flights.sql`, `aircrafts.sql`, `classes.sql`) that can be loaded into the PostgreSQL database.
 
----
 
-#### 💻 Running Locally
+
+## 💻 Running Locally
 - You can still run the project locally with PostgreSQL or MariaDB (in old commmits)
 - To use PostgreSQL: load the schema into your database (e.g., Supabase), and update the connection settings in `app.py` to match your environment.
 
-#### 📝 Features
+## 📝 Features
 
 - **User Registration & Login:** With email and username uniqueness checks.
 - **Flight Booking:** Dynamic selection of available destinations and dates, with tier-based discounts.
@@ -70,7 +68,7 @@ After booking all the flights will be displayed in the account details or my fli
 ![alt text](https://github.com/goviet2002/BananaAirlines/blob/37acba087a9aa2e22d92e92d46289ddfb122f938/static/images/overview/cf.png)
 ![alt text](https://github.com/goviet2002/BananaAirlines/blob/37acba087a9aa2e22d92e92d46289ddfb122f938/static/images/overview/checkedin.png)
 
-#### 👨‍💻 Employee Access
+## 👨‍💻 Employee Access
 
 - Employees can log in with the default account (`admin_boss` / `123`) to manage flights and customer requests.
 
