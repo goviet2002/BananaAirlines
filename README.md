@@ -74,3 +74,7 @@ After booking all the flights will be displayed in the account details or my fli
 
 ![alt text](https://github.com/goviet2002/BananaAirlines/blob/37acba087a9aa2e22d92e92d46289ddfb122f938/static/images/overview/employee1.png)
 ![alt text](https://github.com/goviet2002/BananaAirlines/blob/37acba087a9aa2e22d92e92d46289ddfb122f938/static/images/overview/employee2.png)
+
+## ⚠️ Disclaimer
+Some images used in this project were found online. They are included here for educational and personal use only. No copyright infringement is intended. If you are the owner of any of these images and would like them removed, please contact me.
+
