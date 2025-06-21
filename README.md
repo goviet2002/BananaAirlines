@@ -44,7 +44,7 @@ All relationships are enforced with foreign keys. The schema is defined in [`sql
 - **Cancellation & Check-in:** Users can cancel bookings or check in online.
 - **Tier System:** Bronze, Silver, and Gold tiers with different offers and discounts.
 
-![alt text](https://github.com/goviet2002/BananaAirlines/bananaairlines.gif)
+![alt text](https://github.com/goviet2002/BananaAirlines/blob/main/bananaairlines.gif)
 ![alt text](https://github.com/goviet2002/BananaAirlines/blob/05a2c72bef380e427b55377787d117a12c86b3d8/static/images/overview/tier.png)
 
 If you don't have an account, you can create it by clicking the Sign Up button and filling in your personal information. You cannot create a new account if the registered Email has already existed.
