@@ -1,5 +1,6 @@
 # Banana Airlines – University Project
 
+### Datenbank I Praktikum – JGU Mainz
 This project is an airline booking website originally built on MariaDB, now migrated to PostgreSQL for cloud hosting with [Supabase](https://supabase.com/) and [Render](https://render.com/).
 
 **Live Demo:** [https://bananaairlines.onrender.com/](https://bananaairlines.onrender.com/) 
